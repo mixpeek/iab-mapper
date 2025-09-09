@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/header.png" alt="IAB Taxonomy Mapper" width="900" />
+</p>
+
 # IAB Content Taxonomy Mapper (Local CLI)
 
 Map **IAB Content Taxonomy 2.x** labels/codes to **IAB 3.0** locally with a deterministic→fuzzy→(optional) local-embeddings pipeline.
@@ -18,6 +22,11 @@ Outputs are **IAB-3.0–compatible IDs** suitable for OpenRTB/VAST, with optiona
 ---
 
 ## 🔧 Install
+
+### From PyPI (recommended)
+```bash
+pip install iab-mapper
+```
 
 ### 1) Clone / unpack
 ```bash
@@ -81,6 +90,74 @@ The output contains for each input row:
 - `openrtb` → `{"content":{"cat":[...],"cattax":"<enum>"}}` (configurable via `--cattax`)
 - `vast_contentcat` → `"id1","id2",...`
 - Topic confidences, sources (`"exact"/"fuzzy"/"embed"/"override"), SCD flags, and chosen vectors.
+
+---
+
+## 🐍 Python API (alternative to CLI)
+
+Install:
+```bash
+pip install iab-mapper
+```
+
+Basic usage:
+```python
+from pathlib import Path
+from iab_mapper.pipeline import Mapper, MapConfig
+import iab_mapper as pkg
+
+# Use packaged stub catalogs or point data_dir to your own
+data_dir = Path(pkg.__file__).parent / "data"
+
+cfg = MapConfig(
+    fuzzy_method="bm25",   # rapidfuzz|tfidf|bm25
+    fuzzy_cut=0.92,
+    use_embeddings=False,   # set True and choose emb_model to enable
+    max_topics=3,
+    drop_scd=False,
+    cattax="2",            # OpenRTB content.cattax enum
+    overrides_path=None     # path to JSON overrides if desired
+)
+
+mapper = Mapper(cfg, str(data_dir))
+
+# Single record with optional vectors
+rec = {
+    "code": "2-12",
+    "label": "Food & Drink",
+    "channel": "editorial",
+    "type": "article",
+    "format": "video",
+    "language": "en",
+    "source": "professional",
+    "environment": "ctv",
+}
+
+out = mapper.map_record(rec)
+print(out["out_ids"])         # topic + vector IDs
+print(out["openrtb"])         # {"content": {"cat": [...], "cattax": "2"}}
+print(out["vast_contentcat"]) # "id1","id2",...
+
+# Or just map topics
+topics = mapper.map_topics("Cooking how-to")
+
+# Batch over a list of dicts
+rows = [rec, {"label": "Sports"}]
+mapped = [mapper.map_record(r) for r in rows]
+```
+
+Enable local embeddings (optional):
+```python
+cfg = MapConfig(fuzzy_method="rapidfuzz", use_embeddings=True, emb_model="tfidf", emb_cut=0.8)
+mapper = Mapper(cfg, str(data_dir))
+out = mapper.map_record({"label": "Cooking how-to"})
+```
+
+Use overrides (force mapping before matching):
+```python
+cfg = MapConfig(overrides_path="overrides.json")  # [{"code":"1-4","label":null,"ids":["2-3-18"]}]
+mapper = Mapper(cfg, str(data_dir))
+```
 
 ---
 
