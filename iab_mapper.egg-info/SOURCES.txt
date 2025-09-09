@@ -14,5 +14,15 @@ iab_mapper.egg-info/dependency_links.txt
 iab_mapper.egg-info/entry_points.txt
 iab_mapper.egg-info/requires.txt
 iab_mapper.egg-info/top_level.txt
+iab_mapper/data/iab_2x.json
+iab_mapper/data/iab_3x.json
+iab_mapper/data/synonyms_2x.json
+iab_mapper/data/synonyms_3x.json
+iab_mapper/data/vectors_channel.json
+iab_mapper/data/vectors_environment.json
+iab_mapper/data/vectors_format.json
+iab_mapper/data/vectors_language.json
+iab_mapper/data/vectors_source.json
+iab_mapper/data/vectors_type.json
 tests/test_iab_mapper.py
 tests/test_new_features.py

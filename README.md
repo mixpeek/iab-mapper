@@ -4,6 +4,12 @@
 
 # IAB Content Taxonomy Mapper (Local CLI)
 
+<p align="center">
+  <a href="https://pypi.org/project/iab-mapper/"><img alt="PyPI" src="https://img.shields.io/pypi/v/iab-mapper.svg"></a>
+  <a href="https://github.com/mixpeek/iab-mapper/actions"><img alt="CI" src="https://github.com/mixpeek/iab-mapper/actions/workflows/ci.yml/badge.svg"></a>
+  <a href="https://github.com/mixpeek/iab-mapper/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
+</p>
+
 Map **IAB Content Taxonomy 2.x** labels/codes to **IAB 3.0** locally with a deterministic→fuzzy→(optional) local-embeddings pipeline.
 Outputs are **IAB-3.0–compatible IDs** suitable for OpenRTB/VAST, with optional **vector attributes** (Channel, Type, Format, Language, Source, Environment) and **SCD** awareness.
 

@@ -4,6 +4,21 @@ version = "0.3.0"
 description = "Local IAB Content Taxonomy 2.x -> 3.0 mapper with vectors, SCD, OpenRTB/VAST exporters."
 readme = "README.md"
 requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["iab", "taxonomy", "content", "openrtb", "ctv", "classification"]
+authors = [{ name = "Mixpeek" }]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Operating System :: OS Independent",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Libraries",
+]
 dependencies = [
   "pandas>=2.1",
   "rapidfuzz>=3.0",
@@ -35,3 +50,7 @@ packages = { find = { include = ["iab_mapper*"] } }
 iab_mapper = [
   "data/*.json"
 ]
+[project.urls]
+Homepage = "https://github.com/mixpeek/iab-mapper"
+Repository = "https://github.com/mixpeek/iab-mapper"
+Issues = "https://github.com/mixpeek/iab-mapper/issues"
