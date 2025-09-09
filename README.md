@@ -10,10 +10,30 @@
   <a href="https://github.com/mixpeek/iab-mapper/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
 </p>
 
-Map **IAB Content Taxonomy 2.x** labels/codes to **IAB 3.0** locally with a deterministic→fuzzy→(optional) local-embeddings pipeline.
-Outputs are **IAB-3.0–compatible IDs** suitable for OpenRTB/VAST, with optional **vector attributes** (Channel, Type, Format, Language, Source, Environment) and **SCD** awareness.
+Map **IAB Content Taxonomy 2.x** labels/codes to **IAB 3.0** locally with a deterministic → fuzzy → (optional) semantic pipeline.
+Outputs are **IAB‑3.0–compatible IDs** for OpenRTB/VAST, with optional **vector attributes** (Channel, Type, Format, Language, Source, Environment) and **SCD** awareness.
 
-> No external APIs. Runs fully local. LLMs are **not required**. You can enable local embeddings for tougher matches.
+> Local-first by default. No external APIs are required; LLM re‑rank is optional.
+
+---
+
+## 📚 Table of Contents
+
+- [✨ Features](#-features)
+- [Why migrate to IAB 3.0?](#-why-migrate-to-iab-30)
+- [How it works](#-how-it-works)
+- [🔧 Install](#-install)
+- [🚀 Quick Start](#-quick-start)
+- [🐍 Python API](#-python-api-alternative-to-cli)
+- [📥 Input Formats](#-input-formats)
+- [📤 Output Formats](#-output-formats)
+- [⚙️ Useful Flags](#️-useful-flags)
+- [🧩 Vectors](#-vectors-orthogonal-attributes)
+- [✅ IAB 3.0 Conformance Notes](#-iab-30-conformance-notes)
+- [📎 Official IAB References](#-official-iab-references)
+- [🧯 Troubleshooting](#-troubleshooting)
+- [📦 Example Commands](#-example-commands)
+- [📜 License](#-license)
 
 ---
 
@@ -24,6 +44,27 @@ Outputs are **IAB-3.0–compatible IDs** suitable for OpenRTB/VAST, with optiona
 - **SCD (Sensitive Content) flag** visibility and optional exclusion (`--drop-scd`)
 - Exports **CSV or JSON**; includes **OpenRTB** and **VAST CONTENTCAT** helpers
 - Local-only, reproducible, versioned catalogs
+
+---
+
+## 🔎 Why migrate to IAB 3.0?
+
+- 3.0 introduces clearer separation of primary topic “aboutness” vs. orthogonal vectors (e.g., news vs. opinion, formats, channels).
+- Better support for CTV/video, podcasts, games, and app stores.
+- Non‑backwards compatible in areas like News/Opinion and entertainment genres; careful migration is required.
+
+This tool makes migration practical: it emits valid 3.0 IDs and helps curate edge cases with overrides, synonyms, thresholds, and audit outputs.
+
+---
+
+## 🧠 How it works
+
+1) Normalize text and apply alias/exact matches via synonyms.
+2) Fuzzy retrieval (rapidfuzz | TF‑IDF | BM25) with configurable thresholds.
+3) Optional semantic augmentation with local embeddings (Sentence‑Transformers or TF‑IDF KNN).
+4) Optional local LLM re‑ranking (Ollama) for ordering only.
+5) Assemble outputs: topic IDs + vector IDs → OpenRTB `content.cat` with configurable `cattax`.
+6) SCD flags are surfaced and can be excluded with `--drop-scd`.
 
 ---
 
@@ -251,6 +292,18 @@ Each value maps to a **stable IAB 3.0 ID** that is appended to the `cat` array.
 
 ---
 
+## 📎 Official IAB References
+
+- Content Taxonomy 3.0 Implementation Guide (PDF): `https://iabtechlab.com/wp-content/uploads/2021/09/Implementation-Guide-Content-Taxonomy-3-0-pc-Sept2021.pdf`
+- IAB Tech Lab Content Taxonomy page: `https://iabtechlab.com/standards/content-taxonomy/`
+- Implementation guidance (historic mappings and migration notes):
+  - `https://github.com/InteractiveAdvertisingBureau/Taxonomies/blob/develop/implementation.md#content-21-to-ad-product-20-taxonomy-mapping-implementation-guidance`
+  - `https://github.com/InteractiveAdvertisingBureau/Taxonomies/blob/develop/Taxonomy%20Mappings/Ad%20Product%202.0%20to%20Content%202.1.tsv`
+  - `https://github.com/katieshell/Taxonomies/blob/main/implementation.md#implementation-guidance-for-content-1--content-2-mapping`
+  - `https://github.com/katieshell/Taxonomies/blob/main/implementation.md#migrating-from-content-taxonomy-10`
+
+---
+
 ## 🔬 Evaluation (recommended)
 Create a small gold set for your domain and run periodic checks:
 ```bash
@@ -293,5 +346,7 @@ mixpeek-iab-mapper sample_2x_codes.csv -o mapped.json --use-embeddings --drop-sc
 ---
 
 ## 📜 License
-TBD by Mixpeek. Include IAB attribution in your deployed UI/footer:
+MIT. See `LICENSE`.
+
+Include IAB attribution in your deployed UI/footer:
 > “IAB is a registered trademark of the Interactive Advertising Bureau. This tool is an independent utility built by Mixpeek for interoperability with IAB Content Taxonomy standards.”
