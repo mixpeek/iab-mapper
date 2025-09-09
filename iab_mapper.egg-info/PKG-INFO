@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: iab-mapper
+Version: 0.3.0
+Summary: Local IAB Content Taxonomy 2.x -> 3.0 mapper with vectors, SCD, OpenRTB/VAST exporters.
+Requires-Python: >=3.9
+Requires-Dist: pandas>=2.1
+Requires-Dist: rapidfuzz>=3.0
+Requires-Dist: typer>=0.12
+Requires-Dist: rich>=13.7
+Requires-Dist: numpy>=1.26
+Requires-Dist: orjson>=3.10
+Requires-Dist: tqdm>=4.66
+Requires-Dist: scikit-learn>=1.4
+Requires-Dist: requests>=2.31
+Provides-Extra: emb
+Requires-Dist: sentence-transformers>=3.0; extra == "emb"

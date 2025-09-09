@@ -1,0 +1,12 @@
+pandas>=2.1
+rapidfuzz>=3.0
+typer>=0.12
+rich>=13.7
+numpy>=1.26
+orjson>=3.10
+tqdm>=4.66
+scikit-learn>=1.4
+requests>=2.31
+
+[emb]
+sentence-transformers>=3.0

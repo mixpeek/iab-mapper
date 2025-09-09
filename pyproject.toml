@@ -1,0 +1,24 @@
+[project]
+name = "iab-mapper"
+version = "0.3.0"
+description = "Local IAB Content Taxonomy 2.x -> 3.0 mapper with vectors, SCD, OpenRTB/VAST exporters."
+requires-python = ">=3.9"
+dependencies = [
+  "pandas>=2.1",
+  "rapidfuzz>=3.0",
+  "typer>=0.12",
+  "rich>=13.7",
+  "numpy>=1.26",
+  "orjson>=3.10",
+  "tqdm>=4.66",
+  "scikit-learn>=1.4",
+  "requests>=2.31"
+]
+
+[project.optional-dependencies]
+emb = [
+  "sentence-transformers>=3.0"
+]
+
+[project.scripts]
+mixpeek-iab-mapper = "iab_mapper.cli:app"

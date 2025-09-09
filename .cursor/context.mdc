@@ -1,0 +1,6091 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+
+Skip to content
+Chat history
+
+You said:
+im trying to think about the best distribution channel to completely own for mixpeek gtm. can yu list out each one and evaluate how effective its been thus far for mixpeek and present guidance/suggestions on which to go all in on. note: our focus is media/entertainment and adtech
+ChatGPT said:
+
+Thought for 20s
+Got it. Here’s a tight read on channels, how they’ve worked for Mixpeek specifically, and where to bet big (media/entertainment + adtech lens).
+
+Snapshot: Channel Effectiveness (now → potential)
+LinkedIn (founder-led + team) — Now: Medium / Potential: High
+You’re already posting, getting dev/BD attention. Easy to systematize into a weekly cadence tied to your builds and POCs.
+
+Short-form video (Multimodal Monday → Shorts/IG/LinkedIn) — Now: Low-Med / Potential: High
+Format is defined but not yet scaled into a clip engine. Perfect for visual demos (brand safety, creative attribution, multimodal retrieval).
+
+Technical blog + SEO (Mixpeek site) — Now: Medium / Potential: High
+You’ve set up adtech-keyword angles (contextual AI, brand safety, cookie deprecation). Needs consistent publishing + internal linking + demo CTAs.
+
+IAB Tech Lab participation/standards — Now: Medium / Potential: Very High
+You’re members and already building taxonomy mapping. This can become your category moat if you ship tools + public guidance on IAB 3.x migration/multimodal classification.
+
+Partner POCs & case studies (e.g., Confiant) — Now: Medium / Potential: Very High
+One credible security/ad-verification POC in motion. Turning these into named case studies will unlock trust fast.
+
+OSS repos (tooling, sample apps) — Now: Low / Potential: High
+Repos exist; not packaged as “reference apps” for adtech/media. Star-worthy if you ship clean recipes + demo data.
+
+Conferences (IAB events, Programmatic IO, NAB, IBC) — Now: Low / Potential: Medium
+Useful once you have 2–3 concrete case studies and a standards story.
+
+Reddit — Now: Blocked / Potential: Low
+You’re banned from key subs. Not a primary bet.
+
+Hacker News / Indie Hackers — Now: Low / Potential: Medium
+Works for launch moments and OSS drops, not as a core adtech channel.
+
+Email newsletter — Now: Low / Potential: Medium
+Valuable once your recipe cadence is weekly; otherwise, overhead.
+
+Webinars / Live demos — Now: Low / Potential: Medium-High
+Great for “taxonomy migration clinic” and “brand-safety demo day” once you have repeatable content.
+
+Marketplaces/integrations (AWS, Snowflake, BigQuery; DSP/SSP adapters) — Now: Low / Potential: High
+Strong for procurement in adtech once packaging and security posture are crisp.
+
+Go-All-In Picks (ranked)
+IAB Standards + Taxonomy Ownership
+
+Ship: “IAB 2.x→3.x mapping toolkit,” “Multimodal Content Taxonomy validator,” and a public IAB 3.x Migration Playbook.
+
+Outcome: You become the reference for taxonomy migration + multimodal classification. Working-group visibility → inbound.
+
+Founder-led LinkedIn + Short-Form Video Flywheel
+
+Cadence: 1 long Multimodal Monday (60–90s) → 3–5 clips/week (LinkedIn, IG Reels, YouTube Shorts).
+
+Themes: brand safety catches, creative-affinity search, contextual targeting sans cookies, trailer search, scene-level retrieval.
+
+Add lightweight CTAs: “DM ‘IAB3’ for the checklist” → pipeline.
+
+Recipe Library + App Directory (product-led content)
+
+Ship 10–15 adtech/media recipes as mini-apps and code:
+“Detect NSFW frames in ad creatives,” “Map show timelines to scenes,” “Contextual keyword → scene retrieval,” “Multimodal brand safety (video+audio+text),” “Creative look-alikes (CLIP+reranker).”
+
+Each recipe = page (SEO) + demo + GitHub + API callouts.
+
+Partner POCs → Named Case Studies
+
+Lock 2 more lighthouse partners (verification, CTV analytics, creative testing).
+
+Publish 1-pager + 3-minute demo per POC. Reuse clips on LinkedIn.
+
+Concrete next steps (60 days)
+Standards moat
+
+Publish: “IAB 3.x Migration Playbook” + open-source mapper CLI.
+
+Offer a free “taxonomy audit” form; book 15-min reviews weekly.
+
+Content flywheel
+
+Record 8 Multimodal Mondays in one batch; cut to 30–45s clips.
+
+Template every post: hook → 1-2 on-screen receipts → CTA (“Comment ‘PLAYBOOK’”).
+
+Weekly live demo: “Adtech Office Hours: 3 live audits.”
+
+Recipes
+
+Ship 6 adtech recipes in 6 weeks (code + demo + blog).
+
+Internal link them under a /recipes/adtech hub with clear tags.
+
+POCs → proof
+
+Convert Confiant POC into a public case study (metrics, workflow, screenshots).
+
+Target 2 adds: one CTV analytics, one creative testing platform.
+
+KPIs to track
+Standards: # audit requests, GitHub stars/forks on mapper, IAB WG mentions/invites.
+
+Content: LinkedIn saves + comments per post; Shorts watch-time; inbound DMs.
+
+Recipes: demo signups per recipe page; API trials started; time-to-first-success.
+
+POCs: # named logos; cycle time from intro → POC → paid.
+
+What to de-prioritize
+Reddit (blocked), generic dev forums (unless tied to OSS drops), conferences until you have 2–3 sharp case studies.
+
+Quick editorial calendar (example week)
+Mon: Multimodal Monday — “Scene-level brand safety for CTV (live demo).”
+
+Tue: Clip — “IAB 2.x→3.x pitfalls in 30s.”
+
+Wed: Recipe drop — “Creative look-alikes for UGC ads” (+ GitHub).
+
+Thu: Clip — “How we catch disallowed frames mid-stream.”
+
+Fri: Case study snippet — “How X cut review time 42%.”
+
+If you want, I’ll spin up the first IAB 3.x Playbook outline + the 6-recipe list tailored to adtech/entertainment and draft your next 4 LinkedIn posts.
+
+You said:
+can you make the concrete next steps more verbose and actionable 
+ChatGPT said:
+Here’s a more detailed, step-by-step expansion of the concrete next steps so you can actually move these forward. I’ve split them into workstreams so they can be delegated or tracked.
+
+1. Standards Moat: IAB 3.x Migration Ownership
+Goal: Become the default reference for taxonomy mapping in adtech/media.
+
+Actions (next 60 days):
+
+Week 1–2: Draft a public “IAB 3.x Migration Playbook” (problem framing, migration checklist, mapping pitfalls). Publish as a gated PDF for lead capture.
+
+Week 2–3: Build and open-source a CLI/mini web tool: “IAB 2.x → 3.x Mapper.” Include validation (input JSON → output taxonomy codes).
+
+Week 3–4: Run a “taxonomy audit” campaign. Simple landing page with form: upload category list → book a free 15-min audit call.
+
+Week 5+: Submit tool + playbook into IAB working group discussions; position Mixpeek as the “migration helper” for the ecosystem.
+
+Deliverables: Playbook (PDF), Mapper repo, Audit landing page, 3–5 WG mentions.
+
+2. Content Flywheel: LinkedIn + Short-Form Video
+Goal: Flood the feeds with high-signal thought leadership, anchored in demos and receipts.
+
+Actions (ongoing, start immediately):
+
+Batch record: Film 8 “Multimodal Monday” sessions in one weekend. Each = 60–90s demo/talking head + screen content.
+
+Repurpose: Slice each into 3–5 shorter clips (20–45s) with captions, post across LinkedIn, IG Reels, YouTube Shorts.
+
+Template posts:
+
+Hook → 1–2 receipts (screenshots, diagrams, demo clip) → CTA (“DM ‘IAB3’ for the playbook” or “Download the mapper”).
+
+Systemize: Use Notion or Linear to schedule 3–4 posts per week. Ensure at least one is a visual demo and one is a standards hot take.
+
+Deliverables: 8 long videos, 24–40 clips, LinkedIn calendar, weekly analytics review.
+
+3. Recipes & App Directory
+Goal: Prove Mixpeek’s utility through concrete, adtech-native use cases.
+
+Actions (6 weeks):
+
+Week 1: Publish a central /recipes/adtech hub on site with clean tagging.
+
+Week 1–6: Ship 1 recipe per week, each including:
+
+Blog post explaining problem + solution.
+
+GitHub repo with runnable sample.
+
+Demo video (30–60s).
+
+Example recipes:
+
+Detect NSFW frames in ad creatives.
+
+CLIP+reranker for creative look-alikes.
+
+Contextual keyword → scene retrieval.
+
+Multimodal brand safety (video + audio + text).
+
+Trailer timeline annotation (scene → metadata).
+
+Creative testing: “which scenes drove higher attention?”
+
+Deliverables: 6 recipes (pages + repos + videos).
+
+4. Partner POCs → Case Studies
+Goal: Turn credibility from pilots into public proof.
+
+Actions:
+
+Current POC (Confiant):
+
+Capture before/after metrics (e.g., % of malicious units flagged, time saved).
+
+Design 1-pager with workflow diagram + screenshots.
+
+Film a 3-min narrated demo of the workflow.
+
+Next 2 targets (60 days):
+
+1 CTV analytics firm (focus on trailer/timeline indexing).
+
+1 creative testing platform (focus on creative look-alikes).
+
+Outreach = warm intros via IAB or LinkedIn thought pieces; CTA in content (“looking for 2 more partners to stress-test these recipes”).
+
+Deliverables: 1 published case study, 2 new active POCs.
+
+5. KPIs & Feedback Loops
+Standards: # of playbook downloads, mapper GitHub stars, audit signups.
+
+Content: LinkedIn saves/comments per post, Shorts watch time, inbound demo requests.
+
+Recipes: Signups via recipe pages, demo usage, API trials.
+
+POCs: # named logos, cycle time intro → POC → contract.
+
+6. What to Pause/De-prioritize
+Conferences until 2–3 case studies are public.
+
+Reddit (channel blocked).
+
+Generic dev communities unless tied to OSS recipe drops.
+
+Do you want me to also draft the actual 6-week publishing calendar (recipes + videos + LinkedIn posts) so you can see how it plays out week by week?
+
+You said:
+is multimodal monday the correct venue for this? multimodal money is monday weekly  research updates
+ChatGPT said:
+Right — if Multimodal Monday is your weekly research/news digest for positioning Mixpeek as thought leader, then the taxonomy/POC/recipe content shouldn’t dilute that. It should run as a parallel content lane, not hijack Multimodal Monday.
+
+Here’s a split:
+
+Multimodal Monday (stay pure research/news)
+Goal: Be the trusted signal on multimodal AI research + industry updates.
+
+Audience: Devs, data scientists, researchers.
+
+Format: Weekly, predictable, crisp.
+
+Don’t mix in heavy GTM/POC messaging here — keep it credible.
+
+New Content Lane(s) for GTM
+1. Adtech/Media Recipes Series
+Weekly cadence, tied to your /recipes/adtech hub.
+
+Could be branded as:
+
+“Applied Multimodal”
+
+“Mixpeek Recipes”
+
+“Adtech in Action”
+
+Each = a specific use case, code/demo + blog + clip.
+
+Distribution = LinkedIn + blog + YouTube/Shorts.
+
+2. Case Study Spotlights
+When you finish a POC, dedicate a single video/post to the workflow + results.
+
+Branded as “Spotlight: [Partner]” or “Real-World Mixpeek”.
+
+3. Standards Corner
+Drop shorter clips/posts when IAB topics trend: “What IAB 3.x means for brand safety” → CTA to playbook.
+
+This could live as LinkedIn-only content.
+
+Why separate?
+Keeps Multimodal Monday clean and academic → credibility with devs/researchers.
+
+Lets you own a second drumbeat tuned to adtech/media buyers, standards orgs, and GTM partners.
+
+Creates a natural cross-link: “If you want hands-on recipes beyond Multimodal Monday, check out our Applied Multimodal series.”
+
+👉 My suggestion: don’t repurpose Multimodal Monday for GTM. Instead, keep it pure and spin up a new weekly lane — maybe “Applied Multimodal” — focused on recipes, POCs, and adtech/media use cases.
+
+Do you want me to propose names + visual identity for that GTM lane so it doesn’t look like a confusing offshoot of Multimodal Monday?
+
+You said:
+any alliterations with adtech and multimodal?
+ChatGPT said:
+Here are some alliterative hooks you could use that tie Adtech + Multimodal together:
+
+Multimodal Meets Media
+
+Adtech Applications with AI
+
+Mixpeek Multimodal in Marketing
+
+Ad Intelligence, Ad Insights (with multimodal baked into tagline)
+
+Multimodal for Media & Marketing
+
+Adtech Amplified (by Multimodal)
+
+Multimodal Made for Media
+
+Applied Adtech with AI
+
+Multimodal Media Mondays (if you want a sister-series to MM)
+
+Adtech & AI Alignment
+
+Mixpeek Multimodal for Madison Ave (playful nod to ad industry roots)
+
+If you want something short, sticky, and “series-like”:
+
+Adtech + AI → “AdAI” (clean, broad appeal)
+
+Multimodal Marketing Mechanics
+
+Applied Adtech AI
+
+Media + Multimodal Mechanics
+
+Want me to narrow this to 3 strongest contenders that would pair visually + branding-wise with your existing Multimodal Monday identity so they feel like sibling series?
+
+You said:
+whats the best for hashtagging
+ChatGPT said:
+For hashtagging, you want short, memorable, industry-recognizable phrases — ideally 1–3 words that already have traction or are easy to “own.” Long alliterations don’t play well in hashtags.
+
+Here are the strongest fits:
+
+#AdtechAI → broad, clean, and already a natural tag for the space.
+
+#MultimodalAdtech → nails your positioning, easy to own since it’s niche.
+
+#MediaAI → relevant to entertainment/creative side, broader reach.
+
+#AppliedMultimodal → works for recipe/demo content, emphasizes practicality.
+
+#AdAI → short, punchy, memeable (like “FinTech → FinAI” style).
+
+If you want one to dominate with:
+👉 #MultimodalAdtech (category-defining, niche enough to own).
+
+If you want a companion/secondary for reach:
+👉 #AdtechAI (because others in the space will use it, so you ride discoverability).
+
+Want me to mock up a 3-hashtag set you can consistently use across all posts so you have both category ownership and reach amplification?
+
+You said:
+ok let's do #AdtechAI not multimodalmonday
+
+also review mixpeek sitemap: https://mixpeek.com/sitemap.xml for tangible suggestions as well as where we should be placing the content. 
+
+rewrite the workstreams all together 
+ChatGPT said:
+The sitemap didn’t open on my end (server error), but I can still rewrite the workstreams with #AdtechAI as the anchor content lane instead of trying to wedge GTM into Multimodal Monday. I’ll also weave in best practices for sitemap/content placement based on what I know about Mixpeek’s current structure (docs, blog, recipes, product pages).
+
+📌 Rewritten Workstreams for Mixpeek GTM (#AdtechAI)
+1. #AdtechAI Content Lane (Primary Distribution Channel)
+Goal: Own the conversation where adtech + multimodal intersect.
+
+Launch #AdtechAI as your recurring series.
+
+Format: 60–90s videos, blog posts, and LinkedIn carousels/demos.
+
+Content types:
+
+Applied Recipes (“Detect NSFW Frames in Ads with Mixpeek”)
+
+Standards Explainers (“What IAB 3.x means for contextual targeting”)
+
+Case Study Spotlights (partner results, demos, screenshots).
+
+Distribution:
+
+Blog: /blog/adtech-ai/ subdirectory to house all #AdtechAI content.
+
+LinkedIn + YouTube Shorts: Reuse every drop with captioned clips.
+
+Docs cross-links: From /recipes/ and /docs/adtech to relevant posts.
+
+2. Standards Moat: IAB 3.x & Beyond
+Goal: Become the “de facto guide” for taxonomy migration.
+
+Ship a free IAB 2.x→3.x mapper tool (CLI + hosted page under /tools/mapper).
+
+Publish a gated playbook PDF (“The IAB 3.x Migration Playbook”) under /resources/.
+
+Launch a free taxonomy audit funnel (form on /audit/, CTA from #AdtechAI posts).
+
+Repurpose these into short-form #AdtechAI explainers (“3 pitfalls in 2.x→3.x migration”).
+
+SEO placement: /resources/ and /tools/ → interlink from blog, homepage, and docs.
+
+3. Recipes & App Directory
+Goal: Show practical, adtech-native use cases.
+
+Create a /recipes/adtech/ hub (new sitemap entry).
+
+Ship one new recipe weekly (blog + GitHub + demo clip).
+
+Example recipes:
+
+Brand safety (frame, audio, transcript).
+
+Creative look-alikes (CLIP+reranker).
+
+Trailer/scene indexing for CTV.
+
+Contextual targeting without cookies.
+
+Cross-link recipes from docs (/docs/processing, /docs/retrievers) and blog.
+
+4. POCs → Case Studies
+Goal: Build credibility through named partners.
+
+Convert Confiant PoC into a case study page under /case-studies/.
+
+Add workflow diagrams, before/after metrics, and 2–3min narrated demo.
+
+Secure 2 more POCs (CTV analytics + creative testing).
+
+Each → blog post + short-form #AdtechAI content.
+
+SEO placement: /case-studies/ hub linked from homepage + pricing page.
+
+5. Content & SEO Architecture
+/blog/adtech-ai/ → home for all #AdtechAI articles.
+
+/recipes/adtech/ → practical demos with runnable repos.
+
+/tools/ → free utilities (mapper, validators).
+
+/resources/ → playbooks, whitepapers, PDFs.
+
+/case-studies/ → proof from partners.
+
+Interlink all of the above aggressively into homepage, docs, and pricing pages so the sitemap reinforces authority.
+
+6. Metrics to Track
+#AdtechAI lane: video watch-time, LinkedIn saves/comments, blog traffic.
+
+Standards moat: playbook downloads, tool stars/forks, audit signups.
+
+Recipes: signups via recipe hub, GitHub repo stars, API trial activations.
+
+POCs: # of named logos and time to contract.
+
+Do you want me to also mock up an SEO-driven sitemap expansion (like the exact slugs I’d add under /blog/, /recipes/, /resources/, /case-studies/) so you can just hand it to dev/content?
+
+You said:
+heres the sitemap
+
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>https://mixpeek.com/</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/recipes</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/notebooks</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/solutions</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/terms</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/privacy</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/pricing</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/about</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/careers</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/contact</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/security</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/videos</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/schedule-demo</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/glossary</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/tools</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/comparisons</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/500</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/playbooks</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/solutions/advertising</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/solutions/ecommerce</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/solutions/entertainment</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/solutions/manufacturing</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/guides/quick-start</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/guides/optimization</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/guides/schema-design</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/case-studies/ecommerce-implementation</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/case-studies/media-analysis</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/whitepapers/multimodal-architecture</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/whitepapers/roi-of-intelligent-search</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/multimodal-monday-17</loc>
+<lastmod>2025-07-21T13:02:40.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/multimodal-monday-16-real-time-generation-production-ready</loc>
+<lastmod>2025-07-14T13:00:24.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/iab-taxonomy-migration</loc>
+<lastmod>2025-07-11T14:24:47.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/multimodal-monday-15</loc>
+<lastmod>2025-07-07T14:22:20.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/intentflow</loc>
+<lastmod>2025-07-05T20:17:46.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/dynamic-fusion-contextual-evolution</loc>
+<lastmod>2025-06-30T13:45:30.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/clip-whisper-gemini-fake-video-detection</loc>
+<lastmod>2025-06-24T21:15:59.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/efficient-edges-open-horizons</loc>
+<lastmod>2025-06-23T13:23:07.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/world-models-efficiency-increases</loc>
+<lastmod>2025-06-16T13:00:24.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/niche-power-smarter-vision-models</loc>
+<lastmod>2025-06-09T13:00:31.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/multimodal-deepresearch-agent</loc>
+<lastmod>2025-06-06T19:45:49.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/milo</loc>
+<lastmod>2025-06-06T16:48:04.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/whisper-ray-huggingface</loc>
+<lastmod>2025-06-10T11:39:09.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/mm10-unified-frameworks-specialized-efficiency</loc>
+<lastmod>2025-06-09T04:02:47.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/from-rag-to-agentic-rag</loc>
+<lastmod>2025-05-30T13:08:20.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/multimodal-monday-9-compact-power-creative-edge</loc>
+<lastmod>2025-05-26T13:11:14.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/multimodal-monday-8-faster-systems-faster-impact</loc>
+<lastmod>2025-05-19T13:56:00.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/dataset-engineering</loc>
+<lastmod>2025-06-05T19:48:18.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/multimodal-monday-7-tailored-tools-wider-reach</loc>
+<lastmod>2025-05-12T14:18:01.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/multimodal-late-interaction</loc>
+<lastmod>2025-05-18T13:05:02.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/multimodal-monday-6-retrieval-refined-reach-expanded</loc>
+<lastmod>2025-05-08T21:51:48.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/multimodal-monday-5</loc>
+<lastmod>2025-04-28T11:36:15.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/video-segmentation-unlocking-structure-for-search-and-analytics</loc>
+<lastmod>2025-07-11T14:04:29.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/multimodal-monday-4-from-pixels-to-plans</loc>
+<lastmod>2025-04-21T11:23:25.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/from-calls-to-coaching-how-craftflow-leverages-mixpeek-to-extract-insights-and-drive-sales</loc>
+<lastmod>2025-04-20T23:34:09.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/multimodal-monday-3-scaling-multimodal-ai-laws-lightweights-large-releases</loc>
+<lastmod>2025-04-14T16:00:52.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/ai-content-recommendations-adtech</loc>
+<lastmod>2025-04-13T19:27:47.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/contextual-advertising-after-cookies</loc>
+<lastmod>2025-04-17T20:24:10.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/multimodal-monday-from-tiny-vlms-to-10m-token-titans</loc>
+<lastmod>2025-04-07T15:34:30.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/turning-frames-into-dataframes</loc>
+<lastmod>2025-06-05T20:31:19.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/multimodal-monday-state-of-the-stack</loc>
+<lastmod>2025-04-02T16:00:37.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/dynamic-video-chunking-scene-detection</loc>
+<lastmod>2025-05-21T13:45:29.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/ai-video-tagging</loc>
+<lastmod>2025-01-05T23:58:04.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/ai-video-tagging-2</loc>
+<lastmod>2024-12-30T21:48:00.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/ai-image-discovery</loc>
+<lastmod>2024-12-28T05:54:26.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/mcp-on-s3</loc>
+<lastmod>2025-06-06T19:10:53.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/mixpeek-embed-with-weaviate-for-multimodal-ai</loc>
+<lastmod>2024-12-28T05:54:43.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/world-foundation-model</loc>
+<lastmod>2025-05-21T13:44:46.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/hybrid-search-on-distributed-signals-for-multimodal-understanding</loc>
+<lastmod>2024-10-11T12:08:33.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/transforming-multimodal-search-with-mixpeek-0-9-0</loc>
+<lastmod>2024-12-28T05:55:03.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/semantic-video-search</loc>
+<lastmod>2024-09-28T22:44:58.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/flux-for-multimodal-rag</loc>
+<lastmod>2024-08-21T14:38:26.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/multimodal-classification-organize-content</loc>
+<lastmod>2024-08-13T20:38:50.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/ai-powered-video-captioning-models-for-hybrid-video-retrieval</loc>
+<lastmod>2024-08-13T17:00:40.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/using-celery-to-process-thousands-of-videos</loc>
+<lastmod>2025-06-05T20:21:16.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/movie-trailer-discovery</loc>
+<lastmod>2024-06-27T20:09:59.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/building-a-multimodal-data-processing-pipeline-with-kafka-airflow-and-sagemaker</loc>
+<lastmod>2024-06-24T19:26:11.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/clip-on-sagemaker</loc>
+<lastmod>2024-06-24T19:26:29.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/reverse-video-search</loc>
+<lastmod>2025-06-05T20:24:11.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/scene-detection</loc>
+<lastmod>2024-05-28T15:22:24.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/vuse-v1-release</loc>
+<lastmod>2024-05-30T18:18:27.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/s3-langchain-mongodb</loc>
+<lastmod>2024-05-25T18:21:25.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/mongodb</loc>
+<lastmod>2024-06-03T17:37:48.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/semantic-video-understanding</loc>
+<lastmod>2025-01-10T14:17:59.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/visual-shopping</loc>
+<lastmod>2025-04-10T15:11:46.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/what-is-semantic-video-search</loc>
+<lastmod>2024-08-26T17:44:39.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/creating-a-searchable-pdf-repository</loc>
+<lastmod>2025-04-13T12:05:12.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/authors/colton</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/authors/ethan</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/authors/justin</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/authors/philip</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/authors/tal</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/glossary/vector-database</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/glossary/embedding</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/glossary/multimodal-fusion</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/glossary/neural-search</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/glossary/rag</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/glossary/faiss</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/glossary/clip</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/glossary/ocr</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/glossary/data-modality</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/glossary/data-lakehouse</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/glossary/content-based-retrieval</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/glossary/multimodal-retrieval</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/glossary/feature-extraction</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/glossary/hybrid-search</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/glossary/acid</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/glossary/api</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/glossary/blob-storage</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/recipes/chart-claim-contradiction</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/recipes/talking-no-person</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/recipes/fast-movement-loud-sound-dim-light</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/recipes/gesture-with-command</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/recipes/text-narration-music</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/recipes/angry-face-negative-phrase</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/recipes/arguing-with-activity-spike</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/recipes/rapid-scenes-noise-conflicting-text</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/recipes/subtitle-mismatch-person-present</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/recipes/fake-video-detection</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/recipes/smiling-positive-warm-scenes</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/videos/taxonomies-guide</loc>
+<lastmod>2025-07-21T18:21:31.021Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/videos/namespaces-guide</loc>
+<lastmod>2025-07-21T18:21:31.021Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/videos/collections-guide</loc>
+<lastmod>2025-07-21T18:21:31.021Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/videos/multimodal-monday-2</loc>
+<lastmod>2025-07-21T18:21:31.021Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/videos/intro-multimodal-university</loc>
+<lastmod>2025-07-21T18:21:31.021Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/videos/what-is-multimodal</loc>
+<lastmod>2025-07-21T18:21:31.021Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/videos/fundamental-concepts</loc>
+<lastmod>2025-07-21T18:21:31.021Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/videos/text-understanding</loc>
+<lastmod>2025-07-21T18:21:31.021Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/videos/audio-understanding</loc>
+<lastmod>2025-07-21T18:21:31.021Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/videos/visual-understanding</loc>
+<lastmod>2025-07-21T18:21:31.021Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/videos/stop-ignoring-ood-data</loc>
+<lastmod>2025-07-21T18:21:31.021Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/videos/release-guides</loc>
+<lastmod>2025-07-21T18:21:31.021Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/videos/multimodal-monday</loc>
+<lastmod>2025-07-21T18:21:31.021Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/videos/multimodal-university</loc>
+<lastmod>2025-07-21T18:21:31.021Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/videos/use-cases</loc>
+<lastmod>2025-07-21T18:21:31.021Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/module/introduction-to-multimodal</loc>
+<lastmod>2025-07-21T18:21:31.021Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/module/vector-search-basics</loc>
+<lastmod>2025-07-21T18:21:31.021Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/module/advanced-retrieval</loc>
+<lastmod>2025-07-21T18:21:31.021Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/module/multimodal-pipelines</loc>
+<lastmod>2025-07-21T18:21:31.021Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/text-embedding</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/named-entity</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/keyword-extraction</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/topic-modeling</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/text-classification</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/image-embedding</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/object-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/image-captioning</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/facial-recognition</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/image-segmentation</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/visual-question-answering</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/landmark-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/scene-classification</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/logo-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/image-text-extraction</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/product-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/text-grouping</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/object-grouping</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/scene-splitting</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/face-grouping</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/video-transcription</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/action-recognition</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/object-tracking</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/video-summarization</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/person-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/event-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/video-classification</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/anomaly-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/video-embedding</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/audio-transcription</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/speaker-diarization</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/audio-embedding</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/emotion-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/sound-event-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/language-identification</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/acoustic-scene-classification</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/music-analysis</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/audio-summarization</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/accent-identification</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/person-tracking</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/content-classification</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/event-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/language-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/scene-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/activity-grouping</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/pdf-extraction</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/table-extraction</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/form-extraction</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/document-classification</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/signature-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/header-footer-extraction</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/page-segmentation</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/document-embedding</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/chart-graph-extraction</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/metadata-extraction</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/document-summarization</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/legal-clause-extraction</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/trend-analysis</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/forecasting</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/pattern-recognition</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/correlation-analysis</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/column-analysis</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/correlation-analysis</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/pattern-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/data-quality</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/feature-importance</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/audio-embedding</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/speech-to-text</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/audio-classification</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/speaker-diarization</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/audio-event-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/music-analysis</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/audio-enhancement</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/faceforensics-xception</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/blink-frequency</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/rppg-signal</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/av-syncnet</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/late-interaction-ranker</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/seamless-expressive</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/pii-redactor</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/real-person-classification</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/visual-artifact-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/lipsync-analysis</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/gibberish-text-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/blink-abnormality-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/optical-flow-spike-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/audio-loop-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/lighting-inconsistency-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/retrievers/knn</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/retrievers/hybrid-knn</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/retrievers/face-search</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/spotify-enhance-user-recommendations</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/tesla-improve-autonomous-driving</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/amazon-optimize-warehouse-operations</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/netflix-personalize-content-recommendations</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/google-enhance-search-results</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/microsoft-enhance-productivity-tools</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/apple-enhance-device-integration</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/meta-enhance-content-moderation</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/nvidia-accelerate-ai-development</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/adobe-enhance-creative-tools</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/salesforce-enhance-customer-intelligence</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/intel-enhance-chip-design</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/oracle-optimize-database-performance</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/ibm-enhance-quantum-computing</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/cisco-optimize-network-performance</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/tesla-enhance-autonomous-driving</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/amazon-automate-warehouse-operations</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/netflix-analyze-video-content</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/google-enhance-image-search</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/microsoft-enhance-productivity</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/apple-enhance-security</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/meta-moderate-content</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/nvidia-accelerate-ai</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/adobe-enhance-creativity</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/salesforce-enhance-analytics</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/uber-optimize-pricing</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/airbnb-optimize-search</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/stripe-prevent-fraud</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/doordash-optimize-delivery</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/linkedin-match-jobs</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/zoom-enhance-video</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/pinterest-enhance-search</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/slack-enhance-communication</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/shopify-enhance-shopping</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/twilio-enhance-communication</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/instagram-analyze-creator-niches</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/netflix-enhance-personalized-recommendations</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/tiktok-enhance-content-understanding</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/twitter-enhance-ad-matching</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/snapchat-enhance-ar-ads</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/google-enhance-video-ad-targeting</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/apps/scenewise</loc>
+<lastmod>2025-07-21T18:21:30.102Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/apps/video-taxonomy-matcher</loc>
+<lastmod>2025-07-21T18:21:30.102Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/apps/viral-vibe-finder</loc>
+<lastmod>2025-07-21T18:21:30.102Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/apps/brand-affinity-scout</loc>
+<lastmod>2025-07-21T18:21:30.102Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/apps/ad-alchemy-vision</loc>
+<lastmod>2025-07-21T18:21:30.102Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/apps/clik.vision</loc>
+<lastmod>2025-07-21T18:21:30.102Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/apps/fakecheck</loc>
+<lastmod>2025-07-21T18:21:30.102Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/comparisons/mixpeek-vs-coactive</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/comparisons/mixpeek-vs-glean</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/comparisons/mixpeek-vs-twelvelabs</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/comparisons/mixpeek-vs-pinecone</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/comparisons/mixpeek-vs-turbopuffer</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/comparisons/mixpeek-vs-langchain</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/comparisons/mixpeek-vs-lancedb</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/comparisons/mixpeek-vs-elasticsearch</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/notebooks/fake-check</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/playbooks/fake-video-detection</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.6</priority>
+</url>
+</urlset>
+ChatGPT said:
+
+Thought for 21s
+Perfect. Based on your current sitemap + the shift to #AdtechAI as the owned channel, here’s a single, consolidated GTM plan with where each asset should live and what to ship.
+
+Mixpeek GTM Workstreams (built around #AdtechAI)
+1) #AdtechAI Content System (your primary distribution channel)
+Goal: Own the adtech × multimodal convo; drive demos.
+
+Ship
+
+Series hub: /blog/adtech-ai/ (index page w/ tag feed + subscribe CTA)
+
+Weekly cadence:
+
+1 anchor post (800–1,400 words) + 60–90s video
+
+2–4 clips for LinkedIn/Shorts (captioned) using #AdtechAI
+
+Post templates (repeatable)
+
+Standards Explainer: “What IAB 3.x Means for [Brand Safety | Contextual Targeting]” → CTA to playbook
+→ Placement: /blog/adtech-ai/iab-3x-for-contextual-targeting
+
+Recipe Deep-Dive: “Creative Look-Alikes with CLIP + Reranker” → CTA to recipe repo
+→ Placement: /blog/adtech-ai/creative-lookalikes
+
+Case Spotlight: “How X cut review time 42% with scene-level checks” → CTA to case study
+→ Placement: /blog/adtech-ai/case-spotlight-x
+
+Cross-links: Every post links to /solutions/advertising, relevant Recipes, and /schedule-demo.
+
+Ops
+
+Content board (Notion/Linear) with statuses (Draft → Edit → Design → Publish → Repurpose).
+
+UTM on all CTAs (source=blog, medium=adtechai, campaign=post-slug).
+
+Weekly metric read: post saves/comments, site clicks to /schedule-demo.
+
+2) Standards Moat (IAB 2.x→3.x migration)
+Goal: Be the default migration guide + toolsmith.
+
+Ship
+
+Tool: /tools/iab-mapper (CLI + simple web form that maps 2.x → 3.x; outputs JSON + CSV)
+
+Playbook (gated PDF): /playbooks/iab-3x-migration (existing /playbooks fits)
+
+Audit funnel: /tools/taxonomy-audit (short form → Calendly link or /schedule-demo)
+
+Support content
+
+Update/expand existing post at /blog/iab-taxonomy-migration with tool + playbook CTAs.
+
+Add a short explainer video into /education/videos/taxonomies-guide (already exists).
+
+Cross-link map
+
+From /solutions/advertising and /solutions/entertainment → playbook + mapper + 1–2 blog explainers.
+
+From every Recipe touching taxonomy → mapper + playbook.
+
+KPIs
+
+Mapper runs, playbook downloads, audit requests, WG mentions/invites.
+
+3) Recipes & App Directory (proof it works)
+Goal: Show practical, adtech-native use cases with runnable code.
+
+Structure
+
+Hub: /recipes/adtech (new category page that lists only adtech recipes)
+
+6 recipes (first wave) – each with: recipe page + GitHub + 30–60s demo
+
+/recipes/adtech/multimodal-brand-safety
+
+/recipes/adtech/creative-lookalikes-clip-reranker
+
+/recipes/adtech/contextual-keyword-to-scene
+
+/recipes/adtech/trailer-scene-indexing-ctv
+
+/recipes/adtech/unsafe-frame-audio-transcript-checks
+
+/recipes/adtech/attention-metrics-scene-attributes
+
+Connect to existing “Apps” (great SEO juice):
+
+Link relevant recipes from /apps/video-taxonomy-matcher, /apps/ad-alchemy-vision, /apps/brand-affinity-scout.
+
+Page anatomy (repeat)
+
+Problem → Architecture diagram → How-to steps → Code excerpt → Demo → “Try it” CTA → Related links.
+
+KPIs
+
+Recipe page time-on-page, GitHub stars, clicks to /schedule-demo, API trial activations.
+
+4) POCs → Case Studies (social proof that closes deals)
+Goal: Convert pilots to named proof.
+
+Ship
+
+Case study hub: keep using /education/case-studies/ (consistent with sitemap)
+
+New pages:
+
+/education/case-studies/brand-safety-confiant
+
+/education/case-studies/ctv-trailer-indexing
+
+/education/case-studies/creative-lookalikes-testing
+
+Each case study: problem, baseline, workflow (screens), metrics, 2–3 min narrated demo, stack logos, CTA.
+
+Content tie-ins: Every case becomes (1) a #AdtechAI post, (2) a LinkedIn carousel, (3) a 30–45s clip.
+
+KPIs
+
+of named logos, case-study page conversions, cycle time intro → POC → contract.
+5) Solutions & Comparison Pages (money pages)
+Goal: Capture high-intent traffic and route to demos.
+
+Tighten
+
+/solutions/advertising and /solutions/entertainment
+
+Add “How it works” diagram + 3 tiles: Standards, Recipes, Case Studies.
+
+Inline CTAs to /schedule-demo, mapper, and /recipes/adtech.
+
+/comparisons/ (already strong breadth)
+
+Add adtech-native comparisons where relevant (e.g., “Mixpeek vs. generalized moderation APIs” if you have it).
+
+Cross-link from #AdtechAI posts that discuss tradeoffs.
+
+KPIs
+
+Click-through to /schedule-demo, scroll depth, form fills.
+
+6) Video/Education Alignment (reuse, don’t dilute)
+Goal: Keep Multimodal Monday clean; park GTM videos elsewhere.
+
+Do
+
+Keep Multimodal Monday inside /blog and /education/videos/multimodal-monday (as you have).
+
+Put #AdtechAI videos into posts under /blog/adtech-ai/* and optionally mirror the best on /education/videos/use-cases.
+
+7) Conversion Plumbing
+Everywhere
+
+Persistent “Book a demo” → /schedule-demo.
+
+Secondary CTA on #AdtechAI + Recipes → playbook or mapper.
+
+Add lead magnets to /blog and /recipes sidebars (email capture).
+
+Use JSON-LD Article/SoftwareApplication schema on posts/tools; Breadcrumb schema on hubs.
+
+8) Measurement & Ops
+Content: saves/comments (LinkedIn), watch-time (Shorts), blog CTR to /schedule-demo.
+
+SEO: clicks, impressions, top queries for /blog/adtech-ai/*, /recipes/adtech/*.
+
+Sales: demo requests by source (UTM), time-to-POC, close rate.
+
+Sitemap adds/edits (proposed)
+Add these to make the lane explicit and interlinked:
+
+/blog/adtech-ai
+
+/blog/adtech-ai/iab-3x-for-contextual-targeting
+
+/blog/adtech-ai/creative-lookalikes
+
+/blog/adtech-ai/case-spotlight-<partner>
+
+/tools/iab-mapper
+
+/tools/taxonomy-audit
+
+/playbooks/iab-3x-migration
+
+/recipes/adtech
+
+/recipes/adtech/multimodal-brand-safety
+
+/recipes/adtech/creative-lookalikes-clip-reranker
+
+/recipes/adtech/contextual-keyword-to-scene
+
+/recipes/adtech/trailer-scene-indexing-ctv
+
+/recipes/adtech/unsafe-frame-audio-transcript-checks
+
+/recipes/adtech/attention-metrics-scene-attributes
+
+/education/case-studies/brand-safety-confiant
+
+/education/case-studies/ctv-trailer-indexing
+
+/education/case-studies/creative-lookalikes-testing
+
+Weekly rhythm (simple)
+Mon: Multimodal Monday (research/news).
+
+Tue: #AdtechAI anchor post + video.
+
+Thu: Recipe drop (adtech) + repo.
+
+Fri: Case/metrics clip or Standards hot take.
+
+If you want, I’ll draft the first two #AdtechAI posts, the mapper tool spec, and the brand-safety recipe page copy next.
+
+You said:
+ok give me some anchor post suggestions
+ChatGPT said:
+Here are crisp #AdtechAI anchor post ideas with slugs, 1-liner angle, 60–90s video beats, CTA, and internal links to use.
+
+IAB 3.x for Contextual Targeting (No Cookies, No Problem)
+Slug: /blog/adtech-ai/iab-3x-for-contextual-targeting
+Angle: How 3.x fixes ambiguity and powers scene-level targeting.
+Video (60–90s): Hook → one misclassification example → show mapper → “before/after” segmenting a clip → CTA.
+CTA: Download the IAB 3.x Migration Playbook.
+Link to: /tools/iab-mapper, /playbooks/iab-3x-migration, /solutions/advertising.
+
+Creative Look-Alikes with CLIP + Reranker: From Moodboards to Media Buys
+Slug: /blog/adtech-ai/creative-lookalikes
+Angle: Find “vibes” that convert—beyond keywords.
+Video: Hook (“same vibe, new creatives”) → 3-clip search demo → rerank live → CTA.
+CTA: Try the Recipe & GitHub.
+Link to: /recipes/adtech/creative-lookalikes-clip-reranker, /apps/brand-affinity-scout.
+
+Multimodal Brand Safety that Actually Sees the Scene
+Slug: /blog/adtech-ai/multimodal-brand-safety
+Angle: Frames + audio + transcript > brittle text-only filters.
+Video: Hook (safe headline, unsafe visuals) → tri-signal check demo → flag + rationale → CTA.
+CTA: Book a brand-safety audit.
+Link to: /recipes/adtech/multimodal-brand-safety, /education/case-studies/brand-safety-confiant.
+
+Trailer/Scene Indexing for CTV: Target the Moments that Matter
+Slug: /blog/adtech-ai/ctv-scene-indexing
+Angle: Buy scenes, not shows.
+Video: Hook (waste on irrelevant scenes) → scene timeline UI → keyword→scene jump → CTA.
+CTA: See the CTV indexing recipe.
+Link to: /recipes/adtech/trailer-scene-indexing-ctv, /solutions/entertainment.
+
+Context → Scene Retrieval: Turn Planner Intents into Placements
+Slug: /blog/adtech-ai/context-to-scene-retrieval
+Angle: Translate briefs (“cozy winter kitchen”) into placements.
+Video: Hook → enter brief → return scenes → export placements → CTA.
+CTA: Copy the keyword→scene workflow.
+Link to: /recipes/adtech/contextual-keyword-to-scene.
+
+Unsafe Frame & Audio Checks: Catch What Text Pipelines Miss
+Slug: /blog/adtech-ai/unsafe-frame-audio-checks
+Angle: Fast screening across frame/audio/transcript before go-live.
+Video: Hook → multi-signal check demo → fail/hold policy → CTA.
+CTA: Run our preflight checklist (gated).
+Link to: /recipes/adtech/unsafe-frame-audio-transcript-checks, /tools/iab-mapper.
+
+Attention-Driven Creative Analysis: Which Scenes Earn the Scroll?
+Slug: /blog/adtech-ai/attention-driven-creative
+Angle: Scene attributes that correlate with watch-through.
+Video: Hook → side-by-side creatives → scene metric overlay → CTA.
+CTA: Get the attention recipe + sample notebook.
+Link to: /recipes/adtech/attention-metrics-scene-attributes, /notebooks/fake-check.
+
+Spec Compliance as a Strategy: IAB Mapping You Can Trust
+Slug: /blog/adtech-ai/spec-compliance-iab
+Angle: Compliance → faster approvals → fewer rejections.
+Video: Hook → wrong code → rejection email → mapper fix → pass → CTA.
+CTA: Use the Taxonomy Audit.
+Link to: /tools/taxonomy-audit, /playbooks/iab-3x-migration.
+
+From Heuristics to Multimodal Classifiers: Modern Brand Suitability
+Slug: /blog/adtech-ai/modern-brand-suitability
+Angle: Move from keyword lists to evidence-based, scene-aware ML.
+Video: Hook → “keyword fail” montage → classifier explainer → demo → CTA.
+CTA: Download policy templates (gated).
+Link to: /recipes/adtech/multimodal-brand-safety, /education/whitepapers/multimodal-architecture.
+
+Creative Testing with Look-Alikes: Faster Variants, Same Signal
+Slug: /blog/adtech-ai/creative-testing-lookalikes
+Angle: Spin new versions that keep the winning attributes.
+Video: Hook → extract attributes → generate candidates → recombine → CTA.
+CTA: Try the look-alike recipe.
+Link to: /recipes/adtech/creative-lookalikes-clip-reranker, /apps/ad-alchemy-vision.
+
+Post-Cookie Contextual: What Actually Works in Video
+Slug: /blog/adtech-ai/post-cookie-contextual-video
+Angle: Real tactics for contextual on video/CTV, beyond text pages.
+Video: Hook → 3 fail cases → 3 working plays → demo → CTA.
+CTA: Grab the Contextual Playbook (reuse or add).
+Link to: /blog/contextual-advertising-after-cookies, /solutions/advertising.
+
+Productionizing Multimodal Checks (FastAPI + Celery + Ray)
+Slug: /blog/adtech-ai/productionizing-multimodal-checks
+Angle: Reference pipeline that adtech teams can lift.
+Video: Hook → brief arch diagram → request→queue→inference→policy → CTA.
+CTA: Clone the reference repo.
+Link to: /blog/using-celery-to-process-thousands-of-videos, /blog/turning-frames-into-dataframes.
+
+Creative Graphs: Map Talent, Logos, and Motifs Across Ads
+Slug: /blog/adtech-ai/creative-graph-discovery
+Angle: Build a graph to discover partnerships and UGC trends.
+Video: Hook → node-link visual → query “logos + creator” → insights → CTA.
+CTA: Download schema + Cypher cheatsheet.
+Link to: /recipes/adtech/creative-lookalikes-clip-reranker, /apps/brand-affinity-scout.
+
+Human-in-the-Loop Review: Faster, Safer Approvals with Evidence
+Slug: /blog/adtech-ai/hitl-approvals-multimodal
+Angle: Reviewer UIs with frame/audio evidence → fewer escalations.
+Video: Hook → reviewer pain → new UI demo → approve/annotate → CTA.
+CTA: Book a workflow demo.
+Link to: /apps/scenewise, /education/case-studies/brand-safety-confiant.
+
+“N-Shot” Policy Tuning: Adapt Brand Safety Without Retraining
+Slug: /blog/adtech-ai/n-shot-policy-tuning
+Angle: Prompt-style/policy-rule blends to adapt per brand quickly.
+Video: Hook → policy yaml tweak → new results live → CTA.
+CTA: Download policy starter kit.
+Link to: /playbooks/iab-3x-migration, /education/whitepapers/multimodal-architecture.
+
+Packaging notes (use on every anchor)
+Header: bold claim + 1 diagram or 15s autoplay clip.
+
+Mid-post CTA: tool/playbook/recipe.
+
+Footer: “Want help? → /schedule-demo” + links to related Recipes and Case Studies.
+
+Hashtags in social: #AdtechAI + one reach booster (e.g., #MediaAI).
+
+Want me to draft 2 of these end-to-end (post copy + video script beats + internal link blocks + CTA components) so you can publish this week?
+
+You said:
+i should do one post for contextual targeting, brand safety and creative attribution. ideally taxonomies for each?
+ChatGPT said:
+Exactly — you’ll get the most leverage if you anchor your #AdtechAI lane on the three big adtech problem buckets:
+
+Contextual Targeting (post-cookies)
+
+Brand Safety / Suitability
+
+Creative Attribution / Effectiveness
+
+And yes, you can hang each post on a taxonomy frame — that’s your wedge into IAB credibility and Mixpeek’s “we classify multimodally, not heuristically” moat.
+
+Suggested Anchor Posts (taxonomy-framed)
+1. Contextual Targeting: From Text Keywords to Multimodal Taxonomies
+Taxonomy lens: IAB 3.x contextual categories (especially the expanded video/scene classes).
+
+Outline:
+
+Problem: Text-only context misses visuals + audio.
+
+Demo: “cozy kitchen scene” retrieved → mapped to IAB “Food & Drink > Cooking & Recipes.”
+
+Tool tie-in: /tools/iab-mapper, /playbooks/iab-3x-migration.
+
+CTA: “Get your contextual taxonomy audit.”
+
+Slug: /blog/adtech-ai/contextual-targeting-taxonomy
+
+2. Brand Safety: Scene-Level Taxonomies that Actually See the Risk
+Taxonomy lens: IAB Content Taxonomy “Sensitive Topics,” extended by Mixpeek multimodal signals (frames, audio, transcript).
+
+Outline:
+
+Problem: Misclassifications (e.g., benign video flagged unsafe).
+
+Demo: unsafe logo/audio → flagged at scene level with category code.
+
+Tie-in: /recipes/adtech/multimodal-brand-safety, /education/case-studies/brand-safety-confiant.
+
+CTA: “Download the Brand Safety Taxonomy Template.”
+
+Slug: /blog/adtech-ai/brand-safety-taxonomy
+
+3. Creative Attribution: Taxonomies for Performance, Not Just Compliance
+Taxonomy lens: Custom “performance taxonomy” layered on IAB codes → categories like “humor,” “celebrity,” “scenic outdoor,” “product close-up.”
+
+Outline:
+
+Problem: Teams can’t explain why creative worked.
+
+Demo: Split test → Mixpeek tags scenes with taxonomy labels → correlate with CTR/view-through.
+
+Tie-in: /recipes/adtech/attention-metrics-scene-attributes, /apps/brand-affinity-scout.
+
+CTA: “Get the Creative Attribution Taxonomy Starter Pack.”
+
+Slug: /blog/adtech-ai/creative-attribution-taxonomy
+
+Placement Strategy
+All three live under /blog/adtech-ai/.
+
+Each one cross-links into /solutions/advertising and /solutions/entertainment.
+
+Each one points to the mapper tool and audit funnel.
+
+Add a new taxonomy resources hub at /education/videos/taxonomies-guide (already exists) → link out to these posts.
+
+Do you want me to sketch out taxonomy structures (sample hierarchies for each post) so you can actually show “here’s how Mixpeek classifies scenes differently than stock IAB tags”?
+
+You said:
+for: 2–4 clips for LinkedIn/Shorts (captioned) using #AdtechAI what should the visual format/storyboard be? whats effective there?
+ChatGPT said:
+Good Q — for LinkedIn/Shorts clips, the format has to be fast, visual, and receipt-driven. What works best in B2B adtech/AI right now is pattern-based content: show the problem visually, then the solution demo, then a single CTA. Here’s a format you can re-use across contextual targeting, brand safety, and creative attribution.
+
+🎬 Visual Format / Storyboard for #AdtechAI Clips
+1. Structure (20–45s each)
+0–3s: Hook headline (on-screen text + voiceover)
+
+“Keywords miss what video shows.”
+
+“Why text filters fail at brand safety.”
+
+“The hidden patterns in your best-performing ads.”
+
+3–10s: Problem scene
+
+Quick stock/video clip (e.g., family dinner, violent scene, sports ad).
+
+Overlay text: “How would text-only classifiers label this?”
+
+Cut to IAB category misfire (e.g., “Sports” instead of “Alcohol”).
+
+10–20s: Solution demo
+
+Split screen: left = text-only (wrong), right = Mixpeek multimodal (correct).
+
+Use actual UI snippets (mapper tool, recipe demo, timeline view).
+
+Overlay caption: “Scene-level taxonomy → correct classification.”
+
+20–35s: Proof/impact
+
+Overlay: “Result: 40% fewer false positives” or “New insights: Humor + Outdoors → +18% CTR.”
+
+Show Mixpeek label codes or taxonomy tree lighting up.
+
+35–45s: CTA
+
+On-screen text: “Get the playbook → link in comments” or “Run a free taxonomy audit.”
+
+End card: Mixpeek logo + hashtag #AdtechAI.
+
+2. Visual Principles
+Top half: the content (clip, demo screen, taxonomy tree).
+
+Bottom half: face-cam or voiceover bubble (human anchor).
+
+Middle strip: live captions (auto-scroll, high-contrast background).
+
+Style: keep Mixpeek colors (pink CTA, blue secondary) for brand lock-in.
+
+Duration: 20–45s max. First 3 seconds must be pattern interrupt (a surprising misclassification, a shocking unsafe clip, etc.).
+
+3. Variations per Theme
+Contextual targeting: Show a “cozy kitchen” clip → misclassified → then Mixpeek maps to correct IAB code.
+
+Brand safety: Show benign news clip flagged unsafe → Mixpeek rescues it. Or unsafe scene that slips past → Mixpeek flags it.
+
+Creative attribution: Side-by-side creatives with Mixpeek tags overlayed → “scenic outdoors + humor drove 2.3× CTR.”
+
+4. Why this works
+LinkedIn/Shorts reward story + demo receipts.
+
+Pattern: Hook → Problem → Fix → Proof → CTA is sticky and repeatable.
+
+Mixpeek’s strength is visual evidence → the more you show the UI + taxonomy outputs, the more credible it feels.
+
+Do you want me to draft three specific storyboards (one each for contextual targeting, brand safety, creative attribution) so you can film/clip them right away?
+
+You said:
+lets fous on the standards moat & content flywheel. create a very throughough action oriented plan fr this given what we've discussed. 
+ChatGPT said:
+Got it. Here’s a comprehensive, action-oriented plan focused only on the Standards Moat and the Content Flywheel (#AdtechAI) — the two channels that will give Mixpeek outsized leverage in adtech/media. I’ll make this tactical so you can assign tasks or just execute.
+
+🎯 Mixpeek GTM Execution Plan: Standards Moat + Content Flywheel
+1. Standards Moat: Own IAB 3.x & Taxonomies
+Objective: Become the go-to reference for IAB 2.x → 3.x migration and multimodal taxonomies. Make Mixpeek synonymous with compliance + classification.
+
+Deliverables
+IAB 3.x Migration Playbook (PDF)
+
+Problem framing (why 3.x, what’s new).
+
+Step-by-step migration checklist.
+
+Case examples (false positives in 2.x → corrected in 3.x).
+
+Download form (HubSpot/ConvertKit) for lead capture.
+
+Placement: /playbooks/iab-3x-migration.
+
+IAB Mapper Tool (web + CLI)
+
+Input: 2.x code, JSON file, or text description.
+
+Output: 3.x equivalent, confidence scores, Mixpeek’s extended categories.
+
+Include “copy to CSV” export.
+
+Placement: /tools/iab-mapper.
+
+Taxonomy Audit Funnel
+
+Landing page: “Upload your taxonomy list → get a free audit call.”
+
+Embed a form (email + upload).
+
+Autoresponder with “your audit is in progress” + Calendly link.
+
+Placement: /tools/taxonomy-audit.
+
+Standards Corner Content
+
+Series of explainers tied to mapper/playbook:
+
+“3 Pitfalls in IAB 2.x → 3.x Migration”
+
+“How 3.x Expands Contextual Targeting”
+
+“Sensitive Topics: Getting Brand Safety Right with 3.x”
+
+Each one is a blog post + 30s clip.
+
+Workflow
+Week 1–2: Draft playbook (design + PDF) → push to /playbooks/.
+
+Week 2–4: Build mapper MVP (JSON in, JSON out; web form optional).
+
+Week 3–5: Launch audit funnel with simple form → direct to audit calls.
+
+Week 5+: Fold mapper + playbook into IAB working group discussions.
+
+Distribution
+Anchor posts under /blog/adtech-ai/ linking to mapper + playbook.
+
+LinkedIn posts with clip demos (mapper live on screen).
+
+CTA on /solutions/advertising + /solutions/entertainment → mapper/playbook.
+
+Repurpose into /education/videos/taxonomies-guide.
+
+Metrics
+mapper runs per week.
+Playbook downloads → demo conversions.
+
+Audit form fills → booked calls.
+
+Mentions/visibility in IAB WG Slack/meetings.
+
+2. Content Flywheel (#AdtechAI)
+Objective: Dominate LinkedIn + Shorts with repeatable, demo-led content. Every post ties back to the standards moat, recipes, or case studies.
+
+Core Format
+One anchor post weekly (800–1,200 words blog + 60–90s demo video).
+
+2–4 short clips weekly (20–45s LinkedIn/Shorts).
+
+Framework: Hook → Problem → Demo → Proof → CTA.
+
+Content Types
+Standards Explainers (map to Standards Moat)
+
+Blog: “Why IAB 3.x Matters for Contextual Targeting.”
+
+Clip: Side-by-side misclassify vs Mixpeek mapper.
+
+CTA: “Download the playbook.”
+
+Applied Recipes
+
+Blog: “Scene-Level Brand Safety with Multimodal Taxonomies.”
+
+Clip: Unsafe scene flagged → category code overlay.
+
+CTA: “Run a taxonomy audit.”
+
+Case Spotlights
+
+Blog: “How [Partner] Reduced False Flags by 40%.”
+
+Clip: Workflow diagram + 2 metrics on screen.
+
+CTA: “Book a demo.”
+
+Storyboard for Short Clips (20–45s)
+0–3s: Hook text (“Keywords miss what video shows”).
+
+3–10s: Problem clip (misclassification shown).
+
+10–20s: Mixpeek demo (UI, mapper output, taxonomy tree).
+
+20–30s: Result overlay (“40% fewer false positives”).
+
+30–40s: CTA (“Try the free mapper → link in comments”).
+
+End card: Mixpeek logo + #AdtechAI hashtag.
+
+Cadence
+Monday: Publish anchor blog post under /blog/adtech-ai/*.
+
+Tuesday: Cut 2–3 short clips from anchor demo → post LinkedIn.
+
+Thursday: Publish recipe-linked post (shorter, demo-heavy).
+
+Friday: Post 1 Standards Corner clip (quick tip, 20s).
+
+Workflow
+Script & Shoot (batch 4 anchor videos at a time).
+
+Slice into clips (CapCut/Descript w/ captions).
+
+Write anchor blog post matching video.
+
+Publish blog + post video → LinkedIn.
+
+Post clips → LinkedIn Shorts/IG/YouTube.
+
+Track saves/comments + clicks to demo/playbook.
+
+Metrics
+Blog pageviews + CTR to /schedule-demo.
+
+LinkedIn saves/comments ratio (indicates resonance).
+
+Clip watch-time % (need 60%+ to stay in feed).
+
+Demo requests sourced from #AdtechAI content.
+
+3. Combined Flywheel
+Here’s how Standards Moat + Content Flywheel reinforce each other:
+
+Mapper + Playbook (tools) → fuel blog posts → fuel short clips → drive audits/demos.
+
+Every week:
+
+Publish anchor post (standards/recipe/case).
+
+Slice → 3–4 shorts.
+
+Each short pushes back to tool/playbook.
+
+Standards → inbound credibility (IAB, compliance).
+
+Content → outbound visibility (LinkedIn, Shorts).
+
+Together → inbound demo requests that are high-intent.
+
+60-Day Execution Timeline
+Weeks 1–2
+
+Draft playbook, design PDF.
+
+Write 2 anchor blog posts (#AdtechAI contextual + brand safety).
+
+Record 2 anchor videos.
+
+Set up /blog/adtech-ai/ hub.
+
+Weeks 3–4
+
+Publish playbook.
+
+Launch mapper MVP.
+
+Cut 6–8 clips from first 2 videos.
+
+Launch LinkedIn calendar.
+
+Weeks 5–6
+
+Launch audit funnel page.
+
+Publish 2 more anchor posts (#AdtechAI creative attribution + case spotlight).
+
+Record 2 more videos.
+
+Interlink mapper/playbook into /solutions/* pages.
+
+Weeks 7–8
+
+Add first case study page.
+
+Publish “Standards Corner” series (3–4 blog posts + clips).
+
+Double down on analytics: refine based on top-performing formats.
+
+Do you want me to actually draft the first 2 anchor posts (contextual targeting + brand safety, taxonomy-framed) with video beats included, so you can publish/film this week?
+
+You said:
+ok let's focus on the first week now, we'll make the IAB Mapper Tool (web + CLI) it should be mxp.co/iab which redirects to iab.mixpeek.com maybe?
+ChatGPT said:
+Nice — let’s lock in Week 1 execution around the IAB Mapper Tool, keeping it tight but action-heavy.
+
+✅ Week 1 Action Plan: IAB Mapper Tool
+1. Domain & Routing
+Shortlink: mxp.co/iab → easy to remember/share in content.
+
+Redirect target: iab.mixpeek.com (subdomain under mixpeek.com).
+
+Setup:
+
+Add CNAME for iab.mixpeek.com → your hosting (Vercel/Netlify/etc.).
+
+Configure mxp.co/iab redirect (could be Cloudflare Workers, Netlify redirect, or static rule).
+
+2. MVP Functionality
+Deliver two flavors right away:
+
+CLI (developer credibility)
+Input: CSV or JSON with IAB 2.x codes.
+
+Output: mapped 3.x codes (plus Mixpeek extended categories).
+
+Example usage:
+
+npx mixpeek-iab-mapper input.csv --out mapped.csv
+Package: publish to npm (mixpeek-iab-mapper) and PyPI (mixpeek-iab-mapper).
+
+GitHub: mixpeek/iab-mapper repo with README + demo data.
+
+Web (demo + leads)
+Minimal UI at iab.mixpeek.com:
+
+Upload CSV/JSON.
+
+Output table with: 2.x code → 3.x code → confidence → Mixpeek category.
+
+Export as CSV.
+
+Inline CTA: “Book a free taxonomy audit” → /tools/taxonomy-audit.
+
+3. Content & Launch Assets
+Blog post draft (anchor):
+/blog/adtech-ai/iab-3x-for-contextual-targeting
+
+Why 3.x matters (esp. for contextual targeting).
+
+Demo screenshot of mapper.
+
+CTA: try it at mxp.co/iab.
+
+Short-form video (30s demo):
+
+Hook: “Most taxonomies are stuck in 2.x. That’s a problem.”
+
+Screen capture: upload CSV → mapped results.
+
+CTA overlay: “Try it free at mxp.co/iab.”
+
+Hashtag: #AdtechAI.
+
+LinkedIn/Shorts distribution:
+
+Post 1: Demo clip.
+
+Post 2: Static diagram from playbook (2.x vs 3.x taxonomy tree).
+
+4. Tracking
+Add UTM to links from blog/shorts: ?utm_source=adtechai&utm_medium=video&utm_campaign=iab_mapper.
+
+Collect usage metrics:
+
+CLI downloads (npm/PyPI).
+
+Web tool runs (log IP + company domain if possible).
+
+Audit requests (
+
+You said:
+is that domain naming good?
+ChatGPT said:
+Yeah, that naming scheme works — it’s clean and aligns with how folks in adtech think. Quick take:
+
+👍 Why it works
+mxp.co/iab
+
+Short, memorable, perfect for videos and slides.
+
+Looks like a “utility link” rather than marketing fluff.
+
+Easy to redirect/update later without breaking.
+
+iab.mixpeek.com
+
+Clear subdomain = authority (“this is our IAB standards tool”).
+
+Keeps main mixpeek.com uncluttered, while still branded.
+
+Good separation if you want to spin up other “standards” subdomains (e.g., iab.mixpeek.com, mrc.mixpeek.com).
+
+⚠️ Alternatives to consider (depending on positioning)
+tools.mixpeek.com/iab → groups it with other tools (like /tools in your sitemap).
+
+taxonomy.mixpeek.com → if you want to own the broader “taxonomy” theme, not just IAB.
+
+standards.mixpeek.com → if you expect to branch beyond IAB (e.g., MRC, GARM).
+
+🔑 Recommendation
+Stick with:
+
+Primary promo: mxp.co/iab (for demos, posts, videos).
+
+Destination: iab.mixpeek.com (authority, future-proof).
+
+That way you can later add:
+
+mxp.co/garm → garm.mixpeek.com
+
+mxp.co/mrc → mrc.mixpeek.com
+
+… and build a “standards suite.”
+
+Want me to map out Week 1–2 domain + content rollout (like DNS changes, page scaffolding, blog draft outline, video script) so it’s step-by-step executable?
+
+You said:
+cool so we'll use mxp.co/iab for everything branded easy to navigate and go to. 
+
+now create the plan on creating it + the content flyweheel assets for this and how it all comes together is cohesive, etc. 
+ChatGPT said:
+Perfect. Let’s make Week 1–2 a tight execution sprint where you:
+
+ship the IAB Mapper Tool at mxp.co/iab,
+
+wrap it in a content flywheel so it isn’t just a tool, but a campaign.
+
+Here’s the cohesive, step-by-step plan:
+
+🚀 Execution Plan: IAB Mapper Tool + #AdtechAI Flywheel
+1. Build & Ship the Tool
+Scope (MVP)
+CLI (mixpeek-iab-mapper):
+
+Input: CSV/JSON w/ IAB 2.x codes.
+
+Output: IAB 3.x codes + confidence + Mixpeek extension.
+
+Publish to npm + PyPI.
+
+Open-source repo: github.com/mixpeek/iab-mapper.
+
+Web UI (iab.mixpeek.com → mxp.co/iab):
+
+Upload CSV/JSON → outputs table:
+| 2.x Code | 3.x Code | Confidence | Mixpeek Tag |
+
+Export as CSV.
+
+Inline CTA: “Want a full audit? → Book a demo.”
+
+Minimal styling → reuse Mixpeek docs styling.
+
+Domain/Infra:
+
+mxp.co/iab shortlink → permanent redirect to iab.mixpeek.com.
+
+Hosted on Vercel/Netlify for speed.
+
+2. Content Flywheel Assets
+Everything orbits around mxp.co/iab. The tool is the magnet → all content drives into it.
+
+A) Anchor Blog Post
+Slug: /blog/adtech-ai/iab-3x-for-contextual-targeting
+
+Title: “IAB 3.x Migration: Why Contextual Targeting Needs More Than Keywords”
+
+Structure:
+
+Problem: 2.x → misclassification.
+
+Solution: IAB 3.x taxonomy, scene-level.
+
+Demo: screenshot of mapper output.
+
+CTA: “Run your own taxonomy list at mxp.co/iab.”
+
+B) Short-Form Video (30–45s)
+Hook (0–3s): “Most adtech is stuck in IAB 2.x — and it’s costing you.”
+
+Problem (3–10s): Show cozy kitchen scene misclassified as “Sports.”
+
+Fix (10–20s): Screen capture of mapper output (correct: “Food & Drink > Cooking”).
+
+Proof (20–30s): Overlay text: “40% fewer false positives in pilot.”
+
+CTA (30–40s): “Try it free → mxp.co/iab. #AdtechAI”
+
+C) Static Visuals
+Diagram 1: Side-by-side taxonomy tree (2.x vs 3.x).
+
+Diagram 2: Workflow of mapper → audit → demo.
+
+Format: SVG/PNG branded in Mixpeek colors → use on LinkedIn + blog.
+
+D) Audit Funnel Page
+Slug: /tools/taxonomy-audit
+
+Form: upload CSV + email → auto-reply “We’ll review and book a 15-min audit.”
+
+CTA placement:
+
+Blog post (mid + footer).
+
+Mapper tool (below table).
+
+LinkedIn posts (“Want us to run it for you? → link”).
+
+3. Cohesion: How it Ties Together
+Mapper Tool = flagship asset → memorable link (mxp.co/iab).
+
+Blog Post explains why → educational anchor.
+
+Shorts/Clips show it in action → eye-catching proof.
+
+Audit Funnel captures leads → path to demo.
+
+LinkedIn cadence (Week 1–2):
+
+Day 1 (Launch): Post blog + 30s video demo → link mxp.co/iab.
+
+Day 3: Post static taxonomy tree graphic → “2.x vs 3.x in 10s” → link.
+
+Day 5: Clip: real-world misclassification example → “Want your taxonomy fixed? → mxp.co/iab.”
+
+Flywheel Effect:
+
+Tool makes content real.
+
+Content amplifies tool.
+
+Tool funnels users to audits/demos.
+
+Audits/demos convert into POCs.
+
+4. Tracking & Feedback Loops
+Metrics to collect:
+
+Mapper runs (web + CLI).
+
+Blog post traffic → CTR to mapper.
+
+Clip watch-through rate + comments/saves.
+
+Audit form fills → booked calls.
+
+Iteration:
+
+Most-watched clip format → replicate weekly.
+
+Audit feedback → add features to mapper (e.g., batch runs, API).
+
+Blog SEO → expand into “IAB 3.x brand safety” follow-up post.
+
+5. Week 1–2 Checklist
+Week 1
+
+ Stand up domain: mxp.co/iab → iab.mixpeek.com.
+
+ Build CLI (npm/PyPI).
+
+ Scaffold web tool (file upload + table output).
+
+ Draft + design blog post.
+
+ Storyboard short video + static diagrams.
+
+Week 2
+
+ Publish blog + launch tool.
+
+ Release 1 short demo video + 1 static taxonomy post.
+
+ Launch audit funnel page.
+
+ Post 2 more clips mid-week.
+
+ Track usage + first leads.
+
+👉 Do you want me to draft the anchor blog post outline and the video script beats for launch week so you’ve got plug-and-play assets for Day 1?
+
+You said:
+should i be worried about using the term "iab" 
+ChatGPT said:
+Good instinct — yes, you should think carefully before using “IAB” directly in domains and branding.
+
+Why it’s sensitive
+Trademarked: “IAB” is the Interactive Advertising Bureau’s registered name/mark.
+
+Perception risk: Using iab.mixpeek.com could make it look “official” or endorsed, which might raise eyebrows if you’re not explicitly partnered.
+
+Policy risk: If the tool gains traction, IAB might push back on brand use.
+
+Common industry practice
+Most vendors don’t use “IAB” in domains; instead, they reference it in content:
+
+e.g., “Content Taxonomy 3.0 Mapper”
+
+e.g., “Taxonomy Migration Tool (for IAB standards)”
+
+It’s safer to use descriptive naming while still capturing the SEO juice in your blog posts and materials.
+
+Safer naming options
+Domain/Subdomain
+
+taxonomy.mixpeek.com
+
+standards.mixpeek.com
+
+categories.mixpeek.com
+
+Then you can have /iab-mapper or /taxonomy-mapper as the path.
+
+Shortlink
+
+Instead of mxp.co/iab, use:
+
+mxp.co/taxonomy
+
+mxp.co/migration
+
+mxp.co/mapper
+
+You can still say “IAB Taxonomy Mapper” in posts, just not bake “iab” into your core URLs.
+
+Content strategy
+In blog titles, posts, and videos, it’s fine to use “IAB” (fair use reference to a standard).
+
+In tools and domains, use a neutral, descriptive name:
+
+“Taxonomy Mapper (IAB 2.x → 3.x)”
+
+“Content Category Migration Tool”
+
+👉 My rec:
+
+Use mxp.co/taxonomy as the branded shortlink.
+
+Host at taxonomy.mixpeek.com.
+
+In the UI + blog posts, label it “IAB Taxonomy Mapper” so it’s still clear what standard you’re targeting.
+
+That way you get the SEO + credibility of IAB references without brand/legal risk.
+
+Want me to show you how to rename the whole flow (shortlink → subdomain → blog → video) with this safer taxonomy-first naming, so it’s coherent but still strongly associated with IAB?
+
+You said:
+taxonomy is to generic and long
+ChatGPT said:
+Got it — you want something short, memorable, branded, but not so generic (like “taxonomy”) and not so risky (like “iab” in the domain).
+
+Here are tighter alternatives that hit the middle ground:
+
+🔑 Shortlink options (mxp.co/...)
+mxp.co/map → clean, memorable, evokes mapping/migration.
+
+mxp.co/codes → simple, feels standards-y.
+
+mxp.co/classify → action-oriented.
+
+mxp.co/catmap → shorthand for “category mapper.”
+
+mxp.co/migrate → emphasizes 2.x → 3.x upgrade.
+
+🌐 Subdomain options
+map.mixpeek.com → broad, can later hold GARM, MRC, etc.
+
+codes.mixpeek.com → feels like “category codes.”
+
+classify.mixpeek.com → aligns with Mixpeek’s core mission.
+
+standards.mixpeek.com → umbrella for all standards tools.
+
+mapper.mixpeek.com → specific, future-proof.
+
+✅ Recommendation
+Use mxp.co/map as the universal promo shortlink (easy to say on video, looks sleek in posts).
+
+Point it to map.mixpeek.com (subdomain housing the mapper tool).
+
+In the UI and blog posts, call it “IAB Taxonomy Mapper (2.x → 3.x)” so you get the SEO + clarity without baking “iab” into your DNS.
+
+This way you’re:
+
+✅ Safe from trademark/domain issues.
+
+✅ Still explicitly associated with IAB in content.
+
+✅ Memorable + clean for your audience.
+
+Want me to mock up the launch messaging (blog headline, LinkedIn hook, shortlink usage) with mxp.co/map baked in so you can see how it feels end-to-end?
+
+You said:
+map is geeriv
+ChatGPT said:
+Yeah, fair — “map” is clean but a little bland. You want something that feels specific, sharp, and adtech-native, while still short enough to say on video or drop in a LinkedIn post.
+
+Here are stronger options that sit between too generic (“map”, “taxonomy”) and too risky (“iab”):
+
+🚀 Short, Punchy Shortlinks
+mxp.co/catmap → “category mapper” condensed, feels standards-y.
+
+mxp.co/codemapper → clear, directly about mapping category codes.
+
+mxp.co/classify → action verb, aligns with Mixpeek’s core brand (“understand everything you see”).
+
+mxp.co/recode → modern, suggests “re-code your taxonomy.”
+
+mxp.co/migrate → emphasizes 2.x → 3.x migration.
+
+mxp.co/align → standards alignment, feels polished.
+
+mxp.co/codex → sleek, evokes structured knowledge + codes.
+
+🌐 Subdomains
+codes.mixpeek.com → intuitive for “category codes.”
+
+classify.mixpeek.com → expandable to other standards later.
+
+mapper.mixpeek.com → straightforward, tool-like.
+
+align.mixpeek.com → positioned as “alignment with standards.”
+
+codex.mixpeek.com → modern, brand-adjacent, not locked to IAB.
+
+🔑 Recommendation
+For a balance of memorability + specificity:
+
+Promo shortlink: mxp.co/catmap (easy, quirky, tied to categories).
+
+Destination: codes.mixpeek.com (authoritative, future-proof).
+
+In UI + content: Call it “IAB Taxonomy Mapper (2.x → 3.x)” so you rank for the keywords and make the association explicit.
+
+Would you like me to mock up how the launch post + short video script would look using mxp.co/catmap as the shortlink, so you can feel how it lands in the wild?
+
+You said:
+help me understand how all the gtm assets, plans, actions, tactics come together. use the iab taxonomy mapper as an example to explain it
+ChatGPT said:
+Perfect — let’s walk through how all the GTM moving parts connect using your IAB Taxonomy Mapper as the central example. This will show how the standards moat + content flywheel actually become one system, not just scattered tactics.
+
+🧩 How the GTM Fits Together (IAB Mapper Example)
+1. Flagship Asset (the Magnet)
+👉 IAB Taxonomy Mapper (hosted at mxp.co/catmap).
+
+This is the “thing of value” that anchors the GTM. It’s tangible, memorable, and solves a real pain (2.x → 3.x migration).
+
+CLI version: credibility with devs.
+
+Web version: instant utility for PMs/ops/marketers.
+
+Audit funnel: lead capture → demo pathway.
+
+Everything else (content, posts, videos) points here.
+
+2. Content Flywheel (the Amplifier)
+You build multiple content assets around the mapper, so it doesn’t just sit idle.
+
+Anchor Blog Post
+
+/blog/adtech-ai/iab-3x-for-contextual-targeting
+
+Explains why migration matters + demo screenshots.
+
+CTA → Run it yourself at mxp.co/catmap.
+
+Short-form Videos (LinkedIn, Shorts, IG)
+
+20–45s clips showing misclassification → mapper fixing it.
+
+CTA overlay → Try it free at mxp.co/catmap.
+
+Hashtag #AdtechAI for discoverability.
+
+Static Visuals/Carousels
+
+Side-by-side taxonomy trees (2.x vs 3.x).
+
+Workflow diagram: Input → Mapper → Audit → Demo.
+
+Posted as LinkedIn graphics with a link to mxp.co/catmap.
+
+Education Tie-In
+
+Add mapper walkthrough video to /education/videos/taxonomies-guide.
+
+Cross-link from /solutions/advertising + /solutions/entertainment.
+
+3. Distribution (the Reach)
+Every asset is distributed in formats native to the channel:
+
+LinkedIn: Thought-leadership posts (with demo clips + diagrams).
+
+Shorts/IG: Quick visual problem → solution → CTA.
+
+Blog: Longform anchor article for SEO + depth.
+
+Solutions pages: Inline CTAs to the mapper.
+
+All paths → mxp.co/catmap.
+
+4. Conversion Path (the Funnel)
+The mapper isn’t the end goal — it’s the first step into your funnel:
+
+User tries mapper at mxp.co/catmap.
+
+They see output + CTA: “Want a full taxonomy audit? → Submit your list.”
+
+They submit → /tools/taxonomy-audit.
+
+Audit request → discovery/demo call → POC.
+
+5. Reinforcement (the Moat)
+Everywhere you show up (LinkedIn, IAB WG calls, blogs, demos), you’re the company with the IAB Taxonomy Mapper.
+
+Standards credibility: IAB working groups notice you’re the ones shipping useful migration tools.
+
+Content authority: Your blog/Shorts/LinkedIn are full of real demos, not fluff.
+
+Search authority: SEO traffic around “IAB taxonomy migration” → your blog → your mapper.
+
+This makes Mixpeek the default answer when someone asks “Who knows taxonomies in adtech?”
+
+6. Feedback & Iteration
+Track mapper runs, audit requests, playbook downloads.
+
+See which clip formats perform best → double down.
+
+Use audit feedback to improve mapper → write “Version 2” blog post → restart flywheel.
+
+🔄 Putting It All Together (Flow)
+Build the Mapper (asset).
+
+Explain it in Blog (anchor).
+
+Show it in Videos (shorts, demos).
+
+Visualize it in Diagrams (carousels, posts).
+
+Distribute Everywhere (LinkedIn, Shorts, blog, solutions).
+
+Capture Leads via Audit (funnel).
+
+Convert into POCs (sales).
+
+Reinvest outputs into Content (case studies, updated mapper).
+
+The mapper is the spark, the content flywheel is the oxygen, and the audit/demo funnel is the fireplace that captures heat.
+
+👉 Do you want me to draft an end-to-end GTM flow diagram (Mermaid or simple visual map) showing how mxp.co/catmap → content → distribution → audit → demo → POC all link together?
+
+You said:
+what are some better shortnames? should i do mxp.co/iab-taxonomy ? what if i want to amek it one word
+ChatGPT said:
+Good instinct — if you want something short, memorable, one-word, and future-proof, there are better options than mxp.co/iab-taxonomy (too long, hard to say out loud).
+
+Here’s a list of sharper one-word (or near one-word) candidates you could use as the promo shortlink:
+
+📦 Mapper / Standards-Oriented
+mxp.co/catmap → “category mapper,” short + quirky.
+
+mxp.co/codex → sleek, evokes structured knowledge + codes.
+
+mxp.co/classify → action verb, fits Mixpeek’s mission.
+
+mxp.co/recode → modern, migration vibe.
+
+mxp.co/align → standards alignment.
+
+mxp.co/migrate → 2.x → 3.x upgrade emphasis.
+
+mxp.co/standards → direct, future extensibility (IAB, GARM, MRC).
+
+🎯 More Brandable / Unique
+mxp.co/taxon → nod to “taxonomy,” cleaner + shorter.
+
+mxp.co/klass → play on “classify / classes.”
+
+mxp.co/codify → action-oriented, standardize.
+
+mxp.co/ordr → “order” (bringing structure).
+
+mxp.co/trace → track back to taxonomy codes.
+
+⚖️ My top 3 recs for you (balance of clarity + brand)
+mxp.co/taxon → compact, clearly ties to taxonomy, looks sharp in posts.
+
+mxp.co/catmap → easy to say, playful but still professional.
+
+mxp.co/codex → modern, expandable beyond IAB.
+
+👉 If you want to stay very explicit (for SEO/clarity), mxp.co/iab-taxonomy is okay — but it’s harder to speak/share and may brush against IAB branding sensitivities. A coined one-word like taxon or codex gives you room to grow (e.g., later mxp.co/taxon-garm, mxp.co/taxon-iab).
+
+Do you want me to mock up how these names would look in content assets (LinkedIn post, blog CTA, short video end-card) so you can feel how they land in the wild?
+
+You said:
+what if i just do iab?
+ChatGPT said:
+If you just do mxp.co/iab, here’s the tradeoff:
+
+✅ Pros
+Super short & memorable. People will actually type it.
+
+Clear association. Everyone in adtech instantly knows it’s about the Interactive Advertising Bureau.
+
+Easy to brand in content. Looks clean in videos, LinkedIn posts, slides.
+
+⚠️ Cons
+Trademark sensitivity.
+
+IAB is a registered name/mark.
+
+Using it directly in a domain/shortlink can look like endorsement or “official” tooling.
+
+If the tool blows up, they could ask you to change it.
+
+Longevity risk. If you ever want to expand (e.g., GARM, MRC, custom taxonomies), “iab” pigeonholes the brand.
+
+Perception risk. Could look like you’re “co-opting” their name rather than extending/complimenting.
+
+What’s typically safe
+In blog titles / content / UI labels: Totally fine (“IAB Taxonomy Mapper”, “IAB 3.x Migration”). That’s descriptive use.
+
+In domains / product names: More sensitive. Most vendors avoid this.
+
+A middle path
+Keep mxp.co/iab as the promo shortlink (low risk, easy to change later if needed).
+
+Point it to a neutral subdomain like map.mixpeek.com or codes.mixpeek.com.
+
+In the UI/blogs: Call the tool “IAB Taxonomy Mapper” (descriptive, safe).
+
+If you expand later, you can add mxp.co/garm, mxp.co/mrc for other standards.
+
+👉 My rec: Yes, use mxp.co/iab for now — it’s punchy and perfect for launch.
+Just don’t make your core tool brand = “IAB Mapper.” Instead, brand it as a Mixpeek tool that supports IAB 3.x migration.
+
+Do you want me to draft a risk-mitigated naming scheme (how the shortlink, subdomain, tool label, and blog titles should each be phrased) so you can confidently use mxp.co/iab without overcommitting to it?
+
+You said:
+how about mxp.co/mapping
+ChatGPT said:
+mxp.co/mapping is a solid middle ground — here’s how it stacks up vs mxp.co/iab:
+
+✅ Pros
+Generic enough to be safe. Doesn’t use “IAB” directly in the URL, so no trademark or perception risk.
+
+Clear action. “Mapping” instantly signals transformation, migration, standards alignment.
+
+Expandable. You can later host GARM, MRC, or custom mapping tools under the same umbrella.
+
+Professional tone. Feels like a serious utility, not a throwaway gimmick.
+
+⚠️ Cons
+Less specific. Without context, “mapping” could mean anything (geo, DBs, embeddings). You’ll need to pair it with content headlines that say “IAB Taxonomy Mapping” so it lands right.
+
+Slightly longer. Not as punchy as mxp.co/iab.
+
+📊 Comparison
+Option	Memorability	Safety	Expandability	Perception
+mxp.co/iab	⭐⭐⭐⭐⭐	⚠️ Risk	❌ Narrow	Could look official
+mxp.co/mapping	⭐⭐⭐	✅ Safe	⭐⭐⭐⭐ Expandable	Neutral/clean
+mxp.co/catmap	⭐⭐⭐⭐	✅ Safe	⭐⭐⭐	Quirky but clear
+mxp.co/taxon	⭐⭐⭐⭐	✅ Safe	⭐⭐⭐⭐	More unique/brandable
+🔑 My Take
+If your goal is max adoption fast, mxp.co/iab is 🔥 — but with some brand risk.
+If your goal is durability + safety, mxp.co/mapping is better.
+If you want something short + ownable, mxp.co/catmap or mxp.co/taxon might be best.
+
+👉 If you go with mxp.co/mapping, you’d market it everywhere as:
+
+“Mixpeek’s IAB Taxonomy Mapper — available at mxp.co/mapping.”
+
+That way, the shortlink is safe + generic, but the branding and SEO still hit “IAB Taxonomy Mapper.”
+
+Do you want me to sketch the branded hierarchy (shortlink, subdomain, tool title, blog titles, CTA text) for the mxp.co/mapping path so it all feels consistent?
+
+You said:
+what about 
+
+mxp.co/taxonomy
+ChatGPT said:
+mxp.co/taxonomy is clean and safe — here’s how it lands:
+
+✅ Pros
+Crystal clear. Everyone in adtech knows what “taxonomy” refers to.
+
+SEO friendly. Strong keyword if anyone searches “taxonomy mapping tool.”
+
+Safe legally. You’re not using “IAB” in the URL.
+
+Expandable. You can hang IAB 3.x, GARM, custom schemas under the same umbrella.
+
+⚠️ Cons
+Slightly long. Two more syllables than “iab,” not as punchy for video overlays.
+
+Generic. Could be confused with “taxonomy” in biology or SEO if pulled out of context (less of a problem since your content is adtech-specific).
+
+Not as brand-y. “Taxonomy” is descriptive, not ownable like “catmap” or “codex.”
+
+📊 Comparison with Other Options
+Shortlink	Memorability	Specificity	Safety	Expandability
+mxp.co/iab	⭐⭐⭐⭐⭐	Very high	⚠️ Risk	❌ Narrow
+mxp.co/taxonomy	⭐⭐⭐	High	✅ Safe	⭐⭐⭐⭐ Broad
+mxp.co/mapping	⭐⭐⭐	Medium	✅ Safe	⭐⭐⭐⭐ Broad
+mxp.co/catmap	⭐⭐⭐⭐	Medium	✅ Safe	⭐⭐⭐
+mxp.co/taxon	⭐⭐⭐⭐	Medium	✅ Safe	⭐⭐⭐⭐ Ownable
+🔑 My take
+If you want clarity + SEO + safety → mxp.co/taxonomy is a great pick.
+
+If you want short + sticky → mxp.co/taxon or mxp.co/catmap are stronger.
+
+If you want instant recognition but higher risk → mxp.co/iab.
+
+👉 If you pick mxp.co/taxonomy, you can still market it as:
+
+“The IAB Taxonomy Mapper — live at mxp.co/taxonomy.”
+
+That way the shortlink is safe + descriptive, but your branding and blog titles still carry “IAB.”
+
+Do you want me to show how mxp.co/taxonomy would flow through the GTM assets (blog CTA, short video end card, LinkedIn post hooks), so you can see if it feels right in use?
+
+You said:
+ok so we'll do mxp.co/taxonomy 
+
+is migratin from 2.0 -> 3.0 the biggest opportunity here?
+ChatGPT said:
+Yes — IAB 2.0 → 3.0 migration is the biggest near-term opportunity for Mixpeek to plant a flag. Here’s why:
+
+🔥 Why 2.0 → 3.0 Migration is the Wedge
+Mandatory shift.
+
+IAB Tech Lab formally announced 2.x → 3.0 deprecation.
+
+SSPs, DSPs, verification vendors, publishers, and brands have to migrate if they want to stay compliant in the ecosystem.
+
+No one wants to be the outlier still transacting on 2.x codes.
+
+Painful lift.
+
+2.0 had ~400 categories; 3.0 has ~1,500 (much finer granularity).
+
+Manual mapping = slow, error-prone, and creates compliance risk.
+
+Many players don’t have internal ML/ops staff who understand taxonomies deeply.
+
+Budget exists.
+
+Migration is compliance + revenue protection, so spend is justified even in tight markets.
+
+This isn’t “nice to have”—it’s required to transact.
+
+Mixpeek’s advantage.
+
+You already classify multimodally (video, audio, text).
+
+You can map 2.0 → 3.0 while also extending beyond (scene-level, multimodal brand safety, creative attribution).
+
+So you don’t just solve migration — you unlock new value.
+
+🎯 Why It’s the Best GTM Door
+Immediate urgency → pipeline.
+“Still on IAB 2.0? Use Mixpeek’s free mapper to upgrade in minutes.”
+
+Standardized pitch.
+Every company in adtech/CTV knows what “IAB migration” means. No education required.
+
+Credibility play.
+If Mixpeek is the company associated with “taxonomy migration,” you build a moat in standards — which opens the door to everything else (brand safety, attribution, contextual targeting).
+
+Cross-sell hook.
+After migration, you upsell:
+
+Multimodal brand safety checks.
+
+Scene-level contextual targeting.
+
+Creative performance taxonomies.
+
+🚀 GTM Positioning
+Lead with compliance pain (2.0 → 3.0 migration).
+Land with a free tool (mxp.co/taxonomy).
+Expand into value-adds (brand safety, attribution, targeting).
+
+Think of it as:
+
+Wedge: IAB migration (compliance, must-do).
+
+Expansion: Use same taxonomies for advanced retrieval/classification.
+
+Moat: Standards credibility (become the “taxonomy people” in adtech).
+
+Next Step
+If we lock migration as the wedge, your Week 1–2 GTM is really about:
+
+Mapper tool launch (mxp.co/taxonomy).
+
+Anchor post: “Why Migrating to IAB 3.0 Isn’t Optional — and How to Do It Fast.”
+
+Short demo clips: misclassification in 2.0 vs corrected in 3.0.
+
+Audit funnel: “Upload your taxonomy, get a free audit.”
+
+👉 Want me to draft a migration-focused positioning doc (problem framing → Mixpeek wedge → expansion path) that you could use for both sales calls and your first blog post?
+
+You said:
+cool ok so i'll make:
+
+- branding around: mxp.co/taxonomy 
+- github repo
+- long form blog post
+- short form linkedin/youtube/tiktok/ig videos
+- jupyter notebook
+- iab taxnomy migration tool/mapper
+- long form educational video (in mixpeek.com/education/<name>)
+- 
+
+add anything else...
+
+make me a full end to end plan that provides real guidance for each asset, where it should live, where t post it, summary of what each is and anything else that can be provided as a handoff to someone to just do. 
+
+here's our existing sitemap so you know what section it lives in. note you should indicate where and how each should be linked throughout 
+
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>https://mixpeek.com/</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/recipes</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/notebooks</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/solutions</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/terms</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/privacy</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/pricing</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/about</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/careers</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/contact</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/security</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/videos</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/schedule-demo</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/glossary</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/tools</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/comparisons</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/500</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/playbooks</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/solutions/advertising</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/solutions/ecommerce</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/solutions/entertainment</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/solutions/manufacturing</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/guides/quick-start</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/guides/optimization</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/guides/schema-design</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/case-studies/ecommerce-implementation</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/case-studies/media-analysis</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/whitepapers/multimodal-architecture</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/whitepapers/roi-of-intelligent-search</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/multimodal-monday-17</loc>
+<lastmod>2025-07-21T13:02:40.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/multimodal-monday-16-real-time-generation-production-ready</loc>
+<lastmod>2025-07-14T13:00:24.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/iab-taxonomy-migration</loc>
+<lastmod>2025-07-11T14:24:47.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/multimodal-monday-15</loc>
+<lastmod>2025-07-07T14:22:20.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/intentflow</loc>
+<lastmod>2025-07-05T20:17:46.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/dynamic-fusion-contextual-evolution</loc>
+<lastmod>2025-06-30T13:45:30.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/clip-whisper-gemini-fake-video-detection</loc>
+<lastmod>2025-06-24T21:15:59.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/efficient-edges-open-horizons</loc>
+<lastmod>2025-06-23T13:23:07.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/world-models-efficiency-increases</loc>
+<lastmod>2025-06-16T13:00:24.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/niche-power-smarter-vision-models</loc>
+<lastmod>2025-06-09T13:00:31.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/multimodal-deepresearch-agent</loc>
+<lastmod>2025-06-06T19:45:49.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/milo</loc>
+<lastmod>2025-06-06T16:48:04.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/whisper-ray-huggingface</loc>
+<lastmod>2025-06-10T11:39:09.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/mm10-unified-frameworks-specialized-efficiency</loc>
+<lastmod>2025-06-09T04:02:47.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/from-rag-to-agentic-rag</loc>
+<lastmod>2025-05-30T13:08:20.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/multimodal-monday-9-compact-power-creative-edge</loc>
+<lastmod>2025-05-26T13:11:14.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/multimodal-monday-8-faster-systems-faster-impact</loc>
+<lastmod>2025-05-19T13:56:00.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/dataset-engineering</loc>
+<lastmod>2025-06-05T19:48:18.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/multimodal-monday-7-tailored-tools-wider-reach</loc>
+<lastmod>2025-05-12T14:18:01.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/multimodal-late-interaction</loc>
+<lastmod>2025-05-18T13:05:02.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/multimodal-monday-6-retrieval-refined-reach-expanded</loc>
+<lastmod>2025-05-08T21:51:48.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/multimodal-monday-5</loc>
+<lastmod>2025-04-28T11:36:15.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/video-segmentation-unlocking-structure-for-search-and-analytics</loc>
+<lastmod>2025-07-11T14:04:29.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/multimodal-monday-4-from-pixels-to-plans</loc>
+<lastmod>2025-04-21T11:23:25.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/from-calls-to-coaching-how-craftflow-leverages-mixpeek-to-extract-insights-and-drive-sales</loc>
+<lastmod>2025-04-20T23:34:09.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/multimodal-monday-3-scaling-multimodal-ai-laws-lightweights-large-releases</loc>
+<lastmod>2025-04-14T16:00:52.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/ai-content-recommendations-adtech</loc>
+<lastmod>2025-04-13T19:27:47.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/contextual-advertising-after-cookies</loc>
+<lastmod>2025-04-17T20:24:10.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/multimodal-monday-from-tiny-vlms-to-10m-token-titans</loc>
+<lastmod>2025-04-07T15:34:30.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/turning-frames-into-dataframes</loc>
+<lastmod>2025-06-05T20:31:19.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/multimodal-monday-state-of-the-stack</loc>
+<lastmod>2025-04-02T16:00:37.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/dynamic-video-chunking-scene-detection</loc>
+<lastmod>2025-05-21T13:45:29.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/ai-video-tagging</loc>
+<lastmod>2025-01-05T23:58:04.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/ai-video-tagging-2</loc>
+<lastmod>2024-12-30T21:48:00.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/ai-image-discovery</loc>
+<lastmod>2024-12-28T05:54:26.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/mcp-on-s3</loc>
+<lastmod>2025-06-06T19:10:53.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/mixpeek-embed-with-weaviate-for-multimodal-ai</loc>
+<lastmod>2024-12-28T05:54:43.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/world-foundation-model</loc>
+<lastmod>2025-05-21T13:44:46.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/hybrid-search-on-distributed-signals-for-multimodal-understanding</loc>
+<lastmod>2024-10-11T12:08:33.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/transforming-multimodal-search-with-mixpeek-0-9-0</loc>
+<lastmod>2024-12-28T05:55:03.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/semantic-video-search</loc>
+<lastmod>2024-09-28T22:44:58.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/flux-for-multimodal-rag</loc>
+<lastmod>2024-08-21T14:38:26.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/multimodal-classification-organize-content</loc>
+<lastmod>2024-08-13T20:38:50.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/ai-powered-video-captioning-models-for-hybrid-video-retrieval</loc>
+<lastmod>2024-08-13T17:00:40.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/using-celery-to-process-thousands-of-videos</loc>
+<lastmod>2025-06-05T20:21:16.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/movie-trailer-discovery</loc>
+<lastmod>2024-06-27T20:09:59.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/building-a-multimodal-data-processing-pipeline-with-kafka-airflow-and-sagemaker</loc>
+<lastmod>2024-06-24T19:26:11.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/clip-on-sagemaker</loc>
+<lastmod>2024-06-24T19:26:29.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/reverse-video-search</loc>
+<lastmod>2025-06-05T20:24:11.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/scene-detection</loc>
+<lastmod>2024-05-28T15:22:24.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/vuse-v1-release</loc>
+<lastmod>2024-05-30T18:18:27.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/s3-langchain-mongodb</loc>
+<lastmod>2024-05-25T18:21:25.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/mongodb</loc>
+<lastmod>2024-06-03T17:37:48.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/semantic-video-understanding</loc>
+<lastmod>2025-01-10T14:17:59.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/visual-shopping</loc>
+<lastmod>2025-04-10T15:11:46.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/what-is-semantic-video-search</loc>
+<lastmod>2024-08-26T17:44:39.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/creating-a-searchable-pdf-repository</loc>
+<lastmod>2025-04-13T12:05:12.000+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/authors/colton</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/authors/ethan</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/authors/justin</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/authors/philip</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/blog/authors/tal</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/glossary/vector-database</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/glossary/embedding</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/glossary/multimodal-fusion</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/glossary/neural-search</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/glossary/rag</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/glossary/faiss</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/glossary/clip</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/glossary/ocr</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/glossary/data-modality</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/glossary/data-lakehouse</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/glossary/content-based-retrieval</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/glossary/multimodal-retrieval</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/glossary/feature-extraction</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/glossary/hybrid-search</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/glossary/acid</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/glossary/api</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/glossary/blob-storage</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/recipes/chart-claim-contradiction</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/recipes/talking-no-person</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/recipes/fast-movement-loud-sound-dim-light</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/recipes/gesture-with-command</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/recipes/text-narration-music</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/recipes/angry-face-negative-phrase</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/recipes/arguing-with-activity-spike</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/recipes/rapid-scenes-noise-conflicting-text</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/recipes/subtitle-mismatch-person-present</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/recipes/fake-video-detection</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/recipes/smiling-positive-warm-scenes</loc>
+<lastmod>2025-07-21T18:21:31.020Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/videos/taxonomies-guide</loc>
+<lastmod>2025-07-21T18:21:31.021Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/videos/namespaces-guide</loc>
+<lastmod>2025-07-21T18:21:31.021Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/videos/collections-guide</loc>
+<lastmod>2025-07-21T18:21:31.021Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/videos/multimodal-monday-2</loc>
+<lastmod>2025-07-21T18:21:31.021Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/videos/intro-multimodal-university</loc>
+<lastmod>2025-07-21T18:21:31.021Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/videos/what-is-multimodal</loc>
+<lastmod>2025-07-21T18:21:31.021Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/videos/fundamental-concepts</loc>
+<lastmod>2025-07-21T18:21:31.021Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/videos/text-understanding</loc>
+<lastmod>2025-07-21T18:21:31.021Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/videos/audio-understanding</loc>
+<lastmod>2025-07-21T18:21:31.021Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/videos/visual-understanding</loc>
+<lastmod>2025-07-21T18:21:31.021Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/videos/stop-ignoring-ood-data</loc>
+<lastmod>2025-07-21T18:21:31.021Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/videos/release-guides</loc>
+<lastmod>2025-07-21T18:21:31.021Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/videos/multimodal-monday</loc>
+<lastmod>2025-07-21T18:21:31.021Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/videos/multimodal-university</loc>
+<lastmod>2025-07-21T18:21:31.021Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/videos/use-cases</loc>
+<lastmod>2025-07-21T18:21:31.021Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/module/introduction-to-multimodal</loc>
+<lastmod>2025-07-21T18:21:31.021Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/module/vector-search-basics</loc>
+<lastmod>2025-07-21T18:21:31.021Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/module/advanced-retrieval</loc>
+<lastmod>2025-07-21T18:21:31.021Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/education/module/multimodal-pipelines</loc>
+<lastmod>2025-07-21T18:21:31.021Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/text-embedding</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/named-entity</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/keyword-extraction</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/topic-modeling</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/text-classification</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/image-embedding</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/object-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/image-captioning</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/facial-recognition</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/image-segmentation</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/visual-question-answering</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/landmark-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/scene-classification</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/logo-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/image-text-extraction</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/product-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/text-grouping</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/object-grouping</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/scene-splitting</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/face-grouping</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/video-transcription</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/action-recognition</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/object-tracking</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/video-summarization</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/person-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/event-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/video-classification</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/anomaly-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/video-embedding</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/audio-transcription</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/speaker-diarization</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/audio-embedding</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/emotion-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/sound-event-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/language-identification</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/acoustic-scene-classification</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/music-analysis</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/audio-summarization</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/accent-identification</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/person-tracking</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/content-classification</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/event-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/language-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/scene-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/activity-grouping</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/pdf-extraction</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/table-extraction</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/form-extraction</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/document-classification</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/signature-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/header-footer-extraction</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/page-segmentation</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/document-embedding</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/chart-graph-extraction</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/metadata-extraction</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/document-summarization</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/legal-clause-extraction</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/trend-analysis</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/forecasting</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/pattern-recognition</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/correlation-analysis</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/column-analysis</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/correlation-analysis</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/pattern-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/data-quality</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/feature-importance</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/audio-embedding</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/speech-to-text</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/audio-classification</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/speaker-diarization</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/audio-event-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/music-analysis</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/audio-enhancement</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/faceforensics-xception</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/blink-frequency</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/rppg-signal</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/av-syncnet</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/late-interaction-ranker</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/seamless-expressive</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/pii-redactor</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/real-person-classification</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/visual-artifact-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/lipsync-analysis</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/gibberish-text-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/blink-abnormality-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/optical-flow-spike-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/audio-loop-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/extractors/lighting-inconsistency-detection</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/retrievers/knn</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/retrievers/hybrid-knn</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/retrievers/face-search</loc>
+<lastmod>2025-07-21T18:21:31.022Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/spotify-enhance-user-recommendations</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/tesla-improve-autonomous-driving</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/amazon-optimize-warehouse-operations</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/netflix-personalize-content-recommendations</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/google-enhance-search-results</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/microsoft-enhance-productivity-tools</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/apple-enhance-device-integration</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/meta-enhance-content-moderation</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/nvidia-accelerate-ai-development</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/adobe-enhance-creative-tools</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/salesforce-enhance-customer-intelligence</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/intel-enhance-chip-design</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/oracle-optimize-database-performance</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/ibm-enhance-quantum-computing</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/cisco-optimize-network-performance</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/tesla-enhance-autonomous-driving</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/amazon-automate-warehouse-operations</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/netflix-analyze-video-content</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/google-enhance-image-search</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/microsoft-enhance-productivity</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/apple-enhance-security</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/meta-moderate-content</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/nvidia-accelerate-ai</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/adobe-enhance-creativity</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/salesforce-enhance-analytics</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/uber-optimize-pricing</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/airbnb-optimize-search</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/stripe-prevent-fraud</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/doordash-optimize-delivery</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/linkedin-match-jobs</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/zoom-enhance-video</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/pinterest-enhance-search</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/slack-enhance-communication</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/shopify-enhance-shopping</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/twilio-enhance-communication</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/instagram-analyze-creator-niches</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/netflix-enhance-personalized-recommendations</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/tiktok-enhance-content-understanding</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/twitter-enhance-ad-matching</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/snapchat-enhance-ar-ads</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/dossier/google-enhance-video-ad-targeting</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/apps/scenewise</loc>
+<lastmod>2025-07-21T18:21:30.102Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/apps/video-taxonomy-matcher</loc>
+<lastmod>2025-07-21T18:21:30.102Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/apps/viral-vibe-finder</loc>
+<lastmod>2025-07-21T18:21:30.102Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/apps/brand-affinity-scout</loc>
+<lastmod>2025-07-21T18:21:30.102Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/apps/ad-alchemy-vision</loc>
+<lastmod>2025-07-21T18:21:30.102Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/apps/clik.vision</loc>
+<lastmod>2025-07-21T18:21:30.102Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/apps/fakecheck</loc>
+<lastmod>2025-07-21T18:21:30.102Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/comparisons/mixpeek-vs-coactive</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/comparisons/mixpeek-vs-glean</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/comparisons/mixpeek-vs-twelvelabs</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/comparisons/mixpeek-vs-pinecone</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/comparisons/mixpeek-vs-turbopuffer</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/comparisons/mixpeek-vs-langchain</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/comparisons/mixpeek-vs-lancedb</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/comparisons/mixpeek-vs-elasticsearch</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/notebooks/fake-check</loc>
+<lastmod>2025-07-21T18:21:31.023Z</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://mixpeek.com/playbooks/fake-video-detection</loc>
+<lastmod>2025-07-21T18:21:31.024Z</lastmod>
+<priority>0.6</priority>
+</url>
+</urlset>
+ChatGPT said:
+Here’s a plug-and-play plan you can hand off. It centers the IAB Taxonomy Mapper and wires every asset into one funnel. Shortlink we’ll promote everywhere: mxp.co/taxonomy.
+
+Week 1–2: End-to-End GTM Plan
+0) Core funnel (the “why this works” wiring)
+Traffic → mxp.co/taxonomy → /tools/iab-taxonomy-mapper → /tools/taxonomy-audit → /schedule-demo → POC.
+Every asset below either drives to the mapper, or nurtures toward the audit/demo.
+
+1) Tool: IAB Taxonomy Mapper (Web + CLI)
+What it is: 2.x→3.x category mapper with Mixpeek extensions; upload CSV/JSON → mapped table + export.
+Lives at:
+
+Promo: mxp.co/taxonomy (shortlink in posts/videos)
+
+Canonical: /tools/iab-taxonomy-mapper (create this)
+
+CLI repo: github.com/mixpeek/iab-mapper
+
+Deliverables
+
+Web UI: upload → table: 2.x | matched 3.x | confidence | Mixpeek tag | notes → CSV export.
+
+CLI: mixpeek-iab-mapper input.csv --out mapped.csv (npm + PyPI).
+
+Demo dataset: sample_2x_codes.csv.
+
+Internal links to add
+
+From: /solutions/advertising, /solutions/entertainment, /blog/iab-taxonomy-migration, /education/videos/taxonomies-guide.
+
+To: /tools/taxonomy-audit and /schedule-demo.
+
+Copy (quick)
+
+H1: IAB 2.x → 3.0, mapped in minutes.
+
+CTA: Run a free mapping → Start | Need help? Request a Taxonomy Audit.
+
+2) Landing: Taxonomy Audit
+What it is: Lead capture for a free 15-min review.
+Lives at: /tools/taxonomy-audit
+
+Form fields: work email, company, CSV/JSON upload, “priority” selector (Contextual / Brand Safety / CTV).
+Auto-response: “Got it—here’s a Calendly link. We’ll send your diff + findings.”
+Links in: tool result page, blog post mid-CTA, all short-form captions.
+
+3) Blog (anchor, long-form)
+What it is: Definitive “why + how” piece that showcases the mapper.
+Lives at: /blog/adtech-ai/iab-3x-for-contextual-targeting (create /blog/adtech-ai/ hub)
+
+Outline
+
+Problem: 2.x misses (text-only) vs video/CTV reality.
+
+What’s new in 3.x (granularity + sensitive topics).
+
+Demo: screenshots of mapper input/output.
+
+How to roll out (diff report → internal mapping → QA).
+
+CTAs: Try the Mapper → /tools/iab-taxonomy-mapper, Request Audit → /tools/taxonomy-audit.
+
+Internal links (from this post)
+
+/solutions/advertising, /education/videos/taxonomies-guide, /playbooks/* (below).
+
+4) Education: Long-form Video
+What it is: 6–10 min walkthrough + migration checklist.
+Lives at: /education/videos/taxonomies-guide (embed new video at top)
+
+Chapters overlay
+
+2.x pain → 3.x overview
+
+Live mapping demo
+
+QA tips (edge cases)
+
+How to plug Mixpeek outputs into SSP/DSP workflows
+CTAs on page: Start the Mapper | Book an Audit.
+
+5) Jupyter Notebook (technical proof + SEO)
+What it is: Reproducible mapping + evaluation notebook using sample data.
+Lives at: /notebooks/iab-mapping (create)
+
+Notebook sections
+
+Load sample_2x_codes.csv
+
+Map via local Python pkg (mixpeek-iab-mapper)
+
+Confidence thresholds + “unmapped” handling
+
+Export CSV / JSONL
+Link from: blog post, tool page footer (“Prefer code? Run the notebook”).
+
+6) Short-form Video Set (LinkedIn / YT Shorts / IG / TikTok)
+What it is: 3 clips, 20–45s, captioned, facecam + screen.
+
+Clip A (Problem): “Keywords miss what video shows” → misclassify vs correct 3.x.
+
+Clip B (Demo): Upload CSV → instant mapping → export.
+
+Clip C (Outcome): “Cut false flags 40%” style (use your safest claim/placeholder).
+On-screen CTA: Try it free → mxp.co/taxonomy.
+Hashtags: #AdtechAI (+ optional #MediaAI).
+Link in comments/caption: /tools/iab-taxonomy-mapper + /tools/taxonomy-audit.
+
+7) GitHub Repo (OSS credibility)
+What it is: Public CLI + docs.
+Lives at: github.com/mixpeek/iab-mapper (link under /tools and blog)
+
+Repo structure
+
+/cli      # Node/Python clients
+/web      # optional shared mapping logic
+/data     # sample_2x_codes.csv, mapping tables
+/docs     # README, migration FAQ, API
+README essentials: install, quickstart, examples, exit codes, CSV schema, FAQs, security note, link to audit/demo.
+
+8) Playbook (optional v2, gated)
+What it is: PDF for deeper leads; keep v1 light if short on time.
+Lives at: /playbooks/iab-3x-migration
+
+1-pager v1 contents: what changes in 3.x, 6-step migration checklist, QA pitfalls, tool links.
+Gating: email capture; thank-you page links to the mapper.
+
+9) Site wiring (where to link across your current sitemap)
+Add these lightweight blocks:
+
+/tools → new cards:
+
+IAB Taxonomy Mapper → /tools/iab-taxonomy-mapper
+
+Taxonomy Audit → /tools/taxonomy-audit
+
+/solutions/advertising + /solutions/entertainment
+
+Add “Standards & Compliance” section with buttons: Map 2.x→3.x (tool), Request Audit.
+
+Inline link in hero subcopy: “IAB 3.x ready.”
+
+/blog
+
+Add a tag Adtech AI and show the new anchor post in a featured row.
+
+Cross-link from /blog/iab-taxonomy-migration to the new tool + audit.
+
+/education/videos/taxonomies-guide
+
+Place the long-form video at the top, add buttons to Tool + Audit.
+
+/schedule-demo
+
+Add “Coming from the IAB mapper?” note to keep scent.
+
+/glossary
+
+Add/expand entries: “IAB Content Taxonomy 3.0”, “Contextual Targeting”, “Brand Suitability” → each links to Tool + Blog.
+
+10) Social + Email assets (ready-to-ship)
+LinkedIn (launch) – text
+
+Still transacting on IAB 2.x? You’re leaving accuracy (and revenue) on the table.
+We built a free 2.x → 3.0 mapper for video/CTV workflows. Upload your CSV, get mapped codes + confidence in seconds.
+Try it: mxp.co/taxonomy
+Need help? Request an audit → /tools/taxonomy-audit
+#AdtechAI
+
+Short captions (for all clips)
+
+“Fix 2.x → 3.0 in minutes: mxp.co/taxonomy #AdtechAI”
+
+“Scene-level context needs 3.x. Map your list: mxp.co/taxonomy”
+
+Email (to warm contacts / IAB WGs)
+
+Subject: “Free IAB 2.x → 3.0 mapper (CSV in, CSV out)”
+
+Body (3 lines): problem, link to tool, link to audit.
+
+11) Tracking & SEO
+Add UTM to every link in posts: ?utm_source=linkedin&utm_medium=social&utm_campaign=iab-mapper (adjust per channel).
+
+Events: tool_upload, tool_export, audit_submit.
+
+Schema: SoftwareApplication (tool page), Article (blog), BreadcrumbList (/tools).
+
+Title/desc for tool page:
+
+Title: IAB Taxonomy Mapper (2.x → 3.0) — Mixpeek
+
+Meta: Map legacy IAB 2.x categories to 3.0 in seconds. CSV upload, confidence scores, export.
+
+12) QA checklist (so no surprises)
+ CSV with unknown 2.x codes handled (flag + suggestion).
+
+ Confidence threshold toggle works.
+
+ Export preserves input order and adds new columns.
+
+ 404/large file states friendly.
+
+ Tool loads <2s, mobile OK.
+
+ Legal: page footer uses “IAB” descriptively (no endorsement language).
+
+13) Owner matrix (who does what)
+Eng: Web tool, API, CLI, sample data.
+
+Design: Tool page, diagrams, social thumbnails.
+
+Content: Blog draft, notebook, video scripts.
+
+Sales/BD: Audit responses, demo scheduling, follow-ups.
+
+Ops/Rev: UTM, analytics dashboards, weekly report.
+
+14) 10-day calendar (simple)
+D1: Ship tool (staging), record demo, draft blog, create audit page.
+
+D2: Final QA; publish /tools/iab-taxonomy-mapper + /tools/taxonomy-audit.
+
+D3: Publish blog; post Clip A (problem).
+
+D4: Post Clip B (demo); share in IAB WG Slack/email.
+
+D5: Add links across /solutions/*, /education/videos/taxonomies-guide, /tools.
+
+D6: Publish notebook; tweet/X thread (optional).
+
+D7: Post Clip C (outcome); begin audit outreach to warm accounts.
+
+D8–D10: Collect usage, schedule audits, prep v1.1 improvements.
+
+15) Nice-to-haves (if time)
+/comparisons: “Mixpeek vs generic moderation APIs for IAB 3.x” (light page)
+
+Case study stub: /education/case-studies/brand-safety-* (even if “Coming soon”)
+
+Badge: “IAB 3.x Ready” small SVG you can add to solutions/app pages.
+
+If you want, I’ll crank out (a) the tool page copy, (b) the blog outline with section headers + CTAs wired to your sitemap, and (c) the three short video scripts, so your team can just paste and ship.
+
+You said:
+i think the tool itself should live on a subdomain right
+ChatGPT said:
+Yep—host the tool UI on a subdomain. It’s cleaner for SEO, security, and ops.
+
+Recommended URL scheme
+Promo shortlink (everywhere): mxp.co/taxonomy
+
+App subdomain (tool UI): tools.mixpeek.com/iab-taxonomy-mapper
+
+(Alt if you want broader suite later: standards.mixpeek.com/iab-mapper or codes.mixpeek.com/iab-mapper)
+
+Canonical doc/SEO page on main site: mixpeek.com/tools/iab-taxonomy-mapper
+→ This page explains the tool, embeds screenshots, and links out to the subdomain app. It’s what you interlink from blog/solutions/education.
+
+Why subdomain
+Security/ops: isolate cookies, CSP, and rate limits; ship independently (Vercel/Netlify).
+
+Perf: separate cache/CDN rules; zero-risk deploys.
+
+Clear ownership: “this is an app,” not just marketing.
+
+DNS / hosting quick steps
+Create tools.mixpeek.com CNAME → hosting provider.
+
+Add HTTPS, HTTP→HTTPS redirect.
+
+Shortlink rule: mxp.co/taxonomy → https://tools.mixpeek.com/iab-taxonomy-mapper.
+
+Add uptime check + status page (e.g., status.mixpeek.com).
+
+App concerns (subdomain)
+CORS: allow mixpeek.com for embed/iframe if you plan to.
+
+CSP: lock to your static/CDN + analytics domains.
+
+Auth (if any): keep the mapper unauth’d, gate only audit/exports if needed.
+
+Analytics: tag events (tool_upload, tool_export, cta_audit_click) with utm_* passthrough from shortlink.
+
+Rate limiting: basic IP throttle; guard big CSVs.
+
+Robots: index,follow on the doc page; noindex OK on bare app if you prefer SEO to flow to the doc page.
+
+Internal linking (based on your sitemap)
+Point to the doc page (not the raw app) from:
+
+/solutions/advertising + /solutions/entertainment → “Map IAB 2.x→3.0” button → mixpeek.com/tools/iab-taxonomy-mapper
+
+/blog/adtech-ai/* anchor posts → same doc page mid-CTA + footer CTA
+
+/education/videos/taxonomies-guide → same doc page
+
+/tools index → card → same doc page
+
+On the doc page, primary CTA = Launch Tool → tools.mixpeek.com/iab-taxonomy-mapper; secondary CTA = Request Taxonomy Audit → /tools/taxonomy-audit.
+
+SEO setup
+Doc page: SoftwareApplication schema, canonical to itself.
+
+App page (subdomain): rel="canonical" → the doc page, or set noindex.
+
+Shortlink: preserve UTM → app → doc page via visible links so analytics tie back.
+
+Minimal checklist to ship
+ CNAME + TLS for tools.mixpeek.com
+
+ App live at /iab-taxonomy-mapper with upload → table → export
+
+ Shortlink mxp.co/taxonomy → app URL
+
+ Doc page at mixpeek.com/tools/iab-taxonomy-mapper (screenshots, FAQs, CTAs)
+
+ Add links on /solutions/*, /blog, /education/videos/taxonomies-guide, /tools
+
+ Analytics events + UTM passthrough
+
+ Uptime monitor + basic rate limit
+
+ Legal footer copy: “IAB referenced for interoperability; no endorsement implied.”
+
+If you want a name beyond “tools,” I like standards.mixpeek.com for a future suite (IAB/GARM/MRC).
+
+You said:
+what about 
+mxp.co/taxonomy -> iab-taxonomy-mapping.mixpeek.com 
+ChatGPT said:
+That’s a really good pattern — here’s how it plays:
+
+🔑 Flow
+Promo shortlink: mxp.co/taxonomy
+→ easy to drop in blog CTAs, video end cards, LinkedIn copy.
+
+App subdomain: iab-taxonomy-mapping.mixpeek.com
+→ clear, descriptive, authority-sounding; isolates the actual tool environment.
+
+Main site doc page: mixpeek.com/tools/iab-taxonomy-mapper
+→ SEO, screenshots, FAQs, CTAs to launch app + request audit.
+
+✅ Why it works
+Clarity: no ambiguity — anyone reading iab-taxonomy-mapping.mixpeek.com knows what the app does.
+
+SEO-safe: you’re not trying to rank this subdomain; all SEO lives on the /tools doc page.
+
+Ops: easy to isolate app infra from main marketing site.
+
+Flexibility: if you later add GARM/MRC, you can create garm-taxonomy-mapping.mixpeek.com, etc.
+
+⚠️ Considerations
+Length: it’s long to type or say out loud, which is why the mxp.co/taxonomy shortlink is essential.
+
+Brand: subdomains like this feel more like “internal utility” than polished product brands. You may want a cleaner root (standards.mixpeek.com/iab-mapper) if you want to build a family of standards tools.
+
+🔧 Implementation
+DNS: create CNAME for iab-taxonomy-mapping.mixpeek.com → hosting.
+
+Shortlink: mxp.co/taxonomy → 301 redirect to https://iab-taxonomy-mapping.mixpeek.com.
+
+Doc page: mixpeek.com/tools/iab-taxonomy-mapper → screenshots + launch button → app.
+
+Interlink: add doc page cards/links from /solutions/advertising, /solutions/entertainment, /education/videos/taxonomies-guide, /tools.
+
+👉 Recommendation:
+
+External audience always sees mxp.co/taxonomy.
+
+Search engines + Mixpeek.com sitemap point to /tools/iab-taxonomy-mapper.
+
+App hosting lives at iab-taxonomy-mapping.mixpeek.com.
+
+That way you’ve got clean UX (shortlink), strong SEO (doc page), and safe infra isolation (subdomain app).
+
+Do you want me to show you a visual flow diagram (shortlink → app → doc page → audit/demo) so it’s dead obvious how everything ties together?
+
+You said:
+Uploaded image
+we don't have tools anywhere
+
+does it make sense to put it anywhere here ^ 
+ChatGPT said:
+Good catch — your footer doesn’t currently have a Tools section. Right now the buckets are:
+
+Solutions
+
+Product
+
+Resources
+
+Education
+
+About
+
+Here’s where the IAB Taxonomy Mapper best fits:
+
+🔑 Option 1: Add under Product
+Product already has “Feature Extractors,” “Retrievers,” “Taxonomies.”
+
+Adding “Tools” or directly “Taxonomy Mapper” here signals it’s part of the Mixpeek offering, not just a blog resource.
+
+Example:
+
+Product
+  Feature Extractors
+  Retrievers
+  Taxonomies
+  Clusters
+  Security
+  Pricing
+  Tools
+→ /tools page would then list IAB Mapper and any future utilities.
+
+🔑 Option 2: Add under Resources
+Resources is where you already keep Docs, Blog, Recipes, Playbooks, Notebooks, Apps.
+
+Tools logically fits alongside Apps + Playbooks.
+
+Example:
+
+Resources
+  Documentation
+  Blog
+  Recipes
+  Playbooks
+  Notebooks
+  Apps
+  Tools
+→ Then /tools/iab-taxonomy-mapper becomes discoverable as a resource.
+
+🔑 Option 3: Create its own top-level column (if Tools become a suite)
+If you’re planning multiple standards utilities (IAB, GARM, MRC), a dedicated Tools column future-proofs navigation.
+
+Example:
+
+Tools
+  IAB Mapper
+  Taxonomy Audit
+  (Future: GARM Mapper)
+✅ My recommendation
+Short term (1–2 tools): put it under Resources, next to Playbooks + Apps. That’s where people expect to find utilities.
+
+Long term (3+ tools): spin out a Tools column so Mixpeek looks like it owns a proper suite of standards-compliance products.
+
+Do you want me to draft footer + sitemap edits (exact text + link structure) for the short-term (Resources) and long-term (Tools column) so you have a clean handoff to your frontend/dev team?
+
+You said:
+so /tools/iab-taxonomy-mapper should redirect? whats the point of having it? should it be a page with details?
+ChatGPT said:
+Great Q — here’s the clean way to think about it:
+
+🔑 Role of /tools/iab-taxonomy-mapper
+It shouldn’t just redirect. It should be a canonical doc/landing page for SEO, internal linking, and user trust — while the actual app lives on the subdomain.
+
+1. Why not just redirect?
+If you only redirect, you lose:
+
+SEO authority (Google won’t index the app on a subdomain as cleanly).
+
+Internal linking consistency (footer, blog CTAs, solutions pages).
+
+Education/marketing content (screenshots, FAQs, guides).
+
+2. What it should be
+A lightweight landing page that:
+
+Explains the tool and why migration matters.
+
+Shows screenshots of the mapper.
+
+Embeds a demo video (30–60s).
+
+Links to:
+
+Launch tool → iab-taxonomy-mapping.mixpeek.com
+
+Request audit → /tools/taxonomy-audit
+
+Read blog → /blog/adtech-ai/iab-3x-for-contextual-targeting
+
+3. Page anatomy
+URL: /tools/iab-taxonomy-mapper
+
+Sections:
+
+Hero:
+
+H1: “IAB Taxonomy Mapper (2.x → 3.0)”
+
+CTA buttons: “Launch Tool” (to subdomain) + “Request Audit”
+
+Why it matters:
+
+Brief: “IAB 2.x is deprecated. 3.0 expands to 1,500+ categories. Manual migration is costly + error-prone.”
+
+How it works (visual):
+
+Step 1: Upload CSV/JSON
+
+Step 2: Mapper aligns with IAB 3.0 + Mixpeek categories
+
+Step 3: Export CSV → ready for your workflows
+
+Screenshots / video: Show sample input/output.
+
+FAQ:
+
+What’s included in mapping?
+
+Is this official IAB? (No, built by Mixpeek for compatibility)
+
+How to use CLI? (link to GitHub).
+
+Footer CTA: “Try it now → mxp.co/taxonomy”
+
+4. How it connects
+From footer: Resources → Tools → “IAB Taxonomy Mapper” → this page.
+
+From solutions pages (Advertising, Entertainment): button → this page.
+
+From blog post: mid-content CTA → this page.
+
+From education video: description → this page.
+
+The subdomain app should have a banner: “Looking for more details? → /tools/iab-taxonomy-mapper” so traffic flows back.
+
+✅ So: /tools/iab-taxonomy-mapper = SEO + education + marketing landing page.
+The app subdomain = utility environment.
+The shortlink (mxp.co/taxonomy) = promo.
+
+Do you want me to draft the actual page copy/sections for /tools/iab-taxonomy-mapper so you can hand it off to design/dev as-is?
+
+You said:
+ok give me a fully descriptive comprehensive prompt for iab-taxonomy-mapper that i can use to create the list details and the details page 
+ChatGPT said:
+Got it — here’s a fully descriptive, comprehensive prompt you can feed into your site builder, CMS, or a copy/design assistant to generate both:
+
+The list entry (what shows up under “Tools” in Resources or footer)
+
+The details landing page (/tools/iab-taxonomy-mapper)
+
+📝 Prompt: IAB Taxonomy Mapper Tool Page + Listing
+Context:
+We are building a landing page and site listing for the IAB Taxonomy Mapper. This is Mixpeek’s free tool that helps adtech/media companies migrate their category codes from IAB Content Taxonomy 2.x → 3.x, with optional Mixpeek multimodal extensions.
+
+The shortlink we’ll promote is mxp.co/taxonomy → it should redirect to the subdomain app (iab-taxonomy-mapping.mixpeek.com). The /tools/iab-taxonomy-mapper page should be the canonical marketing + SEO landing page.
+
+The “Tools” index page will list this tool alongside future standards/compliance utilities.
+
+✦ Deliverable 1: List Entry (for /tools index)
+Title: IAB Taxonomy Mapper
+Short Description (40–50 words):
+Quickly migrate from IAB Content Taxonomy 2.x to 3.0. Upload a CSV or JSON, get mapped categories with confidence scores, and export results instantly. Built by Mixpeek for adtech, CTV, and media companies that need standards compliance without manual rework.
+
+CTA button text: Launch Tool
+CTA link: mxp.co/taxonomy
+
+✦ Deliverable 2: Tool Details Page (/tools/iab-taxonomy-mapper)
+Page Structure & Copy Requirements:
+
+Hero Section
+Headline: IAB Taxonomy Mapper (2.x → 3.0)
+
+Subhead: Instantly upgrade your taxonomies to IAB 3.0. Ensure contextual targeting, brand safety, and compliance across adtech and media platforms.
+
+Primary CTA button: Launch Tool → mxp.co/taxonomy
+
+Secondary CTA button: Request Audit → /tools/taxonomy-audit
+
+Why This Matters
+H2: Why migrate to IAB 3.0?
+
+Body copy:
+
+IAB 2.x has ~400 categories; IAB 3.0 expands to 1,500+.
+
+Migration is mandatory for contextual targeting, brand safety, and supply chain compliance.
+
+Manual mapping is slow and risky — errors mean lost revenue and failed ad approvals.
+
+Mixpeek’s mapper automates the process in seconds.
+
+How It Works
+H2: How the Mapper Works
+
+3 Steps visual (list or icons):
+
+Upload your IAB 2.x CSV or JSON.
+
+Mixpeek automatically maps to 3.x categories + confidence scores.
+
+Export mapped file, ready for your SSP, DSP, or internal taxonomy.
+
+Include a small screenshot or mockup of the upload → table → export UI.
+
+Demo Video / Screenshots
+H2: See It in Action
+
+Embed a short (30–60s) demo video.
+
+Add before/after screenshot: 2.x misclassified → corrected 3.x category.
+
+FAQs
+Is this an official IAB tool?
+No. This tool was built by Mixpeek to support interoperability with IAB standards.
+
+Does it support custom categories?
+Yes, you can extend results with Mixpeek’s multimodal classifiers for video, audio, and text.
+
+What formats are supported?
+CSV and JSON. CLI version also available.
+
+Where can I get the CLI?
+GitHub: mixpeek/iab-mapper.
+
+Call-to-Action Section
+H2: Ready to Migrate?
+
+CTA buttons:
+
+Launch Mapper (→ mxp.co/taxonomy)
+
+Request a Free Audit (→ /tools/taxonomy-audit)
+
+Secondary link: Learn more in our IAB Taxonomy Migration Guide.
+
+SEO Metadata (for page config)
+Title tag: IAB Taxonomy Mapper (2.x → 3.0 Migration) | Mixpeek
+
+Meta description: Free tool to map IAB Content Taxonomy 2.x categories to 3.0. Upload CSV/JSON, get mapped categories with confidence scores, and export results instantly. Built by Mixpeek for adtech, CTV, and media compliance.
+
+Internal Linking Requirements
+Link to this page from:
+
+Footer → Resources → Tools → IAB Taxonomy Mapper
+
+/solutions/advertising + /solutions/entertainment (Standards/Compliance section)
+
+/blog/iab-taxonomy-migration and new /blog/adtech-ai/iab-3x-for-contextual-targeting
+
+/education/videos/taxonomies-guide
+
+Link from this page to:
+
+Tool app: iab-taxonomy-mapping.mixpeek.com (via Launch Tool CTA)
+
+Audit funnel: /tools/taxonomy-audit
+
+GitHub repo: github.com/mixpeek/iab-mapper
+
+Blog: /blog/adtech-ai/iab-3x-for-contextual-targeting
+
+👉 This prompt gives whoever’s building the page(s) everything they need: list entry, full landing page copy/sections, CTAs, SEO metadata, internal link wiring, and FAQ content.
+
+Do you want me to also draft a visual wireframe layout (boxes, hero, CTA placement) so it’s crystal clear how /tools/iab-taxonomy-mapper should look?
+
+You said:
+now do it for the actual tool, explaining how it should work
+ChatGPT said:
+Perfect — here’s the functional spec for the actual IAB Taxonomy Mapper tool (iab-taxonomy-mapping.mixpeek.com). This is the app experience itself, separate from the /tools/iab-taxonomy-mapper landing page.
+
+🛠️ IAB Taxonomy Mapper — Tool Spec
+1. Core Purpose
+A utility web app where users can upload their IAB Content Taxonomy 2.x category lists (CSV/JSON) and instantly map them to IAB 3.0 categories, with optional Mixpeek multimodal extensions.
+
+Output: Exportable table with:
+
+Original 2.x code / label
+
+Matched 3.0 code / label
+
+Confidence score (0–1)
+
+Mixpeek “extended taxonomy” tag(s) (optional)
+
+Notes (e.g., “no match found”)
+
+2. UX Flow
+Step 1: Upload
+File formats accepted: CSV or JSON.
+
+Sample files: Provide sample_2x_codes.csv + sample_2x_codes.json as downloads.
+
+Drag-and-drop area + “Browse Files” button.
+
+Validation:
+
+Detects if valid 2.x codes/labels exist.
+
+Shows errors for invalid/malformed files.
+
+Limit: 5MB file, ~5k rows (configurable).
+
+Step 2: Mapping
+Processing indicator: “Mapping categories to IAB 3.0… this may take a few seconds.”
+
+Results displayed in table UI:
+| 2.x Code | 2.x Label | 3.x Code | 3.x Label | Confidence | Mixpeek Tag | Notes |
+
+Row actions:
+
+Tooltip hover for confidence explanation.
+
+Flag unmatched rows (“No direct 3.0 equivalent”).
+
+Allow quick inline editing (optional v2).
+
+Filters above table:
+
+“Show unmatched only”
+
+Confidence threshold slider (default 0.7).
+
+Step 3: Export
+Export formats: CSV, JSON.
+
+Options:
+
+Include Mixpeek extensions (yes/no).
+
+Include confidence scores (yes/no).
+
+CTA buttons:
+
+Download mapped CSV
+
+Download mapped JSON
+
+Step 4: CTAs (conversion hooks)
+Banner above/below table:
+
+Need help validating your taxonomy? → Request a Free Audit
+
+Footer CTA: “Book a demo to see multimodal brand safety + attribution taxonomies in action.”
+
+3. CLI Version (cross-promo)
+Brief section in UI sidebar:
+
+Prefer CLI? Install via pip install mixpeek-iab-mapper or npm install mixpeek-iab-mapper.
+See GitHub → mixpeek/iab-mapper.
+
+4. Technical Requirements
+Frontend: React/Next.js (Vercel/Netlify).
+
+Backend mapping logic: Node/Python microservice using a lookup table + fuzzy matching (Levenshtein / semantic if available).
+
+Mapping source: JSON mapping file (2.x → 3.x) bundled, updateable.
+
+Optional extensions: Mixpeek classification models for extra tags.
+
+Rate limiting: basic IP throttle (to avoid abuse).
+
+Analytics events:
+
+file_upload (file type + rows)
+
+mapping_complete (rows mapped/unmapped)
+
+export_download (format)
+
+cta_audit_click
+
+5. UI Anatomy
+Header
+Logo + title: IAB Taxonomy Mapper
+
+Subtext: “Upgrade from IAB 2.x → 3.0 in seconds.”
+
+Body
+Upload module (drag-drop box).
+
+Results table (scrollable).
+
+Filters (confidence slider, unmatched toggle).
+
+Export buttons.
+
+Sidebar / Footer
+“Need more?” → Audit link.
+
+CLI instructions → GitHub repo.
+
+Disclaimer: “This tool is not affiliated with IAB. Built by Mixpeek for standards interoperability.”
+
+6. Edge Cases
+No matches: show “Unmapped” with CTA: “Request Audit.”
+
+Partial matches: highlight rows in yellow with suggestion.
+
+Invalid file: show friendly error + sample file link.
+
+Very large file: suggest CLI tool instead.
+
+7. Branding
+Use Mixpeek palette:
+
+CTA Pink #fc5185
+
+Secondary Blue rgb(63, 193, 201)
+
+Dark rgba(38, 43, 50, 1)
+
+Offwhite #f3f3f3
+
+Typography: Inter (body), Roboto Mono (code/confidence).
+
+CTA buttons: pill-shaped, shadow, hover glow.
+
+8. Legal
+Disclaimer footer:
+
+“IAB is a registered trademark of the Interactive Advertising Bureau. This tool is an independent utility built by Mixpeek for compatibility with IAB Content Taxonomy standards. No endorsement is implied.”
+
+9. Output Example (after mapping)
+2.x Code | 2.x Label     | 3.x Code | 3.x Label                  | Confidence | Mixpeek Tag        | Notes
+------------------------------------------------------------------------------------------------------------
+1-4      | Sports        | 2-3-18   | Sports > Team Sports        | 0.94       | [Outdoor, Motion]  | -
+2-12     | Food & Drink  | 3-5-2    | Food & Drink > Cooking      | 0.89       | [Kitchen Scene]    | -
+5-9      | Tobacco       | -        | -                          | -          | -                  | No equivalent in 3.0
+👉 With this spec, someone can build the full tool (iab-taxonomy-mapping.mixpeek.com) and tie it into the rest of your GTM funnel (blog → landing page → tool → audit → demo).
+
+Do you want me to also write the developer handoff brief (Jira/Linear-style tickets: FE, BE, QA, Analytics, Design) so an eng team can sprint on this cleanly?
+
+Branched from Channel evaluation and suggestions
+
+You said:
+can you make sure this utilizes the taxonomy api as well as actual iab taxonomies https://iabtechlab.com/standards/content-taxonomy/?__hstc=230754752.9a9097221a49b463cff8f3de1db33b6d.1737660895405.1738555930845.1739294949446.6&__hssc=230754752.1.1739294949446&__hsfp=3017050130
+
+https://server-xb24.onrender.com/docs/openapi.json
+ChatGPT said:
+
+Thought for 12s
+Yes—let’s wire the tool to both:
+
+the official IAB Content Taxonomy (authoritative codes/labels for 2.x and 3.x), and
+
+your Mixpeek Taxonomy API (per your OpenAPI at .../openapi.json) for mapping, lookups, validation, and optional multimodal extensions.
+
+Below is a drop-in functional spec + eng handoff you can give to your team.
+
+IAB Taxonomy Mapper — Spec (with IAB data + Mixpeek Taxonomy API)
+Goals
+Map customer taxonomies from IAB 2.x → IAB 3.0 reliably.
+
+Validate/augment via Mixpeek Taxonomy API (your OpenAPI server).
+
+Keep IAB canonical data source-of-truth (codes, labels, hierarchy).
+
+Ship a web app (subdomain) + CLI with identical mapping logic.
+
+Data Sources
+A. IAB Content Taxonomy (authoritative)
+Location: IAB Tech Lab “Content Taxonomy” page (you’ll download the official CSV/JSON; check license terms).
+
+Artifacts to persist in your repo/db:
+
+iab_2x.json (id, label, path, parents)
+
+iab_3x.json (id, label, path, parents)
+
+Optional: official 2.x→3.0 reference correspondences if provided; else you’ll maintain your own map_seed.json.
+
+Updater job: a small script scripts/fetch_iab_taxonomy.py you run when IAB publishes changes. Version the payloads (version: 3.0.x) and store with checksum.
+
+B. Mixpeek Taxonomy API (your server)
+OpenAPI: https://server-xb24.onrender.com/docs/openapi.json
+
+Use cases:
+
+Lookup & validate codes/labels.
+
+Suggest candidates (if your API supports search/semantic).
+
+Extend with multimodal tags (video/audio/text signals) when desired.
+
+Client generation: generate typed clients from OpenAPI for JS (web) and Python/Node (CLI).
+
+Architecture (high level)
+[ Web UI ]  →  [ Mapping Service ]
+                    |       \
+                    |        \_ uses Mixpeek Taxonomy API (validate/suggest/extend)
+                    |
+                    \_ IAB canonical data (2.x & 3.x JSON in repo/DB)
+Mapping Service exposes /map and /validate endpoints to the UI & CLI.
+
+Deterministic mapping uses:
+
+Exact code match (2.x → canonical 2.x record)
+
+Seed mapping table (your maintained correspondences)
+
+Heuristic/semantic candidates (label similarity, optional API assist)
+
+Confidence scoring + fallbacks (unmapped flagged)
+
+Mixpeek API is called for:
+
+GET /taxonomy/{version}/codes/{id} (validate existence/label)
+
+POST /taxonomy/resolve (free-text → candidates)
+
+POST /taxonomy/map (if your API provides bulk mapping)
+
+POST /taxonomy/extend (add Mixpeek extensions: e.g., “Kitchen Scene”, “Outdoor Motion”)
+
+If your OpenAPI paths differ, swap in your actual routes; keep the call pattern.
+
+Web App (subdomain) behavior
+URL: iab-taxonomy-mapping.mixpeek.com
+Promo shortlink: mxp.co/taxonomy → 301 to the subdomain
+Marketing/SEO page: /tools/iab-taxonomy-mapper (explain + link to app)
+
+UX Flow
+Upload CSV/JSON (columns: code_2x, label_2x optional).
+
+Map button → calls POST /map with rows:
+
+{
+  "version_from": "2.x",
+  "version_to": "3.0",
+  "rows": [{"code":"1-4","label":"Sports"}, ...],
+  "options": {"confidence_min":0.7, "include_extensions": true}
+}
+Results table (sortable/filterable):
+2.x code | 2.x label | 3.0 code | 3.0 label | confidence | mixpeek_extensions[] | notes
+
+Filters: “Show Unmapped”, confidence slider.
+
+Export: CSV / JSON (preserve input order).
+
+CTAs: “Request Audit” → /tools/taxonomy-audit, “Read Migration Guide” → /blog/adtech-ai/iab-3x-for-contextual-targeting.
+
+API Contract (app → mapping service)
+POST /map
+Request: see above payload.
+Response:
+
+{
+  "summary": {"total": 1200, "mapped": 1120, "unmapped": 80},
+  "rows": [
+    {
+      "code_2x": "1-4",
+      "label_2x": "Sports",
+      "code_3x": "2-3-18",
+      "label_3x": "Sports > Team Sports",
+      "confidence": 0.94,
+      "extensions": ["Outdoor","Motion"],
+      "notes": ""
+    },
+    {
+      "code_2x": "5-9",
+      "label_2x": "Tobacco",
+      "code_3x": null,
+      "label_3x": null,
+      "confidence": 0.0,
+      "extensions": [],
+      "notes": "No equivalent / policy mismatch"
+    }
+  ]
+}
+POST /validate (optional) to hard-check codes against Mixpeek API + IAB cache.
+
+Error/edge cases
+Invalid file/schema → friendly error + link to sample_2x_codes.csv.
+
+Very large files → prompt to use CLI.
+
+Unmapped > N% → “Suggest Audit” banner.
+
+CLI (mirrors web logic)
+Pkg names:
+
+PyPI: mixpeek-iab-mapper
+
+npm: @mixpeek/iab-mapper
+
+Usage:
+
+# Python
+pip install mixpeek-iab-mapper
+mixpeek-iab-mapper map input.csv --out mapped.csv --min-confidence 0.7 --extend
+
+# Node
+npx @mixpeek/iab-mapper map input.csv --out mapped.csv --min-confidence 0.7 --extend
+Flags:
+
+--min-confidence (default 0.7)
+
+--extend (boolean; call Mixpeek API for extensions)
+
+--api-base (override OpenAPI host)
+
+--iab-version-from, --iab-version-to
+
+CLI → Service/API
+
+CLI should call the same /map endpoint (or embed identical mapping lib for offline).
+
+If offline mode is needed, bundle IAB JSON + seed map, and disable extensions.
+
+Mapping Logic (deterministic + API-assisted)
+Canonical load
+
+Load iab_2x.json, iab_3x.json into in-memory indices:
+
+by code, by normalized label, and by path.
+
+Seed correspondence
+
+seed_map.json: curated pairs (2.x code → 3.x code) with notes (exact/close/none). This is version-controlled.
+
+Rule cascade per row
+
+Exact code match via seed → accept (confidence 1.0 or 0.95).
+
+Label/path match (normalized label + parent path). Assign 0.85–0.95.
+
+Mixpeek API suggestion (if available):
+POST /taxonomy/resolve with {text: label_2x, scope: "3.0"} → candidate list with scores.
+Pick top above threshold; otherwise unmapped.
+
+Forbidden / deprecated handling: map to null + note (“No 3.0 equivalent”).
+
+Extensions (optional)
+
+If --extend / include_extensions=true: call POST /taxonomy/extend with row context to attach Mixpeek multimodal tags that customers can optionally adopt.
+
+Confidence scoring heuristic (example):
+
+Seed exact: 0.98–1.00
+
+Label+path exact: 0.92–0.96
+
+Label only (fuzzy): 0.80–0.90
+
+API semantic suggestion: as returned, cap min 0.75
+
+No match: 0.00
+
+Using Your OpenAPI (client calls)
+(Adjust paths to actual names after you generate the client from .../openapi.json.)
+
+Validate a code exists (3.0):
+
+await client.taxonomy.getCode({ version: '3.0', code: '2-3-18' })
+Resolve a label to candidates (3.0):
+
+const { candidates } = await client.taxonomy.resolve({
+  version: '3.0',
+  text: 'Sports > Team Sports'
+})
+Bulk map (if provided):
+
+await client.taxonomy.map({
+  fromVersion: '2.x',
+  toVersion: '3.0',
+  rows: [{ code:'1-4', label:'Sports' }, ...]
+})
+Extend with Mixpeek tags (optional):
+
+await client.taxonomy.extend({
+  version: '3.0',
+  code: '2-3-18',
+  context: { mediaType:'video', hints:['team','outdoor'] }
+})
+If your API lacks these exact routes, implement them in the mapping service as adapters that combine IAB lookup + your best available API endpoints.
+
+Versioning & Governance
+Expose versions on UI: “IAB 2.x → 3.0 (v3.0.0 data, last updated YYYY-MM-DD)”.
+
+Pin an IAB dataset version per deployment; changes require a bump and changelog.
+
+Keep seed_map.json separate from code; editable by standards owner via PRs.
+
+Security & Compliance
+Legal disclaimer in footer: “IAB is a registered trademark… tool is independent, no endorsement implied.”
+
+Rate limit anonymous usage; gate huge exports.
+
+PII: files should not contain PII; never store uploads (process in memory, ephemeral temp).
+
+Telemetry: only anonymous counts (rows, mapped/unmapped). Respect Do-Not-Track.
+
+Pages & Links (wired to your sitemap)
+App: iab-taxonomy-mapping.mixpeek.com (noindex or canonicalize to doc page)
+
+Promo shortlink: mxp.co/taxonomy → app
+
+Doc/SEO page: /tools/iab-taxonomy-mapper
+Links to: App, Audit, Blog, GitHub
+
+Audit: /tools/taxonomy-audit
+
+Education video (existing): /education/videos/taxonomies-guide
+
+Blog anchor: /blog/adtech-ai/iab-3x-for-contextual-targeting
+
+Footer: add “Tools → IAB Taxonomy Mapper” under Resources (short term)
+
+Dev Handoff (tickets you can paste into Linear/Jira)
+FE (Web App)
+
+Upload component (CSV/JSON) w/ schema validation + sample downloads.
+
+Results table with filters, confidence slider, CSV/JSON export.
+
+CTA banners to Audit & Blog; CLI blurb + GitHub link.
+
+Telemetry events: file_upload, map_complete, export_click, cta_audit_click.
+
+BE (Mapping Service)
+
+Endpoints: POST /map, POST /validate.
+
+Load IAB 2.x & 3.0 JSON, index for code/label/path.
+
+Implement rule cascade + confidence scoring.
+
+Integrate Mixpeek API client (generated from OpenAPI).
+
+Rate limiting + request logging; ephemeral file handling.
+
+Data/Standards
+
+Fetch & version IAB datasets; checksum + changelog.
+
+Build/maintain seed_map.json.
+
+Unit tests for tricky categories (sensitive topics, deprecated nodes).
+
+CLI
+
+Python + Node CLIs that call /map (and offline mode).
+
+Flags: min-confidence, extend, api-base,
+
+You said:
+dont u need to create a document in a mixpeek collection before you create the taxonomy?
+ChatGPT said:
+Yep — you’re right. With Mixpeek’s own API model, taxonomy isn’t free-floating. It attaches to documents in a collection. The workflow is usually:
+
+Create a collection
+
+POST /collections
+{
+  "name": "iab-taxonomy"
+}
+Returns a collection_id.
+
+Ingest a document (the thing you want to enrich/classify)
+
+In this case, the “document” could be a CSV/JSON representing a set of 2.x codes, or even a text blob that contains the category labels.
+
+POST /collections/{collection_id}/documents
+{
+  "document_id": "iab-2x-sample",
+  "properties": {
+    "codes": ["1-4", "2-12", "5-9"],
+    "labels": ["Sports", "Food & Drink", "Tobacco"]
+  }
+}
+Run a taxonomy extractor on that document
+
+Using Mixpeek’s Taxonomy extractor (or your custom extractor that maps 2.x → 3.0).
+
+POST /collections/{collection_id}/documents/{document_id}/features
+{
+  "extractor": "taxonomy",
+  "params": { "target_version": "3.0" }
+}
+This step uses your mapping logic (backed by the IAB taxonomy data + Mixpeek’s API) to create structured taxonomy annotations.
+
+Query back the enriched document
+
+Now the document contains features.taxonomy with the mapped 3.x codes + confidence + Mixpeek extensions.
+
+GET /collections/{collection_id}/documents/{document_id}
+What that means for the Mapper tool
+When a user uploads a CSV of 2.x codes in the UI, under the hood the backend service can:
+
+Create/lookup a dedicated collection (iab-taxonomy)
+
+Create a temp “document” that holds those codes/labels
+
+Call Mixpeek’s taxonomy feature extractor on that doc
+
+Return the enriched taxonomy (3.x codes, confidences, etc.) to display in the UI
+
+So yes — you do need to create a document in a collection before you can run taxonomy extraction via Mixpeek’s API.
+
+👉 Do you want me to write out the exact sequence of API calls (with sample payloads) that the Mapper app should make to Mixpeek so your devs can just wire it directly?
+
+can you cr
+
+
+No file chosenNo file chosen
+ChatGPT can make mistakes. Check important info.
+

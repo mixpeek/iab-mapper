@@ -1,0 +1,2 @@
+[console_scripts]
+mixpeek-iab-mapper = iab_mapper.cli:app

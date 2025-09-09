@@ -1,0 +1,214 @@
+# IAB Content Taxonomy Mapper (Local CLI)
+
+Map **IAB Content Taxonomy 2.x** labels/codes to **IAB 3.0** locally with a deterministic→fuzzy→(optional) local-embeddings pipeline.
+Outputs are **IAB-3.0–compatible IDs** suitable for OpenRTB/VAST, with optional **vector attributes** (Channel, Type, Format, Language, Source, Environment) and **SCD** awareness.
+
+> No external APIs. Runs fully local. LLMs are **not required**. You can enable local embeddings for tougher matches.
+
+---
+
+## ✨ Features
+- Deterministic alias/exact matching → fuzzy string matching → **optional local embeddings** (Sentence-Transformers) for near-misses
+- Emits **IAB 3.0 IDs** (not just labels) and configurable **`cattax`** for OpenRTB conformance
+- Multi-category output per input; **vector attributes** support
+- **SCD (Sensitive Content) flag** visibility and optional exclusion (`--drop-scd`)
+- Exports **CSV or JSON**; includes **OpenRTB** and **VAST CONTENTCAT** helpers
+- Local-only, reproducible, versioned catalogs
+
+---
+
+## 🔧 Install
+
+### 1) Clone / unpack
+```bash
+unzip iab-mapper.zip && cd iab-mapper
+```
+
+### 2) Python env & install
+```bash
+python -m venv .venv && source .venv/bin/activate
+pip install -e .
+# Optional (enable local embeddings / KNN search)
+pip install -e ".[emb]"
+```
+
+> If you need fully offline installs, pre-bundle the Sentence-Transformers model in your image/host and point to it via `--emb-model` (local path).
+
+---
+
+## 📁 Project Layout
+```
+iab-mapper/
+  pyproject.toml
+  sample_2x_codes.csv
+  iab_mapper/
+    __init__.py
+    cli.py
+    pipeline.py
+    matching.py
+    normalize.py
+    embeddings.py
+    io_utils.py
+    data/
+      iab_2x.json
+      iab_3x.json
+      synonyms_2x.json
+      synonyms_3x.json
+      vectors_channel.json
+      vectors_type.json
+      vectors_format.json
+      vectors_language.json
+      vectors_source.json
+      vectors_environment.json
+```
+
+Replace the stub `data/*.json` with your **full IAB catalogs** (include `id`, `label`, `path`, and `scd` on 3.0 nodes).
+
+---
+
+## 🚀 Quick Start
+
+```bash
+# map the sample CSV using fuzzy matching only
+mixpeek-iab-mapper sample_2x_codes.csv -o mapped.json
+
+# enable local embeddings (improves recall on free-text labels)
+mixpeek-iab-mapper sample_2x_codes.csv -o mapped.json --use-embeddings
+```
+
+The output contains for each input row:
+- `out_ids` → **IAB 3.0 IDs** (topics + any vector IDs)
+- `openrtb` → `{"content":{"cat":[...],"cattax":"<enum>"}}` (configurable via `--cattax`)
+- `vast_contentcat` → `"id1","id2",...`
+- Topic confidences, sources (`"exact"/"fuzzy"/"embed"/"override"), SCD flags, and chosen vectors.
+
+---
+
+## 📥 Input Formats
+
+### CSV
+- Required columns: `label`
+- Optional columns: `code` (2.x), `channel`, `type`, `format`, `language`, `source`, `environment`
+
+Example:
+```csv
+code,label,channel,type,format,language,source,environment
+1-4,Sports,editorial,article,video,en,professional,ctv
+, Cooking how-to ,editorial,article,video,en,professional,web
+```
+
+### JSON
+- List of objects with the same fields as CSV.
+
+---
+
+## 📤 Output Formats
+
+### CSV
+- Includes compact JSON strings for complex fields (e.g., `topic_ids`, `openrtb`).
+
+### JSON
+- List of records. Example snippet:
+```json
+{
+  "in_code": "2-12",
+  "in_label": "Food & Drink",
+  "out_ids": ["3-5-2", "1026", "1068"],
+  "out_labels": ["Food & Drink > Cooking"],
+  "topic_ids": ["3-5-2"],
+  "topic_confidence": [0.89],
+  "topic_sources": ["fuzzy"],
+  "topic_scd": [false],
+  "vectors": {"channel":"editorial","type":"article","format":"video","language":"en","source":"professional","environment":"ctv"},
+  "cattax": "2",
+  "openrtb": {"content":{"cat":["3-5-2","1026","1068"],"cattax":"2"}},
+  "vast_contentcat": ""3-5-2","1026","1068""
+}
+```
+
+---
+
+## ⚙️ Useful Flags
+
+```bash
+# thresholds
+--fuzzy-cut 0.92          # 0..1 (higher = stricter)
+--use-embeddings          # enable local embeddings
+--emb-model all-MiniLM-L6-v2
+--emb-cut 0.80            # cosine similarity cut
+--max-topics 3            # max topic categories per row
+--drop-scd                # exclude SCD nodes from results
+--cattax 2                # set OpenRTB content.cattax enum for Content Taxonomy
+--overrides overrides.json# JSON overrides applied before matching
+--unmapped-out misses.json# write rows with no topic_ids to file
+```
+
+---
+
+## 🧩 Vectors (Orthogonal Attributes)
+Pass via columns or pre-fill in your CSV:
+- **Channel** (`vectors_channel.json`): e.g., `editorial`, `ugc`
+- **Type** (`vectors_type.json`): e.g., `article`, `podcast`, `livestream`
+- **Format** (`vectors_format.json`): e.g., `video`, `text`, `audio`
+- **Language** (`vectors_language.json`): e.g., `en`, `es`, `de`
+- **Source** (`vectors_source.json`): e.g., `professional`, `brand`, `news`
+- **Environment** (`vectors_environment.json`): e.g., `ctv`, `web`, `app`
+
+Each value maps to a **stable IAB 3.0 ID** that is appended to the `cat` array.
+
+---
+
+## ✅ IAB 3.0 Conformance Notes
+- Emits **IDs** for `content.cat` and sets **`"cattax":"<enum>"`**.  
+- Supports **multiple categories per content** (topic IDs + vectors).  
+- **Strict ID validation**: only IDs present in your 3.0 catalog are emitted.  
+- **SCD-aware**: show SCD flags and optionally exclude (`--drop-scd`).
+
+> This tool is **not affiliated with IAB**. It is an independent utility for compatibility with IAB Content Taxonomy.
+
+---
+
+## 🔬 Evaluation (recommended)
+Create a small gold set for your domain and run periodic checks:
+```bash
+# (pseudo) compare mapped.json to gold.json for accuracy & unmapped rates
+python scripts/eval.py mapped.json gold.json
+```
+Gate releases on accuracy deltas so behavior stays stable for audits.
+
+---
+
+## 🛠️ Updating Catalogs
+Replace the stub JSONs in `iab_mapper/data/` with your official datasets:
+- `iab_2x.json` → include `code`, `label`
+- `iab_3x.json` → include `id`, `label`, `path[]`, `scd`
+- `synonyms_*.json` → org-specific aliases
+ - `vectors_*.json` → official vector catalogs mapping values to stable 3.0 IDs
+
+Commit with a version bump and note `taxonomy_version` in your release notes.
+
+---
+
+## 🧯 Troubleshooting
+- **No matches:** lower `--fuzzy-cut` or enable `--use-embeddings`.
+- **Weird matches:** raise thresholds; add synonyms into `synonyms_*.json`.
+- **Offline:** pre-bundle ST model; set `--emb-model` to a local folder path.
+- **CSV issues:** ensure UTF-8 and header row (`label` required).
+ - **Unmapped:** inspect `--unmapped-out` and add overrides/synonyms as needed.
+
+---
+
+## 📦 Example Commands
+```bash
+# Strict fuzzy only
+mixpeek-iab-mapper sample_2x_codes.csv -o mapped.csv --fuzzy-cut 0.95
+
+# Embeddings on, drop SCD, max 2 topics, custom cattax, collect unmapped
+mixpeek-iab-mapper sample_2x_codes.csv -o mapped.json --use-embeddings --drop-scd --max-topics 2 --cattax 2 --unmapped-out misses.json
+```
+
+---
+
+## 📜 License
+TBD by Mixpeek. Include IAB attribution in your deployed UI/footer:
+> “IAB is a registered trademark of the Interactive Advertising Bureau. This tool is an independent utility built by Mixpeek for interoperability with IAB Content Taxonomy standards.”
