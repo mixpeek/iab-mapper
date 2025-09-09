@@ -2,6 +2,7 @@
 name = "iab-mapper"
 version = "0.3.0"
 description = "Local IAB Content Taxonomy 2.x -> 3.0 mapper with vectors, SCD, OpenRTB/VAST exporters."
+readme = "README.md"
 requires-python = ">=3.9"
 dependencies = [
   "pandas>=2.1",
@@ -22,3 +23,15 @@ emb = [
 
 [project.scripts]
 mixpeek-iab-mapper = "iab_mapper.cli:app"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = { find = { include = ["iab_mapper*"] } }
+
+[tool.setuptools.package-data]
+iab_mapper = [
+  "data/*.json"
+]
