@@ -42,7 +42,11 @@ Outputs are **IAB‑3.0–compatible IDs** for OpenRTB/VAST, with optional **vec
 Use the bundled fetcher to sync to the latest Content Taxonomy files from the official IAB GitHub repository. It will locate the latest 2.x and 3.x datasets and normalize them into this tool’s schemas.
 
 ```bash
+# via Python script (direct)
 python scripts/update_catalogs.py
+
+# or via CLI command
+mixpeek-iab-mapper update-catalogs --exact3 "3.1" --exact2 "2.2"
 # Optional: use a GitHub token to raise rate limits
 # export GITHUB_TOKEN=ghp_...
 ```
@@ -312,13 +316,13 @@ Each value maps to a **stable IAB 3.0 ID** that is appended to the `cat` array.
 
 ## 📎 Official IAB References
 
-- Content Taxonomy 3.0 Implementation Guide (PDF): `https://iabtechlab.com/wp-content/uploads/2021/09/Implementation-Guide-Content-Taxonomy-3-0-pc-Sept2021.pdf`
-- IAB Tech Lab Content Taxonomy page: `https://iabtechlab.com/standards/content-taxonomy/`
+- Content Taxonomy 3.0 Implementation Guide (PDF): https://iabtechlab.com/wp-content/uploads/2021/09/Implementation-Guide-Content-Taxonomy-3-0-pc-Sept2021.pdf
+- IAB Tech Lab Content Taxonomy page: https://iabtechlab.com/standards/content-taxonomy/
 - Implementation guidance (historic mappings and migration notes):
-  - `https://github.com/InteractiveAdvertisingBureau/Taxonomies/blob/develop/implementation.md#content-21-to-ad-product-20-taxonomy-mapping-implementation-guidance`
-  - `https://github.com/InteractiveAdvertisingBureau/Taxonomies/blob/develop/Taxonomy%20Mappings/Ad%20Product%202.0%20to%20Content%202.1.tsv`
-  - `https://github.com/katieshell/Taxonomies/blob/main/implementation.md#implementation-guidance-for-content-1--content-2-mapping`
-  - `https://github.com/katieshell/Taxonomies/blob/main/implementation.md#migrating-from-content-taxonomy-10`
+  - https://github.com/InteractiveAdvertisingBureau/Taxonomies/blob/develop/implementation.md#content-21-to-ad-product-20-taxonomy-mapping-implementation-guidance
+  - https://github.com/InteractiveAdvertisingBureau/Taxonomies/blob/develop/Taxonomy%20Mappings/Ad%20Product%202.0%20to%20Content%202.1.tsv
+  - https://github.com/katieshell/Taxonomies/blob/main/implementation.md#implementation-guidance-for-content-1--content-2-mapping
+  - https://github.com/katieshell/Taxonomies/blob/main/implementation.md#migrating-from-content-taxonomy-10
 
 ---
 
@@ -364,7 +368,7 @@ mixpeek-iab-mapper sample_2x_codes.csv -o mapped.json --use-embeddings --drop-sc
 ---
 
 ## 📜 License
-MIT. See `LICENSE`.
+MIT. See [LICENSE](LICENSE).
 
 Include IAB attribution in your deployed UI/footer:
 > “IAB is a registered trademark of the Interactive Advertising Bureau. This tool is an independent utility built by Mixpeek for interoperability with IAB Content Taxonomy standards.”

@@ -3,6 +3,7 @@ from pathlib import Path
 from rich.console import Console
 from rich.table import Table
 from iab_mapper.pipeline import Mapper, MapConfig
+from iab_mapper.updater import update_catalogs
 
 app = typer.Typer(add_completion=False)
 con = Console()
@@ -78,3 +79,17 @@ def run(
         Path(unmapped_out).write_text(json.dumps(unmapped, ensure_ascii=False), encoding="utf-8")
         con.print(f"Unmapped → {unmapped_out} ({len(unmapped)})")
 if __name__=="__main__": app()
+
+
+@app.command(name="update-catalogs")
+def update_catalogs_cmd(
+    data_dir: Path = typer.Option(Path(__file__).parent / "data", help="Data dir to write catalogs"),
+    major3: int = typer.Option(3, help="Major version to pick for Content Taxonomy 3.x (e.g., 3)"),
+    major2: int = typer.Option(2, help="Major version to pick for Content Taxonomy 2.x (e.g., 2)"),
+    exact3: str = typer.Option(None, help="Exact filename substring for 3.x (e.g., '3.1')"),
+    exact2: str = typer.Option(None, help="Exact filename substring for 2.x (e.g., '2.2')"),
+    token: str = typer.Option(None, help="GitHub token (overrides env GITHUB_TOKEN)"),
+):
+    """Fetch latest IAB catalogs from IAB GitHub and normalize into JSON."""
+    update_catalogs(str(data_dir), major3=major3, major2=major2, exact3=exact3, exact2=exact2, token=token)
+    con.print(f"Updated catalogs in {data_dir}")
