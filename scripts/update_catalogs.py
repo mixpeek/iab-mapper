@@ -30,7 +30,7 @@ CONTENT_DIR = "Content Taxonomies"
 GITHUB_API = "https://api.github.com"
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-DATA_DIR = os.path.abspath(os.path.join(ROOT, "..", "iab_mapper", "data"))
+DATA_DIR = os.path.abspath(os.path.join(ROOT, "iab_mapper", "data"))
 RAW_DIR = os.path.join(DATA_DIR, "raw")
 
 
@@ -106,7 +106,7 @@ def to_bool(val: Any) -> bool:
 
 def normalize_2x(df: pd.DataFrame) -> List[Dict[str, Any]]:
     cols = {c.lower(): c for c in df.columns}
-    id_col = next((cols[k] for k in cols if k in {"code", "id", "node id", "taxonomy id"}), None)
+    id_col = next((cols[k] for k in cols if k in {"code", "id", "node id", "taxonomy id", "unique id"}), None)
     label_col = next((cols[k] for k in cols if k in {"label", "name", "node", "node name"}), None)
     if not id_col or not label_col:
         raise ValueError("Could not infer 2.x id/label columns")
@@ -122,12 +122,12 @@ def normalize_2x(df: pd.DataFrame) -> List[Dict[str, Any]]:
 
 def normalize_3x(df: pd.DataFrame) -> List[Dict[str, Any]]:
     cols = {c.lower(): c for c in df.columns}
-    id_col = next((cols[k] for k in cols if k in {"id", "node id", "taxonomy id"}), None)
+    id_col = next((cols[k] for k in cols if k in {"id", "node id", "taxonomy id", "unique id"}), None)
     label_col = next((cols[k] for k in cols if k in {"label", "name", "node", "node name"}), None)
     path_col = next((cols[k] for k in cols if k in {"path", "full path", "taxonomy path"}), None)
     scd_col = next((cols[k] for k in cols if k in {"scd", "sensitive", "is scd"}), None)
 
-    tier_cols = [cols[c] for c in df.columns.str.lower() if c.startswith("tier")]
+    tier_cols = [cols[c] for c in df.columns.str.lower() if c.startswith("tier ") or c.startswith("tier")]
 
     def row_path(r) -> List[str]:
         if path_col:
@@ -160,11 +160,19 @@ def normalize_3x(df: pd.DataFrame) -> List[Dict[str, Any]]:
 
 
 def parse_table(text: str, name: str) -> pd.DataFrame:
-    # Decide delimiter by filename extension
-    if name.lower().endswith(".tsv"):
-        return pd.read_csv(io.StringIO(text), sep="\t")
-    if name.lower().endswith(".csv"):
-        return pd.read_csv(io.StringIO(text))
+    # Decide delimiter by filename extension, and detect header row
+    lower = name.lower()
+    lines = text.splitlines()
+    header_idx = 0
+    for i, line in enumerate(lines[:10]):
+        if ("unique id" in line.lower()) and ("name" in line.lower()):
+            header_idx = i
+            break
+    sio = io.StringIO(text)
+    if lower.endswith(".tsv"):
+        return pd.read_csv(sio, sep="\t", header=header_idx)
+    if lower.endswith(".csv"):
+        return pd.read_csv(sio, header=header_idx)
     # Try to parse JSON as table-like
     try:
         data = json.loads(text)
