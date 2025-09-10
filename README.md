@@ -37,6 +37,24 @@ Outputs are **IAB‑3.0–compatible IDs** for OpenRTB/VAST, with optional **vec
 
 ---
 
+### Update catalogs (fetch latest from IAB)
+
+Use the bundled fetcher to sync to the latest Content Taxonomy files from the official IAB GitHub repository. It will locate the latest 2.x and 3.x datasets and normalize them into this tool’s schemas.
+
+```bash
+python scripts/update_catalogs.py
+# Optional: use a GitHub token to raise rate limits
+# export GITHUB_TOKEN=ghp_...
+```
+
+Outputs:
+- `iab_mapper/data/iab_2x.json` → `[{"code","label"}]`
+- `iab_mapper/data/iab_3x.json` → `[{"id","label","path":[],"scd":bool}]`
+
+Replace or extend `synonyms_*.json` and `vectors_*.json` as needed for your org.
+
+---
+
 ## ✨ Features
 - Deterministic alias/exact matching → fuzzy string matching → **optional local embeddings** (Sentence-Transformers) for near-misses
 - Emits **IAB 3.0 IDs** (not just labels) and configurable **`cattax`** for OpenRTB conformance
