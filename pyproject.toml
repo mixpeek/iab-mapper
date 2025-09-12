@@ -38,6 +38,7 @@ emb = [
 
 [project.scripts]
 mixpeek-iab-mapper = "iab_mapper.cli:app"
+iab-mapper = "iab_mapper.cli:app"
 
 [build-system]
 requires = ["setuptools>=68", "wheel"]

@@ -6,6 +6,7 @@
 
 <p align="center">
   <a href="https://pypi.org/project/iab-mapper/"><img alt="PyPI" src="https://img.shields.io/pypi/v/iab-mapper.svg"></a>
+  <a href="https://img.shields.io/pypi/dm/iab-mapper"><img alt="Downloads" src="https://img.shields.io/pypi/dm/iab-mapper"></a>
   <a href="https://github.com/mixpeek/iab-mapper/actions"><img alt="CI" src="https://github.com/mixpeek/iab-mapper/actions/workflows/ci.yml/badge.svg"></a>
   <a href="https://github.com/mixpeek/iab-mapper/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
 </p>
@@ -34,6 +35,14 @@ Outputs are **IAB‑3.0–compatible IDs** for OpenRTB/VAST, with optional **vec
 - [🧯 Troubleshooting](#-troubleshooting)
 - [📦 Example Commands](#-example-commands)
 - [📜 License](#-license)
+
+---
+
+### Versioning snapshot
+
+| IAB 2.x supported | IAB 3.x supported | Updated       |
+|-------------------|-------------------|---------------|
+| 2.2               | 3.1               | 2025-09-12    |
 
 ---
 
@@ -147,11 +156,21 @@ Replace the stub `data/*.json` with your **full IAB catalogs** (include `id`, `l
 ## 🚀 Quick Start
 
 ```bash
-# map the sample CSV using fuzzy matching only
-mixpeek-iab-mapper sample_2x_codes.csv -o mapped.json
+# simplest path: fuzzy only, CSV in → JSON out
+iab-mapper sample_2x_codes.csv -o mapped.json
 
-# enable local embeddings (improves recall on free-text labels)
-mixpeek-iab-mapper sample_2x_codes.csv -o mapped.json --use-embeddings
+# enable local embeddings (improves recall on free‑text labels)
+iab-mapper sample_2x_codes.csv -o mapped.json --use-embeddings
+```
+
+OpenRTB and VAST helpers (example output):
+
+```json
+{"content":{"cat":["3-5-2","1026","1068"],"cattax":"2"}}
+```
+
+```text
+"3-5-2","1026","1068"
 ```
 
 The output contains for each input row:
@@ -276,18 +295,17 @@ code,label,channel,type,format,language,source,environment
 
 ## ⚙️ Useful Flags
 
-```bash
-# thresholds
---fuzzy-cut 0.92          # 0..1 (higher = stricter)
---use-embeddings          # enable local embeddings
---emb-model all-MiniLM-L6-v2
---emb-cut 0.80            # cosine similarity cut
---max-topics 3            # max topic categories per row
---drop-scd                # exclude SCD nodes from results
---cattax 2                # set OpenRTB content.cattax enum for Content Taxonomy
---overrides overrides.json# JSON overrides applied before matching
---unmapped-out misses.json# write rows with no topic_ids to file
-```
+| Flag | Default | What it does |
+|------|---------|--------------|
+| `--fuzzy-cut` | `0.92` | Stricter = fewer, higher-confidence matches |
+| `--use-embeddings` | off | Enable local embeddings for near-miss labels |
+| `--emb-model` | `all-MiniLM-L6-v2` | Sentence-Transformers model or `tfidf` |
+| `--emb-cut` | `0.80` | Cosine similarity threshold for embeddings |
+| `--max-topics` | `3` | Cap topic IDs per row |
+| `--drop-scd` | off | Exclude Sensitive Content nodes |
+| `--cattax` | `2` | OpenRTB `content.cattax` enum |
+| `--unmapped-out` | — | Write misses to file for audit |
+| `--overrides` | — | Force mappings before match |
 
 ---
 
@@ -334,6 +352,25 @@ python scripts/eval.py mapped.json gold.json
 ```
 Gate releases on accuracy deltas so behavior stays stable for audits.
 
+Minimal starter:
+
+```json
+// scripts/gold.json
+[{"in_label":"Sports","topic_ids":["483"]}]
+```
+
+```python
+# scripts/eval.py (toy example)
+import json, sys
+pred = { (r.get('in_label')): set(r.get('topic_ids',[])) for r in json.load(open(sys.argv[1])) }
+gold = { (r.get('in_label')): set(r.get('topic_ids',[])) for r in json.load(open(sys.argv[2])) }
+tp=fp=fn=0
+for k in gold:
+    g=gold[k]; p=pred.get(k,set())
+    tp += len(g & p); fp += len(p - g); fn += len(g - p)
+print({'tp':tp,'fp':fp,'fn':fn})
+```
+
 ---
 
 ## 🛠️ Updating Catalogs
@@ -347,6 +384,34 @@ Commit with a version bump and note `taxonomy_version` in your release notes.
 
 ---
 
+## 🔐 Security & operations
+
+- Local-first: processing happens on your machine; no external APIs needed.
+- No PII required; CSV/JSON processed in-memory.
+- Air‑gapped: prebundle ST model and run `iab-mapper` fully offline.
+
+---
+
+## 🤝 Using Mixpeek API (optional)
+
+If you prefer managing catalogs, outputs, and audits centrally, you can run mapping locally and then persist results via Mixpeek for auditability.
+
+```http
+# 1) create collection
+POST /collections { "name": "iab-taxonomy" }
+
+# 2) create 'document' with 2.x codes
+POST /collections/{id}/documents { "document_id":"iab-2x", "properties": { ... } }
+
+# 3) run taxonomy feature extractor (2.x → 3.0)
+POST /collections/{id}/documents/{doc}/features { "extractor":"taxonomy", "params":{"target_version":"3.0"} }
+
+# 4) fetch enriched doc
+GET /collections/{id}/documents/{doc}
+```
+
+See also: [Taxonomy Mapper tool](/tools/iab-taxonomy-mapper), [Taxonomy audit tool](/tools/taxonomy-audit), [Video guide](/education/videos/taxonomies-guide), and the landing page at [mxp.co/taxonomy](https://mxp.co/taxonomy).
+
 ## 🧯 Troubleshooting
 - **No matches:** lower `--fuzzy-cut` or enable `--use-embeddings`.
 - **Weird matches:** raise thresholds; add synonyms into `synonyms_*.json`.
@@ -359,10 +424,10 @@ Commit with a version bump and note `taxonomy_version` in your release notes.
 ## 📦 Example Commands
 ```bash
 # Strict fuzzy only
-mixpeek-iab-mapper sample_2x_codes.csv -o mapped.csv --fuzzy-cut 0.95
+iab-mapper sample_2x_codes.csv -o mapped.csv --fuzzy-cut 0.95
 
 # Embeddings on, drop SCD, max 2 topics, custom cattax, collect unmapped
-mixpeek-iab-mapper sample_2x_codes.csv -o mapped.json --use-embeddings --drop-scd --max-topics 2 --cattax 2 --unmapped-out misses.json
+iab-mapper sample_2x_codes.csv -o mapped.json --use-embeddings --drop-scd --max-topics 2 --cattax 2 --unmapped-out misses.json
 ```
 
 ---
