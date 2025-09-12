@@ -83,7 +83,7 @@ def test_cli_invocation(tmp_path: Path):
     input_csv = Path(__file__).parents[1] / "sample_2x_codes.csv"
     out_path = tmp_path / "mapped.json"
     runner = CliRunner()
-    result = runner.invoke(app, [str(input_csv), "-o", str(out_path), "--fuzzy-method", "bm25", "--fuzzy-cut", "0.1"])
+    result = runner.invoke(app, ["run", str(input_csv), "-o", str(out_path), "--fuzzy-method", "bm25", "--fuzzy-cut", "0.1"])
     assert result.exit_code == 0
     assert out_path.exists()
     data = json.loads(out_path.read_text())

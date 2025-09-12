@@ -122,14 +122,21 @@ def normalize_3x(df: pd.DataFrame) -> List[Dict[str, Any]]:
         if path_col:
             raw = r.get(path_col)
             if isinstance(raw, str) and raw.strip():
-                parts = [p.strip() for p in re.split(r">|/|\\|,", raw) if p.strip()]
+                parts = [p.strip() for p in re.split(r">|/|\\|,", raw) if p.strip() and p.strip().lower() != "nan"]
                 if parts:
                     return parts
-        parts = []
+        parts: List[str] = []
         for t in tier_cols:
-            val = str(r.get(t) or "").strip()
-            if val:
-                parts.append(val)
+            val = r.get(t)
+            try:
+                import pandas as _pd  # local import to avoid import ordering issues
+                if _pd.isna(val):
+                    continue
+            except Exception:
+                pass
+            s = str(val).strip()
+            if s and s.lower() != "nan":
+                parts.append(s)
         return parts
 
     if not id_col or not label_col:

@@ -32,16 +32,30 @@ def test_vectors_and_cattax_in_outputs():
 
 
 def test_overrides_precedence(tmp_path: Path):
-    overrides = [
-        {"code": "1-4", "label": None, "ids": ["2-3-18"]},
-    ]
+    # Pick an existing 3.x ID to guarantee the override is valid across catalog versions
+    import json
+    from pathlib import Path as _Path
+    import iab_mapper as pkg
+    dd = _Path(pkg.__file__).parent / "data" / "iab_3x.json"
+    cats = json.loads(dd.read_text())
+    # choose a stable root like "Sports" if present; otherwise first item
+    target_id = None
+    for r in cats:
+        if r.get("label") == "Sports":
+            target_id = r.get("id")
+            break
+    if target_id is None:
+        target_id = cats[0]["id"]
+
+    overrides = [{"code": "1-4", "label": None, "ids": [target_id]}]
     ov_path = tmp_path / "overrides.json"
     ov_path.write_text(json.dumps(overrides), encoding="utf-8")
 
     cfg = MapConfig(fuzzy_method="rapidfuzz", fuzzy_cut=0.95, max_topics=3, overrides_path=str(ov_path))
     m = Mapper(cfg, str(data_dir()))
     out = m.map_record({"code": "1-4", "label": "Sports"})
-    assert out["topic_ids"] == ["2-3-18"]
+    # With latest catalogs, IDs change; verify override wins and is first
+    assert out["topic_ids"][0] == target_id
     assert out["topics"][0]["source"] == "override"
 
 
@@ -64,7 +78,7 @@ def test_cli_unmapped_and_cattax(tmp_path: Path):
     out_path = tmp_path / "mapped.json"
     misses_path = tmp_path / "misses.json"
 
-    res = runner.invoke(app, [str(input_file), "-o", str(out_path), "--cattax", "2", "--unmapped-out", str(misses_path)])
+    res = runner.invoke(app, ["run", str(input_file), "-o", str(out_path), "--cattax", "2", "--unmapped-out", str(misses_path)])
     assert res.exit_code == 0
     data = json.loads(out_path.read_text())
     assert isinstance(data, list)

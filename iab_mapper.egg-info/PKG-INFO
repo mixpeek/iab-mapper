@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: iab-mapper
-Version: 0.3.0
+Version: 0.3.1
 Summary: Local IAB Content Taxonomy 2.x -> 3.0 mapper with vectors, SCD, OpenRTB/VAST exporters.
 Author: Mixpeek
 License: MIT
