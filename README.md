@@ -121,6 +121,19 @@ pip install -e ".[emb]"
 
 > If you need fully offline installs, pre-bundle the Sentence-Transformers model in your image/host and point to it via `--emb-model` (local path).
 
+### 3) LLM Re-ranking (Ollama, optional)
+If you intend to use the LLM re-ranking feature (available in the demo's "Advanced options"), you need to have [Ollama](https://ollama.com/) installed and the `llama3.1:8b` model pulled locally.
+
+```bash
+# Install Ollama (if you haven't already)
+# Refer to https://ollama.com/download for installation instructions
+
+# Pull the required LLM model
+ollama pull llama3.1:8b
+```
+
+After installing Ollama and pulling the model, ensure your Ollama server is running (it usually starts automatically after installation).
+
 ---
 
 ## 📁 Project Layout
