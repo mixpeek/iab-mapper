@@ -12,9 +12,9 @@ except Exception:
 @dataclass
 class MapConfig:
     fuzzy_cut: float = 0.92
-    fuzzy_method: str = "rapidfuzz"  # rapidfuzz|tfidf|bm25
+    fuzzy_method: str = "rapidfuzz"  # rapidfuzz|tfidf|bm25|hybrid
     use_embeddings: bool = False
-    emb_model: str = "all-MiniLM-L6-v2"
+    emb_model: str = "tfidf"  # default lightweight for demo; switch to all-MiniLM-L6-v2 if installed
     emb_cut: float = 0.80
     max_topics: int = 3
     drop_scd: bool = False
@@ -73,36 +73,120 @@ class Mapper:
     def map_topics(self, in_label: str):
         out = []
         q = self.alias_idx.get(normalize(in_label)) or in_label
-        if self.cfg.fuzzy_method == "rapidfuzz":
-            fuzz_hits = matching.fuzzy_multi(q, self.labels3, top_k=self.cfg.max_topics, cut=self.cfg.fuzzy_cut)
-        else:
-            fuzz_hits = self.retriever.search(q, top_k=self.cfg.max_topics, cut=self.cfg.fuzzy_cut)
-        for lbl, s in fuzz_hits:
-            id_ = self.label_to_id.get(lbl)
-            if not id_:
-                continue
-            if any(x["id"] == id_ for x in out):
-                continue
-            if not self.cfg.drop_scd or not self.id_to_row[id_].get("scd"):
-                out.append({"id": id_, "label": self.id_to_row[id_]["label"], "confidence": round(float(s),3), "source": self.cfg.fuzzy_method})
-        if self.emb and len(out) < self.cfg.max_topics:
-            hits = self.emb.search(q, top_k=10)
+
+        def add_hits(hits: List[tuple], source: str):
+            for lbl, s in hits:
+                id_ = self.label_to_id.get(lbl)
+                if not id_:
+                    continue
+                if self.cfg.drop_scd and self.id_to_row[id_].get("scd"):
+                    continue
+                existing = next((x for x in out if x["id"] == id_), None)
+                if existing:
+                    if float(s) > float(existing.get("confidence", 0.0)):
+                        existing["confidence"] = round(float(s), 3)
+                        existing["source"] = source
+                    continue
+                out.append({
+                    "id": id_,
+                    "label": self.id_to_row[id_]["label"],
+                    "confidence": round(float(s), 3),
+                    "source": source,
+                })
+
+        # Embedding (semantic KNN) candidates first, if enabled
+        if self.emb and self.cfg.use_embeddings:
+            hits = self.emb.search(q, top_k=10) # Get more candidates to ensure good coverage
+            emb_candidates = []
             for idx, sim in hits:
-                if sim < self.cfg.emb_cut: continue
+                if sim < self.cfg.emb_cut:
+                    continue
                 label = self.labels3[idx]
                 id_ = self.label_to_id.get(label)
-                if not id_ or any(x["id"]==id_ for x in out): continue
-                if not self.cfg.drop_scd or not self.id_to_row[id_].get("scd"):
-                    out.append({"id": id_, "label": self.id_to_row[id_]["label"], "confidence": round(float(sim),3), "source":"embed"})
-                if len(out) >= self.cfg.max_topics: break
+                if not id_:
+                    continue
+                if self.cfg.drop_scd and self.id_to_row[id_].get("scd"):
+                    continue
+                emb_candidates.append({
+                    "id": id_,
+                    "label": self.id_to_row[id_]["label"],
+                    "confidence": round(float(sim), 3),
+                    "source": "embed",
+                })
+            # Sort embedding candidates by confidence to prioritize strong semantic matches
+            emb_candidates.sort(key=lambda x: float(x.get("confidence", 0.0)), reverse=True)
+            for cand in emb_candidates:
+                # Add embedding hits. If an ID already exists, only update if the embedding confidence is higher.
+                existing = next((x for x in out if x["id"] == cand["id"]), None)
+                if existing:
+                    if cand["confidence"] > existing["confidence"]:
+                        existing.update(cand) # Update with higher confidence embedding match
+                else:
+                    out.append(cand)
+
+
+        if self.cfg.fuzzy_method == "rapidfuzz":
+            fuzz_hits = matching.fuzzy_multi(q, self.labels3, top_k=max(5, self.cfg.max_topics), cut=self.cfg.fuzzy_cut)
+            add_hits(fuzz_hits, "rapidfuzz")
+        elif self.cfg.fuzzy_method in ("tfidf", "bm25"):
+            fuzz_hits = self.retriever.search(q, top_k=max(5, self.cfg.max_topics), cut=self.cfg.fuzzy_cut)
+            add_hits(fuzz_hits, self.cfg.fuzzy_method)
+        elif self.cfg.fuzzy_method == "hybrid":
+            selected = {"rapidfuzz", "tfidf", "bm25", "exact"}
+            # Allow server to pass a subset via options.methods
+            try:
+                # Access dynamic methods list if present on cfg (injected by API layer)
+                methods_list = getattr(self.cfg, "methods", None)
+                if isinstance(methods_list, list) and methods_list:
+                    selected = set([str(m) for m in methods_list])
+            except Exception:
+                pass
+            # Exact label/path match approximation: use alias/normalized equality to labels
+            if "exact" in selected:
+                norm_q = normalize(q)
+                for lbl in self.labels3:
+                    if normalize(lbl) == norm_q:
+                        # Explicitly set confidence to 1.0 for exact matches
+                        add_hits([(lbl, 1.0)], "label_match")
+            try:
+                if "rapidfuzz" in selected:
+                    rf_hits = matching.fuzzy_multi(q, self.labels3, top_k=max(5, self.cfg.max_topics), cut=self.cfg.fuzzy_cut)
+                    add_hits(rf_hits, "rapidfuzz")
+            except Exception:
+                pass
+            try:
+                if "tfidf" in selected:
+                    tf_idx = matching.TFIDFIndex(self.labels3)
+                    tf_hits = tf_idx.search(q, top_k=max(5, self.cfg.max_topics), cut=self.cfg.fuzzy_cut)
+                    add_hits(tf_hits, "tfidf")
+            except Exception:
+                pass
+            try:
+                if "bm25" in selected:
+                    bm_idx = matching.BM25Index(self.labels3)
+                    bm_hits = bm_idx.search(q, top_k=max(5, self.cfg.max_topics), cut=self.cfg.fuzzy_cut)
+                    add_hits(bm_hits, "bm25")
+            except Exception:
+                pass
+
+
         # Optional LLM re-ranking (keeps same candidates, reorders by semantic fit)
+        used_llm = False
         if self.cfg.use_llm and llm_mod is not None and len(out) > 1:
             try:
+                initial_order_ids = [x["id"] for x in out] # Capture order before LLM
                 out = llm_mod.rerank_candidates(q, out, host=self.cfg.llm_host, model=self.cfg.llm_model)
+                final_order_ids = [x["id"] for x in out] # Capture order after LLM
+                if initial_order_ids != final_order_ids: # Check if LLM actually re-ordered
+                    used_llm = True
             except Exception:
                 # Fail soft if LLM not available
                 pass
-        return out[:self.cfg.max_topics]
+
+        # Final trim to top-K
+        if not used_llm:
+            out.sort(key=lambda x: float(x.get("confidence", 0.0)), reverse=True)
+        return out[: self.cfg.max_topics], used_llm # Return used_llm flag
 
     def _try_load(self, path: str) -> Dict[str, str]:
         try:
@@ -154,9 +238,14 @@ class Mapper:
         in_label = rec.get("label") or ""
 
         # 1) Overrides first
-        topics = self._apply_overrides(in_code, in_label)
+        overrides_applied = self._apply_overrides(in_code, in_label)
+        topics = overrides_applied
+        used_llm_rerank = False
         if topics is None:
-            topics = self.map_topics(in_label)
+            topics, used_llm_rerank = self.map_topics(in_label) # Capture used_llm_rerank from map_topics
+        else:
+            # If overrides applied, LLM re-rank is not applicable for this record's top picks
+            topics, _ = self.map_topics(in_label) # still run map_topics to get other candidates, but ignore its used_llm_rerank
 
         # Add SCD flag on topics
         for t in topics:
@@ -196,4 +285,5 @@ class Mapper:
             "openrtb": openrtb,
             "vast_contentcat": vast,
             "topics": topics,
+            "llm_reranked": used_llm_rerank, # Add LLM reranked flag to final output
         }

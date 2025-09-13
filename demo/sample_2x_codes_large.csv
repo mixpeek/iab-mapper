@@ -1,0 +1,112 @@
+code,label
+1-1,Automotive
+1-2,Auto Body Styles
+1-3,Commercial Trucks
+1-4,Sports
+2-12,Food & Drink
+5-9,Tobacco
+3-5,Cooking
+3-6,Baking
+4-1,Technology
+4-2,Consumer Electronics
+4-3,Mobile Phones
+4-4,Software
+4-5,Artificial Intelligence
+6-1,Health
+6-2,Fitness
+6-3,Nutrition
+7-1,Travel
+7-2,Hotels
+7-3,Flights
+7-4,Vacation Rentals
+8-1,Finance
+8-2,Investing
+8-3,Personal Finance
+8-4,Cryptocurrency
+9-1,Entertainment
+9-2,Movies
+9-3,TV Shows
+9-4,Music
+10-1,News
+10-2,Politics
+10-3,World News
+10-4,Business News
+11-1,Gaming
+11-2,Esports
+11-3,Mobile Gaming
+12-1,Education
+12-2,Online Courses
+12-3,STEM
+13-1,Home & Garden
+13-2,DIY
+13-3,Interior Design
+14-1,Sports News
+14-2,Team Sports
+14-3,Individual Sports
+15-1,Science
+15-2,Space
+15-3,Environment
+16-1,Parenting
+16-2,Family Activities
+16-3,Kids Health
+17-1,Pets
+17-2,Dogs
+17-3,Cats
+18-1,Food News
+18-2,Recipes
+18-3,Restaurants
+19-1,Arts
+19-2,Photography
+19-3,Design
+20-1,Books
+20-2,Fiction
+20-3,Non-Fiction
+21-1,Fashion
+21-2,Men's Fashion
+21-3,Women's Fashion
+22-1,Beauty
+22-2,Skincare
+22-3,Makeup
+23-1,Real Estate
+23-2,Home Buying
+23-3,Mortgages
+24-1,Automotive Reviews
+24-2,Used Cars
+24-3,Electric Vehicles
+25-1,Outdoors
+25-2,Hiking
+25-3,Camping
+26-1,Photography Gear
+26-2,Cameras
+26-3,Lenses
+27-1,Music Reviews
+27-2,Concerts
+27-3,Music Theory
+28-1,Podcasts
+28-2,Podcast Reviews
+28-3,Audio Production
+29-1,History
+29-2,Ancient History
+29-3,Modern History
+30-1,Art History
+30-2,Museums
+30-3,Galleries
+31-1,Business
+31-2,Startups
+31-3,Leadership
+32-1,Marketing
+32-2,SEO
+32-3,Content Marketing
+33-1,Programming
+33-2,Python
+33-3,JavaScript
+34-1,Data Science
+34-2,Machine Learning
+34-3,Data Engineering
+35-1,Cybersecurity
+35-2,Network Security
+35-3,Application Security
+36-1,Cloud
+36-2,AWS
+36-3,Azure
+

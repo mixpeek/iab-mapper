@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IAB Mapper Demo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="banner">
+      <div class="container">
+        <h1>IAB 2.x → 3.0 Mapper</h1>
+        <p id="summary">Mapped 0 rows • 0% ≥ threshold • 0 unmatched → <a href="#" id="ctaAudit">Request Audit</a></p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="uploader">
+        <div class="dropzone" id="dropzone">
+          <input type="file" id="fileInput" accept=".csv,.json" />
+          <p>Drag & drop a CSV/JSON here, or click to select.</p>
+          <p class="hint">CSV must include a header with at least column <code>label</code> (optional: <code>code</code>).</p>
+          <p class="hint" id="fileStatus"></p>
+        </div>
+        <div class="samples">
+          <a id="dlCsv" href="sample_2x_codes.csv" download>Download sample_2x_codes.csv</a>
+          <a id="dlJson" href="sample_2x_codes.json" download>Download sample_2x_codes.json</a>
+          <a id="dlCsvLarge" href="sample_2x_codes_large.csv" download>Large sample (CSV ~100 rows)</a>
+          <a id="dlJsonLarge" href="sample_2x_codes_large.json" download>Large sample (JSON ~100 rows)</a>
+        </div>
+      </section>
+
+      <section class="controls">
+        <div class="control">
+          <label>
+            <input type="checkbox" id="unmatchedOnly" /> Unmatched only
+            <i class="fa-regular fa-circle-question help-icon" data-tooltip="Show only rows with no accepted 3.0 match (or below the confidence threshold)."></i>
+          </label>
+        </div>
+        <div class="control">
+          <label style="display:inline-flex;align-items:center;gap:6px;">Methods
+            <i class="fa-regular fa-circle-question help-icon" data-tooltip="Choose mapping methods: exact label, TF-IDF, BM25, or RapidFuzz. Hybrid runs all checked, de‑dups by ID, then optionally adds embeddings and LLM re‑rank."></i>
+          </label>
+          <div class="method-group" id="methods">
+            <label><input type="checkbox" name="methods" value="exact" checked /> exact label</label>
+            <label><input type="checkbox" name="methods" value="tfidf" checked /> tfidf</label>
+            <label><input type="checkbox" name="methods" value="bm25" checked /> bm25</label>
+            <label><input type="checkbox" name="methods" value="rapidfuzz" /> rapidfuzz</label>
+          </div>
+        </div>
+        <div class="control">
+          <label for="confidence">Confidence ≥ <span id="confVal">0.70</span> <i class="fa-regular fa-circle-question help-icon" data-tooltip="Minimum confidence to accept a 3.0 match. Lower to increase recall; higher to increase precision."></i></label>
+          <input id="confidence" type="range" min="0.5" max="1.0" step="0.01" value="0.70" />
+        </div>
+        <div class="control search">
+          <input id="search" type="search" placeholder="Search…" title="Client‑side filter across all columns." />
+        </div>
+        <div class="spacer"></div>
+        <button id="mapBtn" disabled>Map Now</button>
+        <div class="exports">
+          <button id="exportCsv" disabled>Download CSV</button>
+          <button id="exportJson" disabled>Download JSON</button>
+        </div>
+        <button id="clearBtn" disabled>Clear</button>
+      </section>
+
+      <section class="advanced container">
+        <details>
+          <summary>Advanced options</summary>
+          <div class="adv-grid">
+            <div class="field field-row">
+              <label for="useEmbeddings">Use embeddings (KNN) <i class="fa-regular fa-circle-question help-icon" data-tooltip="Add semantic candidates using nearest neighbors; helps when labels differ but meaning is similar."></i></label>
+              <input type="checkbox" id="useEmbeddings" />
+            </div>
+
+            <div class="field">
+              <label for="embCut">Embedding cut <i class="fa-regular fa-circle-question help-icon" data-tooltip="Minimum similarity for embedding candidates (0.50–1.00). Typical: 0.80."></i></label>
+              <input id="embCut" type="number" step="0.01" min="0.5" max="1.0" value="0.80" />
+            </div>
+
+            <div class="field field-row">
+              <label for="useLLM">LLM re-rank (Ollama) <i class="fa-regular fa-circle-question help-icon" data-tooltip="Send candidates to an LLM to reorder by semantic fit. Requires a local Ollama server."></i></label>
+              <input type="checkbox" id="useLLM" />
+            </div>
+
+            <div class="field">
+              <label for="llmModel">LLM model <i class="fa-regular fa-circle-question help-icon" data-tooltip="Ollama model name to use for re‑rank (e.g., llama3.1:8b)."></i></label>
+              <input id="llmModel" type="text" value="llama3.1:8b" />
+            </div>
+
+            <div class="field">
+              <label for="llmHost">LLM host <i class="fa-regular fa-circle-question help-icon" data-tooltip="Base URL for your Ollama server (default http://localhost:11434)."></i></label>
+              <input id="llmHost" type="text" value="http://localhost:11434" />
+            </div>
+          </div>
+        </details>
+      </section>
+
+      <section class="results">
+        <table id="resultsTable">
+          <thead>
+            <tr>
+              <th>2.x Code</th>
+              <th>2.x Label</th>
+              <th>3.0 Code</th>
+              <th>3.0 Label</th>
+              <th>Confidence</th>
+              <th>Method</th>
+              <th>Notes</th>
+              <th>LLM Re-ranked</th>
+            </tr>
+          </thead>
+          <tbody id="resultsBody"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer class="footer container">
+      <p>
+        Method tooltips:
+        <span data-tooltip="exact_code: direct code correspondence from curated seed or overrides">exact_code</span>
+        • <span data-tooltip="label_match: normalized label/path match">label_match</span>
+        • <span data-tooltip="synonym: matched via alias dictionary">synonym</span>
+        • <span data-tooltip="fuzzy: string similarity retrieval">fuzzy</span>
+        • <span data-tooltip="semantic: embedding similarity or rerank">semantic</span>
+      </p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
+
+

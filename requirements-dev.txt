@@ -1,4 +1,7 @@
 pytest>=8.0
 build>=1.0
 twine>=5.0
+fastapi>=0.110
+uvicorn[standard]>=0.30
+pydantic>=2.6
 
