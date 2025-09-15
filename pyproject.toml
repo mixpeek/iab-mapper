@@ -1,6 +1,6 @@
 [project]
 name = "iab-mapper"
-version = "0.3.1"
+version = "0.3.2"
 description = "Local IAB Content Taxonomy 2.x -> 3.0 mapper with vectors, SCD, OpenRTB/VAST exporters."
 readme = "README.md"
 requires-python = ">=3.9"
