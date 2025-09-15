@@ -26,6 +26,9 @@ const els = {
   llmHost: document.getElementById("llmHost"),
   methods: document.getElementById("methods"),
   clearBtn: document.getElementById("clearBtn"),
+  themeToggle: document.getElementById("themeToggle"),
+  themeIcon: document.getElementById("themeIcon"),
+  themeLabel: document.getElementById("themeLabel"),
 };
 
 function fmtPct(n) {
@@ -207,7 +210,7 @@ function clearTable() {
   state.rows = [];
   state.mapped = [];
   state.search = "";
-  els.fileInput.value = ""; // Clear selected file
+  if (els.file) els.file.value = ""; // Clear selected file
   els.fileStatus.textContent = "";
   els.mapBtn.disabled = true;
   els.exportCsv.disabled = true;
@@ -333,6 +336,39 @@ document.addEventListener("DOMContentLoaded", () => {
       el.removeAttribute("title");
     }
   });
+  // Initialize theme from localStorage or system preference
+  try {
+    const saved = localStorage.getItem("iab_theme");
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const theme = saved || (prefersDark ? 'dark' : 'light');
+    setTheme(theme);
+  } catch (_) {
+    setTheme('dark');
+  }
 });
+
+function setTheme(theme) {
+  const root = document.documentElement;
+  if (theme === 'light') {
+    root.setAttribute('data-theme', 'light');
+    if (els.themeIcon) els.themeIcon.className = 'fa-regular fa-sun';
+    if (els.themeLabel) els.themeLabel.textContent = 'Light';
+    if (els.themeToggle) els.themeToggle.setAttribute('aria-checked', 'true');
+  } else {
+    root.removeAttribute('data-theme');
+    if (els.themeIcon) els.themeIcon.className = 'fa-regular fa-moon';
+    if (els.themeLabel) els.themeLabel.textContent = 'Dark';
+    if (els.themeToggle) els.themeToggle.setAttribute('aria-checked', 'false');
+  }
+}
+
+if (els.themeToggle) {
+  els.themeToggle.addEventListener('click', () => {
+    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+    const next = isLight ? 'dark' : 'light';
+    setTheme(next);
+    try { localStorage.setItem('iab_theme', next); } catch(_) {}
+  });
+}
 
 

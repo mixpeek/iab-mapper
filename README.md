@@ -5,10 +5,9 @@
 # IAB Content Taxonomy Mapper (Local CLI)
 
 <p align="center">
-  <a href="https://pypi.org/project/iab-mapper/"><img alt="PyPI" src="https://img.shields.io/pypi/v/iab-mapper.svg"></a>
-  <a href="https://img.shields.io/pypi/dm/iab-mapper"><img alt="Downloads" src="https://img.shields.io/pypi/dm/iab-mapper"></a>
-  <a href="https://github.com/mixpeek/iab-mapper/actions"><img alt="CI" src="https://github.com/mixpeek/iab-mapper/actions/workflows/ci.yml/badge.svg"></a>
-  <a href="https://github.com/mixpeek/iab-mapper/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
+  <a href="https://github.com/mixpeek/iab-mapper">View iab-mapper on GitHub</a>
+  •
+  <a href="https://mixpeek.com/tools/iab-taxonomy-mapper">Open Mixpeek — IAB Taxonomy Mapper</a>
 </p>
 
 Map **IAB Content Taxonomy 2.x** labels/codes to **IAB 3.0** locally with a deterministic → fuzzy → (optional) semantic pipeline.
@@ -122,17 +121,49 @@ pip install -e ".[emb]"
 > If you need fully offline installs, pre-bundle the Sentence-Transformers model in your image/host and point to it via `--emb-model` (local path).
 
 ### 3) LLM Re-ranking (Ollama, optional)
-If you intend to use the LLM re-ranking feature (available in the demo's "Advanced options"), you need to have [Ollama](https://ollama.com/) installed and the `llama3.1:8b` model pulled locally.
+If you intend to use the LLM re-ranking feature (available in the demo's "Advanced options"), you need to have Ollama installed and the `llama3.1:8b` model pulled locally.
 
 ```bash
 # Install Ollama (if you haven't already)
-# Refer to https://ollama.com/download for installation instructions
+# Refer to the Ollama docs for installation instructions
 
 # Pull the required LLM model
 ollama pull llama3.1:8b
 ```
 
 After installing Ollama and pulling the model, ensure your Ollama server is running (it usually starts automatically after installation).
+
+---
+
+## 🖥️ Run the Web Demo (UI)
+
+The repository includes a small Mixpeek‑styled web UI plus a FastAPI backend that exposes `POST /api/map`.
+
+```bash
+# 1) Create a virtual environment (recommended)
+python -m venv .venv && source .venv/bin/activate
+
+# 2) Install the library and demo server deps
+pip install -e .
+pip install -r requirements-dev.txt
+
+# 3) Start the local server (serves API and the UI)
+uvicorn scripts.web_server:app --port 8000 --reload
+
+# 4) Open the demo in your browser
+# → http://localhost:8000/
+```
+
+Optional features used by the UI (enable if you toggle them in “Advanced options”):
+
+- **Embeddings (KNN)**: `pip install -e ".[emb]"` to enable local semantic candidates.
+- **LLM re‑rank (Ollama)**: install Ollama and pull a model you plan to use, e.g.:
+
+```bash
+ollama pull llama3.1:8b   # or another model; set the name in the UI
+```
+
+The server will be available at `http://localhost:8000`, serving both the static UI and the API.
 
 ---
 
@@ -347,13 +378,7 @@ Each value maps to a **stable IAB 3.0 ID** that is appended to the `cat` array.
 
 ## 📎 Official IAB References
 
-- Content Taxonomy 3.0 Implementation Guide (PDF): https://iabtechlab.com/wp-content/uploads/2021/09/Implementation-Guide-Content-Taxonomy-3-0-pc-Sept2021.pdf
-- IAB Tech Lab Content Taxonomy page: https://iabtechlab.com/standards/content-taxonomy/
-- Implementation guidance (historic mappings and migration notes):
-  - https://github.com/InteractiveAdvertisingBureau/Taxonomies/blob/develop/implementation.md#content-21-to-ad-product-20-taxonomy-mapping-implementation-guidance
-  - https://github.com/InteractiveAdvertisingBureau/Taxonomies/blob/develop/Taxonomy%20Mappings/Ad%20Product%202.0%20to%20Content%202.1.tsv
-  - https://github.com/katieshell/Taxonomies/blob/main/implementation.md#implementation-guidance-for-content-1--content-2-mapping
-  - https://github.com/katieshell/Taxonomies/blob/main/implementation.md#migrating-from-content-taxonomy-10
+See also: `https://github.com/mixpeek/iab-mapper` and `https://mixpeek.com/tools/iab-taxonomy-mapper`.
 
 ---
 
@@ -423,7 +448,7 @@ POST /collections/{id}/documents/{doc}/features { "extractor":"taxonomy", "param
 GET /collections/{id}/documents/{doc}
 ```
 
-See also: [Taxonomy Mapper tool](/tools/iab-taxonomy-mapper), [Taxonomy audit tool](/tools/taxonomy-audit), [Video guide](/education/videos/taxonomies-guide), and the landing page at [mxp.co/taxonomy](https://mxp.co/taxonomy).
+See also: `https://mixpeek.com/tools/iab-taxonomy-mapper`.
 
 ## 🧯 Troubleshooting
 - **No matches:** lower `--fuzzy-cut` or enable `--use-embeddings`.

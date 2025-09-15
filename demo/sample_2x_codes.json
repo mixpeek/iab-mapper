@@ -1,6 +1,10 @@
 [
   { "code": "1-4", "label": "Sports" },
-  { "label": "Cooking how-to" }
+  { "code": "1-3", "label": "Technology News" },
+  { "code": "2-7", "label": "Product Reviews" },
+  { "label": "Cooking how-to" },
+  { "label": "Startup fundraising" },
+  { "label": "Gaming livestream" }
 ]
 
 

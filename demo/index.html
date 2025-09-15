@@ -4,14 +4,78 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>IAB Mapper Demo</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Mixpeek-inspired theme accents (honor global CSS variables) */
+      html, body { background: var(--bg); color: var(--text); font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif; }
+
+      a { color: var(--accent); }
+      a:hover { text-decoration: underline; }
+
+      header.banner { background: linear-gradient(180deg, rgba(17,24,39,.9), rgba(15,23,42,.6)); border-bottom: 1px solid var(--border); }
+      header.banner h1 {
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        background: linear-gradient(90deg, var(--accent), var(--accent2));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      #summary { color: var(--muted); }
+
+      main.container { background: transparent; }
+
+      /* Panels */
+      section.uploader .dropzone { background: var(--panel); border: 1px dashed var(--border); color: var(--text); }
+      .samples a { background: rgba(139,92,246,.08); border: 1px solid var(--border); color: var(--text); }
+
+      /* Controls */
+      section.controls { background: var(--panel); border: 1px solid var(--border); box-shadow: inset 0 1px 0 rgba(255,255,255,0.02); }
+      .control label, .control input, .control .help-icon { color: var(--text); }
+      .control input[type="search"], .control input[type="number"], .control input[type="text"] { 
+        background: var(--panel2); border: 1px solid var(--border); color: var(--text);
+      }
+
+      /* Buttons */
+      #mapBtn, #exportCsv, #exportJson, #clearBtn, .samples a {
+        border-radius: 10px;
+      }
+      #mapBtn { background: linear-gradient(90deg, var(--accent), var(--accent2)); border: none; color: #fff; font-weight: 600; }
+      #mapBtn:disabled { opacity: .6; }
+      #mapBtn:hover:not(:disabled) { filter: brightness(1.05); }
+
+      #exportCsv, #exportJson { background: transparent; border: 1px solid var(--border); color: var(--text); }
+      #exportCsv:hover, #exportJson:hover { border-color: var(--accent2); }
+      #clearBtn { background: transparent; border: 1px solid var(--border); color: var(--muted); }
+      #clearBtn:hover { color: var(--text); border-color: var(--accent); }
+
+      /* Table */
+      section.results table { background: var(--panel); border: 1px solid var(--border); color: var(--text); }
+      section.results thead th { background: rgba(139,92,246,.08); border-bottom: 1px solid var(--border); }
+      section.results tbody tr:nth-child(odd) { background: rgba(2,6,23,.35); }
+      section.results tbody td { border-top: 1px solid var(--border); }
+
+      /* Footer */
+      .footer { color: var(--muted); }
+      .footer [data-tooltip] { color: var(--text); border-bottom: 1px dotted var(--border); }
+
+      /* Help icon tint */
+      .help-icon { color: var(--muted); }
+      .help-icon::before { content: "ⓘ"; display:inline-block; }
+    </style>
   </head>
   <body>
     <header class="banner">
       <div class="container">
-        <h1>IAB 2.x → 3.0 Mapper</h1>
-        <p id="summary">Mapped 0 rows • 0% ≥ threshold • 0 unmatched → <a href="#" id="ctaAudit">Request Audit</a></p>
+        <h1>Mixpeek • IAB 2.x → 3.0 Mapper</h1>
+        <p id="summary">Mapped 0 rows • 0% ≥ threshold • 0 unmatched → <a href="https://mixpeek.com/tools/iab-taxonomy-mapper" id="ctaAudit" target="_blank" rel="noopener">Open Mixpeek — IAB Taxonomy Mapper</a></p>
+        <div style="margin-top:8px;display:flex;gap:8px;align-items:center;">
+          <button id="themeToggle" class="theme-toggle" title="Toggle light/dark" role="switch" aria-checked="false">
+            <i id="themeIcon" class="fa-regular fa-moon"></i>
+            <span class="label" id="themeLabel">Dark</span>
+          </button>
+        </div>
       </div>
     </header>
 
@@ -57,7 +121,7 @@
           <input id="search" type="search" placeholder="Search…" title="Client‑side filter across all columns." />
         </div>
         <div class="spacer"></div>
-        <button id="mapBtn" disabled>Map Now <i class="fas fa-spinner fa-spin loading-spinner"></i></button>
+        <button id="mapBtn" disabled>Map Now <span class="loading-spinner" aria-hidden="true"></span></button>
         <div class="exports">
           <button id="exportCsv" disabled>Download CSV</button>
           <button id="exportJson" disabled>Download JSON</button>
@@ -124,10 +188,9 @@
         • <span data-tooltip="synonym: matched via alias dictionary">synonym</span>
         • <span data-tooltip="fuzzy: string similarity retrieval">fuzzy</span>
         • <span data-tooltip="semantic: embedding similarity or rerank">semantic</span>
+        • <a href="https://github.com/mixpeek/iab-mapper" target="_blank" rel="noopener">View iab-mapper on GitHub</a>
       </p>
     </footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
