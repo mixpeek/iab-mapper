@@ -57,7 +57,7 @@
           <input id="search" type="search" placeholder="Search…" title="Client‑side filter across all columns." />
         </div>
         <div class="spacer"></div>
-        <button id="mapBtn" disabled>Map Now</button>
+        <button id="mapBtn" disabled>Map Now <i class="fas fa-spinner fa-spin loading-spinner"></i></button>
         <div class="exports">
           <button id="exportCsv" disabled>Download CSV</button>
           <button id="exportJson" disabled>Download JSON</button>
@@ -86,7 +86,7 @@
 
             <div class="field">
               <label for="llmModel">LLM model <i class="fa-regular fa-circle-question help-icon" data-tooltip="Ollama model name to use for re‑rank (e.g., llama3.1:8b)."></i></label>
-              <input id="llmModel" type="text" value="llama3.1:8b" />
+              <input id="llmModel" type="text" value="deepseek-r1:1.5b" />
             </div>
 
             <div class="field">

@@ -166,6 +166,7 @@ async function onFiles(files) {
 
 async function mapNow() {
   els.mapBtn.disabled = true;
+  els.mapBtn.classList.add("loading"); // Add loading class
   try {
     const body = {
       version_from: "2.x",
@@ -197,6 +198,7 @@ async function mapNow() {
     alert(`Map failed: ${e.message || e}`);
   } finally {
     els.mapBtn.disabled = false;
+    els.mapBtn.classList.remove("loading"); // Remove loading class
     els.clearBtn.disabled = state.rows.length === 0; // Enable Clear after mapping/error
   }
 }

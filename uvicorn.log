@@ -1,30 +1,6 @@
 INFO:     Will watch for changes in these directories: ['/Users/ethan/Dev/mixpeek/tools/iab-mapper']
 INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
-INFO:     Started reloader process [78622] using WatchFiles
-INFO:     Started server process [78671]
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-WARNING:  WatchFiles detected changes in 'iab_mapper/pipeline.py'. Reloading...
-INFO:     Shutting down
-INFO:     Waiting for application shutdown.
-INFO:     Application shutdown complete.
-INFO:     Finished server process [78671]
-INFO:     Started server process [78773]
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-WARNING:  WatchFiles detected changes in 'iab_mapper/pipeline.py'. Reloading...
-INFO:     Shutting down
-INFO:     Waiting for application shutdown.
-INFO:     Application shutdown complete.
-INFO:     Finished server process [78773]
-INFO:     Started server process [90044]
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-WARNING:  WatchFiles detected changes in 'iab_mapper/pipeline.py'. Reloading...
-INFO:     Shutting down
-INFO:     Waiting for application shutdown.
-INFO:     Application shutdown complete.
-INFO:     Finished server process [90044]
-INFO:     Started server process [90125]
+INFO:     Started reloader process [24745] using WatchFiles
+INFO:     Started server process [24794]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.

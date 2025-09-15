@@ -49,6 +49,11 @@ h1{ font-size:20px; margin:0 0 6px 0; }
 .control select[multiple]{ min-width:180px; }
 .method-group{ display:flex; gap:10px; flex-wrap:wrap; }
 .method-group label{ display:flex; align-items:center; gap:6px; background:#0f1520; border:1px solid var(--border); border-radius:8px; padding:6px 10px; color:var(--text); }
+.method-group label:hover,
+.method-group label:focus-within {
+  background-color: #e0e0e0;
+}
+
 .spacer{ flex:1; }
 button{ background:linear-gradient(180deg,#1c2838,#152030); color:var(--text); border:1px solid var(--border); border-radius:8px; padding:10px 14px; cursor:pointer; transition:transform .08s ease, box-shadow .12s ease, border-color .12s ease; }
 button:disabled{ opacity:0.6; cursor:not-allowed; }
@@ -69,6 +74,21 @@ button#mapBtn:hover{
 button#mapBtn:active{ transform: translateY(0); }
 button#mapBtn:disabled{ background:#1b2a3a; color:var(--muted); border-color:var(--border); box-shadow:none; }
 .exports button{ margin-left:8px; }
+
+.loading-spinner {
+  display: none;
+  margin-left: 8px; /* Space between text and spinner */
+}
+
+#mapBtn.loading {
+  cursor: not-allowed;
+  background: #6c757d; /* A grayed-out look */
+  border-color: #6c757d;
+}
+
+#mapBtn.loading .loading-spinner {
+  display: inline-block;
+}
 
 .results{ margin:16px 0 40px; }
 table{ width:100%; border-collapse:collapse; background:var(--panel); border:1px solid var(--border); border-radius:10px; overflow:hidden; }
