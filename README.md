@@ -8,12 +8,37 @@
   <a href="https://github.com/mixpeek/iab-mapper">View iab-mapper on GitHub</a>
   •
   <a href="https://mixpeek.com/tools/iab-taxonomy-mapper">Open Mixpeek — IAB Taxonomy Mapper</a>
+  •
+  <a href="#-quick-start">Quick Start (5 min)</a>
 </p>
 
 Map **IAB Content Taxonomy 2.x** labels/codes to **IAB 3.0** locally with a deterministic → fuzzy → (optional) semantic pipeline.
 Outputs are **IAB‑3.0–compatible IDs** for OpenRTB/VAST, with optional **vector attributes** (Channel, Type, Format, Language, Source, Environment) and **SCD** awareness.
 
 > Local-first by default. No external APIs are required; LLM re‑rank is optional.
+
+## 🎯 What it does
+
+The IAB Mapper helps you migrate from IAB Content Taxonomy 2.x to 3.0 by:
+
+1. **Input:** Your existing 2.x codes/labels (CSV or JSON)
+2. **Process:** Deterministic matching → fuzzy matching → optional semantic enhancement
+3. **Output:** Valid IAB 3.0 IDs ready for OpenRTB/VAST integration
+
+**Example:**
+```bash
+# Input: 2.x codes
+"1-4","Sports"
+"2-12","Food & Drink"
+
+# Output: 3.0 IDs
+"483","Sports"
+"3-5-2","Food & Drink > Cooking"
+```
+
+Perfect for ad tech teams, content platforms, and anyone migrating to IAB 3.0.
+
+> **💡 Try the official samples:** Use `demo/official_samples/sample_2x_codes_official.csv` for realistic testing with 60+ IAB categories.
 
 ---
 
@@ -205,6 +230,9 @@ iab-mapper sample_2x_codes.csv -o mapped.json
 
 # enable local embeddings (improves recall on free‑text labels)
 iab-mapper sample_2x_codes.csv -o mapped.json --use-embeddings
+
+# try with official IAB sample data (recommended)
+iab-mapper demo/official_samples/sample_2x_codes_official.csv -o mapped_official.json
 ```
 
 OpenRTB and VAST helpers (example output):
@@ -471,7 +499,17 @@ iab-mapper sample_2x_codes.csv -o mapped.json --use-embeddings --drop-scd --max-
 ---
 
 ## 📜 License
-MIT. See [LICENSE](LICENSE).
+BSD 2-Clause. See [LICENSE](LICENSE).
 
 Include IAB attribution in your deployed UI/footer:
-> “IAB is a registered trademark of the Interactive Advertising Bureau. This tool is an independent utility built by Mixpeek for interoperability with IAB Content Taxonomy standards.”
+> "IAB is a registered trademark of the Interactive Advertising Bureau. This tool is an independent utility built by Mixpeek for interoperability with IAB Content Taxonomy standards."
+
+---
+
+## 📞 Support & Contact
+
+- **Issues:** [GitHub Issues](https://github.com/mixpeek/iab-mapper/issues)
+- **Documentation:** [Mixpeek IAB Mapper](https://mixpeek.com/tools/iab-taxonomy-mapper)
+- **Questions:** [Open an issue](https://github.com/mixpeek/iab-mapper/issues/new) or contact [Mixpeek](https://mixpeek.com)
+
+For enterprise support, custom integrations, or questions about multimodal classification extensions, reach out to the Mixpeek team.

@@ -23,11 +23,11 @@ pip install -r requirements-dev.txt
 ```
 3. Start the server:
 ```
-uvicorn scripts.web_server:app --port 8000 --reload
+uvicorn scripts.web_server:app --port 8002 --reload
 ```
 4. Open the demo:
 ```
-http://localhost:8000/
+http://localhost:8002/
 ```
 
 ## API
@@ -45,6 +45,8 @@ http://localhost:8000/
 ```
 
 ## Samples
+
+### Basic Samples
 - Small:
   - `sample_2x_codes.csv`
   - `sample_2x_codes.json`
@@ -52,4 +54,13 @@ http://localhost:8000/
   - `sample_2x_codes_large.csv`
   - `sample_2x_codes_large.json`
 
+### Official IAB Samples
+- **Official samples** (recommended for testing):
+  - `official_samples/sample_2x_codes_official.csv`
+  - `official_samples/sample_2x_codes_official.json`
+  - Based on actual IAB Content Taxonomy 2.2 data
+  - Includes 60+ realistic categories and subcategories
+  - See [official_samples/README.md](official_samples/README.md) for details
+
+### Input Format
 CSV must include a header and a `label` column. Optional: `code`, `channel`, `type`, `format`, `language`, `source`, `environment`.

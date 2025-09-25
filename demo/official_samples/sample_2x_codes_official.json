@@ -1,0 +1,642 @@
+[
+  {
+    "code": "1-1",
+    "label": "Arts & Entertainment",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "1-2",
+    "label": "Automotive",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "1-3",
+    "label": "Business",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "1-4",
+    "label": "Careers",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "1-5",
+    "label": "Education",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "1-6",
+    "label": "Family & Parenting",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "1-7",
+    "label": "Health & Fitness",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "1-8",
+    "label": "Food & Drink",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "1-9",
+    "label": "Hobbies & Interests",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "1-10",
+    "label": "Home & Garden",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "1-11",
+    "label": "Law Government & Politics",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "1-12",
+    "label": "News",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "1-13",
+    "label": "Personal Finance",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "1-14",
+    "label": "Society",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "1-15",
+    "label": "Science",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "1-16",
+    "label": "Pets",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "1-17",
+    "label": "Sports",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "1-18",
+    "label": "Style & Fashion",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "1-19",
+    "label": "Technology & Computing",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "1-20",
+    "label": "Travel",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "1-21",
+    "label": "Real Estate",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "1-22",
+    "label": "Shopping",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "1-23",
+    "label": "Religion & Spirituality",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "1-24",
+    "label": "Uncategorized",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "2-1",
+    "label": "Books & Literature",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "2-2",
+    "label": "Celebrity Fan/Gossip",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "2-3",
+    "label": "Fine Art",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "2-4",
+    "label": "Humor",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "2-5",
+    "label": "Movies",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "2-6",
+    "label": "Music",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "2-7",
+    "label": "Television",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "2-8",
+    "label": "Auto Parts",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "2-9",
+    "label": "Auto Repair",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "2-10",
+    "label": "Buying/Selling Cars",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "2-11",
+    "label": "Car Culture",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "2-12",
+    "label": "Certified Pre-Owned",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "2-13",
+    "label": "Convertible",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "2-14",
+    "label": "Coupe",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "2-15",
+    "label": "Crossover",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "2-16",
+    "label": "Diesel",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "2-17",
+    "label": "Electric Vehicle",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "2-18",
+    "label": "Hatchback",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "2-19",
+    "label": "Hybrid",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "2-20",
+    "label": "Luxury",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "2-21",
+    "label": "MiniVan",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "2-22",
+    "label": "Motorcycles",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "2-23",
+    "label": "Off-Road Vehicles",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "2-24",
+    "label": "Performance Vehicles",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "2-25",
+    "label": "Pickup Trucks",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "2-26",
+    "label": "Road-Side Assistance",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "2-27",
+    "label": "Sedan",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "2-28",
+    "label": "Trucks & Accessories",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "2-29",
+    "label": "Vintage Cars",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "2-30",
+    "label": "Wagon",
+    "channel": "editorial",
+    "type": "article",
+    "format": "text",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "",
+    "label": "Cooking how-to videos",
+    "channel": "editorial",
+    "type": "article",
+    "format": "video",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "",
+    "label": "Sports highlights",
+    "channel": "editorial",
+    "type": "article",
+    "format": "video",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "",
+    "label": "Tech reviews",
+    "channel": "editorial",
+    "type": "article",
+    "format": "video",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "",
+    "label": "Fashion trends",
+    "channel": "editorial",
+    "type": "article",
+    "format": "video",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "",
+    "label": "Travel guides",
+    "channel": "editorial",
+    "type": "article",
+    "format": "video",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "",
+    "label": "Health tips",
+    "channel": "editorial",
+    "type": "article",
+    "format": "video",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "",
+    "label": "Financial advice",
+    "channel": "editorial",
+    "type": "article",
+    "format": "video",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "",
+    "label": "Home improvement",
+    "channel": "editorial",
+    "type": "article",
+    "format": "video",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "",
+    "label": "Pet care",
+    "channel": "editorial",
+    "type": "article",
+    "format": "video",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  },
+  {
+    "code": "",
+    "label": "Gaming news",
+    "channel": "editorial",
+    "type": "article",
+    "format": "video",
+    "language": "en",
+    "source": "professional",
+    "environment": "web"
+  }
+]
