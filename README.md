@@ -12,6 +12,14 @@
   <a href="#-quick-start">Quick Start (5 min)</a>
 </p>
 
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=wHLwfp8nKpc">
+    <img src="https://img.youtube.com/vi/wHLwfp8nKpc/maxresdefault.jpg" alt="IAB Mapper Walkthrough Video" width="600" />
+  </a>
+  <br>
+  <strong>📺 Watch the 5-minute walkthrough</strong>
+</p>
+
 Map **IAB Content Taxonomy 2.x** labels/codes to **IAB 3.0** locally with a deterministic → fuzzy → (optional) semantic pipeline.
 Outputs are **IAB‑3.0–compatible IDs** for OpenRTB/VAST, with optional **vector attributes** (Channel, Type, Format, Language, Source, Environment) and **SCD** awareness.
 
